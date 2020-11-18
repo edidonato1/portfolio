@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import emailjs from 'emailjs-com'
+import{ init } from 'emailjs-com';
+init("user_yIHk6A1yfmyHXdBofkhFI");
 
 const ContactForm = () => {
   const [result, setResult] = useState(null)
@@ -12,23 +14,13 @@ const ContactForm = () => {
 
   const sendEmail = event => {
     event.preventDefault();
-    axios
-      .post('/send', { ...form })
-      .then(response => {
-        setResult(response.data);
-        setForm({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-      })
-      .catch(() => {
-        setResult({
-          success: false,
-          message: 'Something went wrong. Try again later'
-        });
-      });
+    const { name, email, subject, message } = form;
+    emailjs.send('service_egkur24', 'template_s05o8qa', {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message
+    })
   };
 
   const handleChange = (e) => {
