@@ -10,8 +10,16 @@ export default function Contact() {
     <div>
       <Layout>
         <ContactDiv>
-          <h1>Contact</h1>
+          <div className="left-div" >
+            <h1>contact</h1>
+          </div>
+          <div className="right-div" >
+            <section className="contact-blurb">
+              <p>currently available for either freelance of full-time work.</p>
+              <p>feel free to fill out the form below, <br></br>or contact me directly for inquiries.</p>
+            </section>
           <ContactForm />
+          </div>
         </ContactDiv>
       </Layout>
     </div>

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom'
 import emailjs from 'emailjs-com'
-import{ init } from 'emailjs-com';
+import { init } from 'emailjs-com';
 init("user_yIHk6A1yfmyHXdBofkhFI");
 
 const ContactForm = () => {
   const [result, setResult] = useState(null)
+  const [sent, setSent] = useState(false)
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -21,6 +23,13 @@ const ContactForm = () => {
       subject: subject,
       message: message
     })
+    setForm({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    })
+    setSent(true)
   };
 
   const handleChange = (e) => {
@@ -31,42 +40,54 @@ const ContactForm = () => {
     });
   };
 
+  if (sent) {
+    return <Redirect to="/" />
+  }
+
   return (
-    <div>
-      {result && (
-        <p className={`${result.success ? 'success' : 'error'}`}>
-          {result.message}
-        </p>
-      )}
+    <div className="form-main">
       <form onSubmit={sendEmail}>
-        <input
-          type="text"
-          name="name"
-          value={form.name}
-          placeholder="full name"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="email"
-          value={form.email}
-          placeholder="email address"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="subject"
-          value={form.subject}
-          placeholder="subject"
-          onChange={handleChange}
-        />
-        <textarea
-          name="message"
-          value={form.message}
-          placeholder="message"
-          onChange={handleChange}
-        />
-        <button type="submit">send</button>
+        <div className="form">
+          <div className="top-row">
+            <input
+              className="input"
+              id="name"
+              type="text"
+              name="name"
+              value={form.name}
+              placeholder="full name"
+              onChange={handleChange}
+            />
+            <input
+              className="input"
+              id="email"
+              type="text"
+              name="email"
+              value={form.email}
+              placeholder="email address"
+              onChange={handleChange}
+            />
+          </div>
+          <input
+            className="input"
+            id="subject"
+            type="text"
+            name="subject"
+            value={form.subject}
+            placeholder="subject"
+            onChange={handleChange}
+          />
+          <input
+            className="input"
+            id="message"
+            type="text"
+            name="message"
+            value={form.message}
+            placeholder="message"
+            onChange={handleChange}
+          />
+          <button type="submit">send</button>
+        </div>
       </form>
     </div>
   )

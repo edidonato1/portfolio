@@ -9,11 +9,13 @@ export default function Home() {
     <div>
       <Layout>
         <HomeDiv>
+        <div className="left-div">
         <div className="title">
         <h1>hello, <br></br> i'm eddie.</h1>
             <h2>web developer</h2>
             <small>front end developer with full stack capability</small>
-        </div>
+            </div>
+            </div>
         </HomeDiv>
       </Layout>
     </div>
