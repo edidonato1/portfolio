@@ -25,8 +25,12 @@ export default function Nav() {
         </Link>
       </ul>
       <div className="social-container">
-        <img src={git} alt="github" className="social-icons" id="github" />
-        <img src={linked} alt="linkedin" className="social-icons" id="linkedin" />
+        <a href="https://github.com/edidonato1" target="blank">
+          <img src={git} alt="github" className="social-icons" id="github" />
+        </a>
+        <a href="https://www.linkedin.com/in/eddie-didonato/" target="blank">
+          <img src={linked} alt="linkedin" className="social-icons" id="linkedin" />
+        </a>
       </div>
     </Navbar>
   )
