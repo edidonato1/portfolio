@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 const StyledLayout = styled.div`
-
+width: 100vw;
+max-width: 100vw;
 .left-div {
+  position: sticky;
+  top: 0;
    width: 35%;
    display: flex;
    background: coral;
@@ -14,10 +17,12 @@ const StyledLayout = styled.div`
 }
 
 .right-div {
+
   display: flex;
   flex-direction: column;
   background: lightcoral;
   width: 65%;
+  /* overflow-y: scroll; */
 }
 
 
