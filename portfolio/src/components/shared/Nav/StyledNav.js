@@ -53,12 +53,12 @@ a {
   width: 30px;
   margin: 10px;
   border-radius: 50%;
-  transition: .2s;
+  transition: .3s;
 }
 
 .social-icons:hover {
-  width: 34px;
-  margin: 8px;
+  width: 36px;
+  margin: 7px;
 }
 
 `

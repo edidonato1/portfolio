@@ -14,7 +14,9 @@ export default function Projects() {
         <StyledProjects>
 
           <div className="left-div" >
+            <div className="left-div-child">
             <h1>projects</h1>
+          </div>
           </div>
           <div className="right-div" id="projects-right">
           <SunsetOracle />

@@ -23,6 +23,10 @@ margin-bottom: 20px;
   background: rgba(200, 200, 200, .2);
 }
 
+.show-contact {
+  color: #43a8a8;
+  cursor: pointer;
+}
 
 
 .input {
