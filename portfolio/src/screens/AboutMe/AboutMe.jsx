@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Layout from '../../components/shared/Layout/Layout'
 import AboutMeDiv from './StyledAboutMe'
+import eddie from '../../assets/images/eddie_rwb.png'
 
 export default function AboutMe() {
-  const [extra, setExtra] = useState(false)
-
 
   return (
     <div>
@@ -14,34 +14,26 @@ export default function AboutMe() {
             <h1>about me</h1>
           </div>
           <div className="right-div" id="about-me-right">
-            <h2>short</h2>
-            <div className="about-text">
-              <p>well-organized | creative thinker | problem solver </p>
-              <p>I'm a budding, inspired web developer.</p>
-              <p>An ambitious lifetime learner, my career has been defined by my devotion to detail,
-              especially regarding the interconnected nature of aesthetics and functionality.
+            <img id="eddie-bnw" src={eddie} alt="eddie didonato" />
+            <h2>eddie didonato</h2>
+            <h3>web developer</h3>
+            <section className="about-text">
+              {/* <p>organized | creative thinker | problem solver </p> */}
+              <p>An ambitious lifetime learner, I've always been curious about the architecture of the internet — 
+              In early 2020, that curiosity pivoted into an obsession. 
+              Since then I've poured every ounce of myself into learning the languages that connect
+              nearly every human on the planet.  
             </p>
-              <p>I thrive in a stimulating environment, surrounded by like-minded individuals with a purpose-driven
-              mindset.
+              <p>In a past life, I was an award winning cocktail bartender, competing in all corners of the country,
+               and around the world.  And while I've left a lot behind to pursue web development, a lot has followed me 
+                in my career as a developer.
               </p>
-              <h2 onClick={() => setExtra(!extra)}>extra</h2>
-              {extra ? 
-              <div className="extra">
-              <p>I was born and raised in a small town in Connecticut.</p>
-              <p>When I came of age, my love for the outdoors led me to pursue a bachelor's degree at a small university in the green mountains of Vermont.</p>
-              <p>Post-grad, I dedicated myself to a passion-driven career in the beverage industry,
-                where I became an award-winning expert in cocktail creation, competing in all corners of the country, and around the world.</p>
-              <p>When my career was punctuated rather abruptly by the pandemic in early 2020, I shifted gears.</p>
-              <p>My love for the precise functionality of recipes and formulas, combined with my second passion for writing and sytax, 
-               prompted a search for a new outlet. </p>
-              <p>I haven't looked back since I opend my first &lt;h1> tag.</p>
-              </div>
-            : <></>}
-
-
-
-            </div>
-            
+              I'm obsessed with creating products with purpose, driven to invoke delight.  I believe 
+              that there's no problem that isn't worth solving, and it's my goal to make products that will inspire, excite, 
+              and genuinely improve people's lives.
+              <p>If you share my passion, I'd love to hear from you.</p>
+              <p><Link to="/contact">get in touch</Link></p>
+            </section>
           </div>
         </AboutMeDiv>
       </Layout>

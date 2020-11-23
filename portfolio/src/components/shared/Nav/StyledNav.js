@@ -10,18 +10,21 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-background: lightcoral;
+background: #BF6B72;;
 height: 100vh;
-width: 70px;
+width: 80px;
 
 .initials {
   margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid black;
+  border: 3px solid #688C8C;
   height: 50px;
   width: 50px;
+  color: #bf6b72;
+  background: #313131;
+  /* background: #688C8C; */
 }
 
 ul {
@@ -49,7 +52,15 @@ a {
 .social-icons {
   width: 30px;
   margin: 10px;
+  border-radius: 50%;
+  transition: .2s;
 }
+
+.social-icons:hover {
+  width: 34px;
+  margin: 8px;
+}
+
 `
 
 export default Navbar

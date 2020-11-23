@@ -1,3 +1,32 @@
+* {
+  font-family: avenir;
+}
+
 li {
   list-style-type: none;
+  color: #101010;
+  /* color: #eeeeaf; */
+  
+}
+.color-wheel {
+color: rgb(191, 107, 114);
+color: #233ED9;
+color: #050D26;
+color: #296CF2;
+color: #688d8d;
+color: #43a8a8;
+color: rgb(236, 200, 203);
+color: rgb(207, 207, 207);
+color: rgb(73, 100, 100);
+
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
 }

@@ -17,6 +17,11 @@ display: flex;
   width: 400px;
 }
 
+#eddie-bnw {
+  width: 300px;
+  border-radius: 50%;
+}
+
 `
 
 export default AboutMeDiv;

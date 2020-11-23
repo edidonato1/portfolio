@@ -15,12 +15,12 @@ export default function Contact() {
           </div>
           <div className="right-div" >
             <section className="contact-blurb">
-              <p>currently available for either freelance of full-time work.</p>
+              <p>currently available for full time,<br></br> or freelance opportunities.</p><br></br>
               <p>feel free to fill out the form below, <br></br>or contact me directly for inquiries.</p>
             </section>
           <ContactForm />
           </div>
-        </ContactDiv>
+          </ContactDiv>
       </Layout>
     </div>
   )

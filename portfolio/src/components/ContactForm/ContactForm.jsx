@@ -5,7 +5,7 @@ import { init } from 'emailjs-com';
 init("user_yIHk6A1yfmyHXdBofkhFI");
 
 const ContactForm = () => {
-  const [result, setResult] = useState(null)
+  const [hover, setHover] = useState(false)
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({
     name: '',
@@ -46,7 +46,11 @@ const ContactForm = () => {
 
   return (
     <div className="form-main">
-      <form onSubmit={sendEmail}>
+      <form onSubmit={sendEmail}
+        // onFocus={() => setHover(true)}
+        // onBlur={() => setHover(false)}
+        // style={hover ? { background: "rgb(73, 100, 100)" } : {}}
+      >
         <div className="form">
           <div className="top-row">
             <input
@@ -57,6 +61,7 @@ const ContactForm = () => {
               value={form.name}
               placeholder="full name"
               onChange={handleChange}
+              required
             />
             <input
               className="input"
@@ -66,6 +71,7 @@ const ContactForm = () => {
               value={form.email}
               placeholder="email address"
               onChange={handleChange}
+              required
             />
           </div>
           <input
@@ -76,8 +82,9 @@ const ContactForm = () => {
             value={form.subject}
             placeholder="subject"
             onChange={handleChange}
+            required
           />
-          <input
+          <textarea
             className="input"
             id="message"
             type="text"
@@ -85,8 +92,11 @@ const ContactForm = () => {
             value={form.message}
             placeholder="message"
             onChange={handleChange}
+            required
           />
-          <button type="submit">send</button>
+          <div className="button-container">
+            <button type="submit">send</button>
+          </div>
         </div>
       </form>
     </div>
