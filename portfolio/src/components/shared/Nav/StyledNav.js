@@ -39,18 +39,23 @@ ul {
   margin: 50px 0;
 
 }  */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  height: 110px;
+}
+
 .nav-icon {
   color: black;
-  padding: 10px 0;
-  margin: 50px 0;
+  padding: 30px 0;
   font-size: 30px;
   transition: .3s;
 }
 
 .nav-icon:hover {
   color: #43a8a8;
-  font-size: 36px;
-  margin: 46px 0;
+  font-size: 32px;
+  /* padding: 28px 0; */
 }
 
 
@@ -67,7 +72,7 @@ a {
 .nav-hidden {
   font-size: 20px;
   margin-top: -15px;
-  margin-bottom: -18px;
+
   /* transition: .3s; */
 }
 
@@ -80,8 +85,8 @@ a {
 }
 
 .social-icons:hover {
-  width: 36px;
-  margin: 7px;
+  width: 38px;
+  margin: 6px;
 }
 
 `

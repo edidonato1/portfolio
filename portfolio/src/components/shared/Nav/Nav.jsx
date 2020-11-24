@@ -6,13 +6,16 @@ import linked from '../../../assets/icons/linkedin.svg'
 import linked2 from '../../../assets/icons/linkedin2.svg'
 import Navbar from './StyledNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons'
+import { faUserAstronaut, faPaperPlane, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+
 
 
 export default function Nav() {
   const [gitHover, setGitHover] = useState(false);
   const [linkHover, setLinkHover] = useState(false);
   const [meHover, setMeHover] = useState(false);
+  const [contactHover, setContactHover] = useState(false);
+  const [workHover, setWorkHover] = useState(false);
 
   return (
     <Navbar>
@@ -23,21 +26,38 @@ export default function Nav() {
       </Link>
       <ul>
         <Link to="/about">
-          {/* <li>about</li> */}
+          <div className="icon-container">
           <li
             className="nav-icon"
             onMouseOver={() => setMeHover(true)}
             onMouseLeave={() => setMeHover(false)}>
             <FontAwesomeIcon icon={faUserAstronaut} />
-            <p className="nav-hidden" style={meHover ? {} : {color: "#BF6B72"}}>me</p>
+              {meHover ? <p className="nav-hidden" >me</p> : <> </>}
 
           </li>
+            </div>
         </Link>
         <Link to="/contact">
-          <li>contact</li>
+          <div className="icon-container">
+          <li
+            className="nav-icon"
+            onMouseOver={() => setContactHover(true)}
+            onMouseLeave={() => setContactHover(false)}>
+              <FontAwesomeIcon icon={faPaperPlane} />
+              {contactHover ?  <p className="nav-hidden">contact</p> : <></>}
+          </li>
+            </div>
         </Link>
         <Link to="/projects">
-          <li>projects</li>
+          <div className="icon-container">
+          <li
+            className="nav-icon"
+            onMouseOver={() => setWorkHover(true)}
+            onMouseLeave={() => setWorkHover(false)}>
+            <FontAwesomeIcon icon={faBriefcase} />
+              {workHover ? <p className="nav-hidden" >work</p> : <></>}
+          </li>
+            </div>
         </Link>
       </ul>
       <div className="social-container">
