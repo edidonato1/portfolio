@@ -12,6 +12,12 @@ display: flex;
 .etc {
   color: lightcoral;
 }
+#get-in-touch {
+  color: #43a8a8;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 
 .about-text {
   width: 400px;

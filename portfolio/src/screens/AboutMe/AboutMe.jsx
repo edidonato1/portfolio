@@ -34,7 +34,7 @@ export default function AboutMe() {
               that there's no problem that isn't worth solving, and it's my goal to make products that will inspire, excite, 
               and genuinely improve people's lives.
               <p>If you share my passion, I'd love to hear from you.</p>
-              <p><Link to="/contact">get in touch</Link></p>
+              <p><Link id="get-in-touch" to="/contact">get in touch</Link></p>
             </section>
           </div>
         </AboutMeDiv>

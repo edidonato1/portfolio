@@ -4,6 +4,7 @@ import AboutMe from './screens/AboutMe/AboutMe'
 import Contact from './screens/Contact/Contact'
 import Projects from './screens/Projects/Projects'
 import { Route, Switch } from 'react-router-dom'
+
 import './App.css'
 
 function App() {

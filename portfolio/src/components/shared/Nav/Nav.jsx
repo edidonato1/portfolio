@@ -5,11 +5,14 @@ import git2 from '../../../assets/icons/github2.svg'
 import linked from '../../../assets/icons/linkedin.svg'
 import linked2 from '../../../assets/icons/linkedin2.svg'
 import Navbar from './StyledNav'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Nav() {
   const [gitHover, setGitHover] = useState(false);
   const [linkHover, setLinkHover] = useState(false);
+  const [meHover, setMeHover] = useState(false);
 
   return (
     <Navbar>
@@ -20,7 +23,15 @@ export default function Nav() {
       </Link>
       <ul>
         <Link to="/about">
-          <li>about</li>
+          {/* <li>about</li> */}
+          <li
+            className="nav-icon"
+            onMouseOver={() => setMeHover(true)}
+            onMouseLeave={() => setMeHover(false)}>
+            <FontAwesomeIcon icon={faUserAstronaut} />
+            <p className="nav-hidden" style={meHover ? {} : {color: "#BF6B72"}}>me</p>
+
+          </li>
         </Link>
         <Link to="/contact">
           <li>contact</li>

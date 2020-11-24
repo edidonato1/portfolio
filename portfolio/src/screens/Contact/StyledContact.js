@@ -53,13 +53,9 @@ max-height: 250px;
   outline: none;
 }
 
-#message {
-
-}
 .top-row {
   display: flex;
   width: 100%;
-  /* background: lightgreen; */
 }
 
 #name {
@@ -82,16 +78,12 @@ button {
   background:  #296CF2;
   font-weight: 500;
   color: rgb(207, 207, 207);
-  /* transition: .2s; */
 }
 
 button:hover {
   height: 40px;
   width: 21%;
   margin-bottom: -2px;
-  /* background: rgb(236, 200, 203); */
-  /* font-weight: 500; */
-  /* color: rgb(73, 100, 100) */
   color: black;
 }
 
