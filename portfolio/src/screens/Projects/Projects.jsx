@@ -19,7 +19,7 @@ export default function Projects() {
           <div className="left-div" >
             <div className="left-div-child">
               <div className="projects-title-inline">
-                <h1 onClick={() => setOpen(!open)}>projects</h1>
+                <h1>projects</h1>
                 <div className="icon-container" >
                   <FontAwesomeIcon
                     className="icon"
@@ -28,10 +28,10 @@ export default function Projects() {
                 </div>
               </div>
               <ul className="drop-down">
-                <li>collab</li>
-                <li>root</li>
-                <li>pop's liquor cabinet</li>
-                <li>sunset oracle</li>
+                <li className="project-li">ColLab</li>
+                <li className="project-li">ROOT</li>
+                <li className="project-li">Pop's Liquor Cabinet</li>
+                <li className="project-li">Sunset Oracle</li>
               </ul>
             </div>
           </div>

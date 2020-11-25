@@ -26,7 +26,7 @@ width: 80px;
   border: 3px solid #688C8C;
   height: 50px;
   width: 50px;
-  color: #bf6b72;
+  color: #DB686F;
   
   /* background: #313131; */
   background: #202020;

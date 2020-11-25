@@ -24,8 +24,11 @@ ul {
   font-size: 22px;
   transition: .1s;
   background: #202020;
-  /* z-index: 2; */
-  /* cursor: pointer; */
+}
+
+.icon:hover {
+  color: #35a3a3;
+  font-size: 24px;
 }
 .icon-container {
   margin-top: -10px;
@@ -41,7 +44,7 @@ ul {
   z-index: 0;
 }
 
-li {
+.project-li {
   color: #DB686F;
   cursor: pointer;
   width: fit-content;
@@ -49,16 +52,13 @@ li {
   font-weight: 500;
 }
 
-li:hover {
+.project-li:hover {
   color: #35a3a3;
   font-size: 18px;
 
 }
 
-.icon:hover {
-  font-size: 24px;
-  color: #35a3a3;
-}
+
 
 
 

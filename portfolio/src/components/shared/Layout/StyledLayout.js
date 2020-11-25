@@ -31,6 +31,10 @@ max-width: 100vw;
   height: 60%;
 }
 
+hr {
+  color: #f0ebeb;
+}
+
 .pointer {
   width: 40px;
   height: 57px;
