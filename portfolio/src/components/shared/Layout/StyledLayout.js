@@ -7,8 +7,10 @@ max-width: 100vw;
   position: sticky;
   top: 0;
    width: 30%;
+   min-width: 250px;
    display: flex;
    background: #202020;
+   /* background: #242424; */
    /* background: #050D26; */
    flex-direction: column;
    justify-content: flex-end;
@@ -19,7 +21,9 @@ max-width: 100vw;
    padding-left: 50px;
    /* margin-top: 0px;
    margin-bottom: 0px; */
-   color: #BF6B72;;
+
+   /* color: #BF6B72; */
+   color: #DB686F;
 }
 
 .left-div-child {
@@ -52,7 +56,8 @@ max-width: 100vw;
 
 
 .right-div {
-  border-left: 3px solid #688C8C;
+  border-left: 3px solid #43a8a8;
+  /* #688C8C; */
   padding-top: 10vh;
   display: flex;
   flex-direction: column;

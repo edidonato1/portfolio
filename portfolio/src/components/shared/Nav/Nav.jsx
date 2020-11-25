@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import git from '../../../assets/icons/github.svg'
-import git2 from '../../../assets/icons/github2.svg'
-import linked from '../../../assets/icons/linkedin.svg'
-import linked2 from '../../../assets/icons/linkedin2.svg'
-import Navbar from './StyledNav'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserAstronaut, faPaperPlane, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import git from '../../../assets/icons/github.svg';
+import git2 from '../../../assets/icons/github2.svg';
+import linked from '../../../assets/icons/linkedin.svg';
+import linked2 from '../../../assets/icons/linkedin2.svg';
+import Navbar from './StyledNav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserAstronaut, faPaperPlane, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -17,47 +17,50 @@ export default function Nav() {
   const [contactHover, setContactHover] = useState(false);
   const [workHover, setWorkHover] = useState(false);
 
+
+
   return (
     <Navbar>
       <Link to='/'>
-        <div className="initials">
-          <h1>ED</h1>
+        <div className="initials-outer">
+          <div className="initials">
+            <h1>ED</h1>
+          </div>
         </div>
       </Link>
       <ul>
         <Link to="/about">
           <div className="icon-container">
-          <li
-            className="nav-icon"
-            onMouseOver={() => setMeHover(true)}
-            onMouseLeave={() => setMeHover(false)}>
-            <FontAwesomeIcon icon={faUserAstronaut} />
-              {meHover ? <p className="nav-hidden" >me</p> : <> </>}
-
-          </li>
-            </div>
+            <li
+              className="nav-icon"
+              onMouseOver={() => setMeHover(true)}
+              onMouseLeave={() => setMeHover(false)}>
+              <FontAwesomeIcon icon={faUserAstronaut} />
+              {meHover ? <p className="nav-hidden" >about</p> : <> </>}
+            </li>
+          </div>
         </Link>
         <Link to="/contact">
           <div className="icon-container">
-          <li
-            className="nav-icon"
-            onMouseOver={() => setContactHover(true)}
-            onMouseLeave={() => setContactHover(false)}>
+            <li
+              className="nav-icon"
+              onMouseOver={() => setContactHover(true)}
+              onMouseLeave={() => setContactHover(false)}>
               <FontAwesomeIcon icon={faPaperPlane} />
-              {contactHover ?  <p className="nav-hidden">contact</p> : <></>}
-          </li>
-            </div>
+              {contactHover ? <p className="nav-hidden">contact</p> : <></>}
+            </li>
+          </div>
         </Link>
         <Link to="/projects">
           <div className="icon-container">
-          <li
-            className="nav-icon"
-            onMouseOver={() => setWorkHover(true)}
-            onMouseLeave={() => setWorkHover(false)}>
-            <FontAwesomeIcon icon={faBriefcase} />
-              {workHover ? <p className="nav-hidden" >work</p> : <></>}
-          </li>
-            </div>
+            <li
+              className="nav-icon"
+              onMouseOver={() => setWorkHover(true)}
+              onMouseLeave={() => setWorkHover(false)}>
+              <FontAwesomeIcon icon={faBriefcase} />
+              {workHover ? <p className="nav-hidden" >projects</p> : <></>}
+            </li>
+          </div>
         </Link>
       </ul>
       <div className="social-container">

@@ -47,9 +47,6 @@ const ContactForm = () => {
   return (
     <div className="form-main">
       <form onSubmit={sendEmail}
-        // onFocus={() => setHover(true)}
-        // onBlur={() => setHover(false)}
-        // style={hover ? { background: "rgb(73, 100, 100)" } : {}}
       >
         <div className="form">
           <div className="top-row">

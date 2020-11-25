@@ -67,24 +67,33 @@ max-height: 250px;
  }
 
 .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding-top: 8px;
+  height: 50px;
 }
 button {
   border: none;
   width: 20%;
+  height: 40px;
   padding: 10px;
   border-radius: 5px;
   background:  #296CF2;
   font-weight: 500;
   color: rgb(207, 207, 207);
+  transition: .3s;
+  font-size: 14px;
 }
 
 button:hover {
-  height: 40px;
-  width: 21%;
+  height: 45px;
+  width: 80px;;
   margin-bottom: -2px;
-  color: black;
+  color: #202020;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 
