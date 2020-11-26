@@ -33,6 +33,7 @@ max-width: 100vw;
 
 hr {
   color: #f0ebeb;
+  margin: 20px 0;
 }
 
 .pointer {
@@ -60,6 +61,7 @@ hr {
 
 
 .right-div {
+
   border-left: 3px solid #43a8a8;
   /* #688C8C; */
   padding-top: 10vh;

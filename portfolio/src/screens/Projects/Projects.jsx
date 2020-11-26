@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Layout from '../../components/shared/Layout/Layout';
 import SunsetOracle from '../../components/ProjectCards/SunsetOracle';
+import PopsLiquorCabinet from '../../components/ProjectCards/PopsLiquorCabinet';
+import Root from '../../components/ProjectCards/Root';
+import CoLab from '../../components/ProjectCards/CoLab';
 import StyledProjects from './StyledProjects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +12,8 @@ import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Projects() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState('')
 
   return (
     <div>
@@ -22,21 +26,25 @@ export default function Projects() {
                 <h1>projects</h1>
                 <div className="icon-container" >
                   <FontAwesomeIcon
+                    style={!open ? {} : { transform: "rotate(180deg)" }}
                     className="icon"
                     icon={faChevronCircleDown}
                     onClick={() => setOpen(!open)} />
                 </div>
               </div>
               <ul className="drop-down">
-                <li className="project-li">ColLab</li>
-                <li className="project-li">ROOT</li>
-                <li className="project-li">Pop's Liquor Cabinet</li>
-                <li className="project-li">Sunset Oracle</li>
+                <li className="project-li" onClick={() => setCurrentProject('colab')}>ColLab</li>
+                <li className="project-li" onClick={() => setCurrentProject('root')}>ROOT</li>
+                <li className="project-li" onClick={() => setCurrentProject('pops')}>Pop's Liquor Cabinet</li>
+                <li className="project-li" onClick={() => setCurrentProject('sunset')} >Sunset Oracle</li>
               </ul>
             </div>
           </div>
           <div className="right-div" id="projects-right">
-            <SunsetOracle />
+            {currentProject === 'sunset' ? <SunsetOracle /> : <> </>}
+            {currentProject === 'pops' ? <PopsLiquorCabinet /> : <> </>}
+            {currentProject === 'root' ? <Root /> : <> </>}
+            {currentProject === 'colab' ? <CoLab /> : <> </>}
           </div>
         </StyledProjects>
       </Layout>

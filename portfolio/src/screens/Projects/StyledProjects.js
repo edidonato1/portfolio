@@ -10,6 +10,7 @@ const ProjectsDiv = styled.div`
 ul {
   padding-inline-start: 5px;
 }
+
 .projects-title-inline {
   position: relative;
   background: #202020;
@@ -24,6 +25,7 @@ ul {
   font-size: 22px;
   transition: .1s;
   background: #202020;
+  margin-top: 4px;
 }
 
 .icon:hover {
@@ -58,13 +60,9 @@ ul {
 
 }
 
-
-
-
-
 h1 {
   margin-right: 20px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 

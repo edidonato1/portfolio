@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import StyledProjectCard from './StyledProjectCard';
@@ -6,6 +6,8 @@ import zip from '../../assets/videos/enter_zip_code.mov';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
 import js from '../../assets/icons/js_logo.png';
+import react from '../../assets/icons/react.svg'
+import airtable from '../../assets/icons/airtable.svg'
 import axios from '../../assets/icons/axios_logo.png';
 import score from '../../assets/images/sunset_score.png';
 import data from '../../assets/images/weather_data.png';
@@ -14,22 +16,19 @@ import data from '../../assets/images/weather_data.png';
 export default function SunsetOracle(props) {
   const [logoText, setLogoText] = useState('');
 
-
-
-
   return (
 
       <StyledProjectCard>
-        <h2 className="title">Sunset Oracle</h2>
-        <h3 className="subtitle">a cheeky single-page weather application</h3>
+        <h2 className="title">Pop's Liquor Cabinet</h2>
+        <h3 className="subtitle">a responsive home bar inventory keeper</h3>
         <div className="project-links">
           <div className="link-mini-div">
-            <a href="https://edidonato1.github.io/Sunset-Oracle/" target="_blank">
+            <a href="https://pops-liquor-cabinet.netlify.app/" target="_blank">
               <h3>Live</h3>
             </a>
           </div>
           <div className="link-mini-div">
-            <a href="https://github.com/edidonato1/Sunset-Oracle" target="_blank">
+            <a href="https://github.com/edidonato1/Pops_Liquor_Cabinet" target="_blank">
               <h3>GitHub </h3>
             </a>
           </div>
@@ -45,7 +44,11 @@ export default function SunsetOracle(props) {
             <li><img onMouseOver={() => setLogoText('JavaScript')} onMouseLeave={() => setLogoText(' ')}
               className="logos" alt="javascript logo" src={js} style={{ width: "35px" }} /></li>
             <li><img onMouseOver={() => setLogoText('Axios')} onMouseLeave={() => setLogoText(' ')}
-              className="logos" alt="axios logo" src={axios} style={{ width: "27px", padding: "4px" }} /></li>
+            className="logos" alt="axios logo" src={axios} style={{ width: "27px", padding: "4px" }} /></li>
+          <li><img onMouseOver={() => setLogoText('React')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="react logo" src={react} style={{ padding: "4px" }} /></li>
+          <li><img onMouseOver={() => setLogoText('Airtable')} onMouseLeave={() => setLogoText(' ')}
+              className="logos" alt="airtable logo" src={airtable} style={{  padding: "2px" }} /></li>
           </ul>
         </div>
         <div id="logo-text-container">
