@@ -24,6 +24,10 @@ a:hover {
   color: #35a3a3;
   font-size: 105%;
 }
+
+section {
+  margin: 25px 0;
+}
  
  .title {
    font-size: 3rem;
@@ -79,6 +83,22 @@ a:hover {
 
 .media {
   width: 100%;
+}
+
+#media-container {
+  display :flex;
+  background: #252525;
+}
+.media-child {
+width: 50%;
+}
+
+.next-last {
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
 }
 
 `

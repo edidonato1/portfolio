@@ -41,10 +41,10 @@ export default function Projects() {
             </div>
           </div>
           <div className="right-div" id="projects-right">
-            {currentProject === 'sunset' ? <SunsetOracle /> : <> </>}
-            {currentProject === 'pops' ? <PopsLiquorCabinet /> : <> </>}
-            {currentProject === 'root' ? <Root /> : <> </>}
-            {currentProject === 'colab' ? <CoLab /> : <> </>}
+            {currentProject === 'sunset' ? <SunsetOracle setCurrentProject={setCurrentProject}/> : <> </>}
+            {currentProject === 'pops' ? <PopsLiquorCabinet setCurrentProject={setCurrentProject}/> : <> </>}
+            {currentProject === 'root' ? <Root setCurrentProject={setCurrentProject}/> : <> </>}
+            {currentProject === 'colab' ? <CoLab setCurrentProject={setCurrentProject}/> : <> </>}
           </div>
         </StyledProjects>
       </Layout>

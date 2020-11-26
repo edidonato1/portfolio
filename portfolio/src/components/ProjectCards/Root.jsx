@@ -1,12 +1,112 @@
 import React, { useState } from 'react'
-import StyledProjectCard from './StyledProjectCard'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import StyledProjectCard from './StyledProjectCard';
+import html from '../../assets/icons/html_logo.png';
+import css from '../../assets/icons/css_logo.png';
+import js from '../../assets/icons/js_logo.png';
+import react from '../../assets/icons/react.svg'
+import mongodb from '../../assets/icons/mongodb.png'
+import express from '../../assets/icons/express.png'
+import axios from '../../assets/icons/axios_logo.png';
+import git from '../../assets/icons/git.png'
+import github from '../../assets/icons/github3.svg'
+import home from '../../assets/images/pops_home_web.png'
+import grab from '../../assets/videos/pops_screen.mov'
+import add from '../../assets/images/pops_add_mobile.png';
+import grabMobile from '../../assets/videos/pops_screen2.mov'
 
-export default function Root() {
 
+
+export default function Root(props) {
+  const [logoText, setLogoText] = useState('');
+  const { setCurrentProject } = props;
 
   return (
+
     <StyledProjectCard>
-        <h1>Root</h1>
+      <h2 className="title">ROOT</h2>
+      <h3 className="subtitle">a travel companion for the mindful communter</h3>
+      <div className="project-links">
+        <div className="link-mini-div">
+          <a href="https://root-green-transport.netlify.app/" target="_blank">
+            <h3>Live</h3>
+          </a>
+        </div>
+        <div className="link-mini-div">
+          <a href="https://github.com/allicue/root" target="_blank">
+            <h3>GitHub </h3>
+          </a>
+        </div>
+      </div>
+      <hr />
+      <h4>toolkit: </h4>
+      <div className="tools">
+        <ul className="logo-box">
+          <li><img onMouseOver={() => setLogoText('HTML')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="html5 logo" src={html} style={{ padding: "0px" }} /></li>
+          <li><img onMouseOver={() => setLogoText('CSS')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="css3 logo" src={css} style={{ width: "38px" }} /></li>
+          <li><img onMouseOver={() => setLogoText('JavaScript')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="javascript logo" src={js} style={{ width: "35px" }} /></li>
+          <li><img onMouseOver={() => setLogoText('Axios')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="axios logo" src={axios} style={{ width: "27px", padding: "4px" }} /></li>
+          <li><img onMouseOver={() => setLogoText('React')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="react logo" src={react} style={{ width: "45px", margin: "-4px"}} /></li>
+          <li><img onMouseOver={() => setLogoText('MongoDB')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="mongodb logo" src={mongodb} style={{ width: "33px" }} /></li>
+          <li><img onMouseOver={() => setLogoText('Node Express')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="express logo" src={express} style={{ width: "40px", margin: "-2px" }} /></li>
+          <li><img onMouseOver={() => setLogoText('Git')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="git logo" src={git} style={{ padding: "2px" }} /></li>
+          <li><img onMouseOver={() => setLogoText('GitHub Collaboration')} onMouseLeave={() => setLogoText(' ')}
+            className="logos" alt="github logo" src={github} style={{ padding: "3px" }} /></li>
+        </ul>
+      </div>
+      <div id="logo-text-container">
+        <small>{logoText}</small>
+      </div>
+      <hr />
+      <section>
+        <h4>the app:</h4>
+        <p>Pop's Liquor Cabinet is built from the perspective of bar professionals, optimized for the home
+        bar enthusiast to efficiently manage their inventory.
+      </p>
+      </section>
+      <img className="media" src={home} alt="pops home web" />
+      <section>
+        <p>Built mobile-first with numerous breakpoints, the application is intuitively designed to mimic the flow of actions involved in building a
+        spirits collection.
+        </p>
+        <p>The user first logs their purchases into inventory using the form provided.
+        When they pour themselves a dram, the "grab a bottle" functionality allows them to dynamically update
+        the amount left in the bottle, and provides the option to update their tasting notes.
+        </p>
+      </section>
+      <div className="media" id="media-container">
+        <img className="media-child" src={add} alt="add bottle" />
+        <video className="media-child" autoPlay loop muted >
+          <source src={grabMobile} type="video/mp4" />
+        </video>
+      </div>
+      <section>
+        <p>The inventory updates in real time, and comes complete with sorting functionality integrated tastefully into
+        the UI.
+      </p>
+      </section>
+      <video className="media" autoPlay loop muted >
+        <source src={grab} type="video/mp4" />
+      </video>
+      <section>
+        <p>Built using Airtable API as a third-party database, Pops' current iteration is a prototype for a full stack, user-focused
+          mobile application.</p>
+      </section>
+      <hr />
+      <div className="next-last">
+        <Link to='/'>last</Link>
+        <Link onClick={() => setCurrentProject('sunset')} >next</Link>
+      </div>
     </StyledProjectCard>
+
   )
 }
