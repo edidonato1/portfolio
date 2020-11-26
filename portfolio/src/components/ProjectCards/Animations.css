@@ -1,0 +1,74 @@
+@keyframes appear {
+  from {opacity: 0}
+  40% {opacity: 1;
+  color: #f0ebeb}
+  50% {opacity: 1;
+    color: #f0ebeb}
+  70% {opacity: 1;
+    color: #f0ebeb}
+  to {opacity: 0}
+}
+
+.appear {
+  animation-name: appear;
+  animation-duration: 7s;
+  color: #313131;
+  animation-delay: 1.5s;
+}
+
+#second {
+  animation-delay: 8s;
+}
+
+#third {
+  animation-duration: 4s;
+  animation-delay: 15s;
+}
+
+#last {
+  animation-duration: 6s;
+  animation-delay: 19s;
+}
+
+@keyframes gears {
+from {opacity: 0}
+99% {opacity: 0}
+to {opacity: 1}
+}
+
+.gears {
+  color: #DB686F;
+  font-size: 200px;
+  animation-name: gears;
+  animation-duration: 22s;
+}
+
+@keyframes clockwise {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes counter {
+  from {transform: rotate(0deg)} 
+  to {transform: rotate(-360deg)}
+}
+
+#large {
+  color: #DB686F;
+  font-size: 200px;
+  animation-name: clockwise;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#medium {
+  color: #35a3a3;
+  font-size: 150px;
+  animation-name: counter;
+  animation-delay: 850ms;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  margin-left: -9px;
+}

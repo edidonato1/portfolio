@@ -5,20 +5,15 @@ const Navbar = styled.nav`
 position: fixed;
 left: 0;
 top: 0;
-
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-/* original bg below */
-/* background: #BF6B72; */
 background: #DB686F;
-
 height: 100vh;
 width: 80px;
 
 .initials {
-  /* margin-top: 40px; */
   border-radius: 7px;
   display: flex;
   justify-content: center;
@@ -27,10 +22,7 @@ width: 80px;
   height: 50px;
   width: 50px;
   color: #DB686F;
-  
-  /* background: #313131; */
   background: #202020;
-  /* background: #688C8C; */
 }
 
 .initials-outer {
@@ -61,10 +53,9 @@ ul {
 
 .nav-icon:hover {
   color: #35a3a3;
+  margin-top: -2px;
   font-size: 34px;
-  /* color: #27b6fb; */
 }
-
 
 a {
   text-decoration: none;
@@ -80,16 +71,9 @@ a {
   font-size: 18px;
   font-weight: 500;
   margin-top: -35px;
-  /* color: #35a3a3; */
   color: #ecc8cb;
-  /* color: #688C8C; */
-  /* text-shadow: 1px 1px #212121; */
-  /* color: #133333; */
   transition: .3s;
 }
-
-
-
 
 .social-icons {
   width: 30px;

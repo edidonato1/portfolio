@@ -28,7 +28,7 @@ export default function Projects() {
                 <div className="icon-container" >
                   <FontAwesomeIcon
                     style={!open ? {} : { transform: "rotate(180deg)" }}
-                    className="icon"
+                    className={open ? "icon" : "icon pulse"}
                     icon={faChevronCircleDown}
                     onClick={() => setOpen(!open)} />
                 </div>

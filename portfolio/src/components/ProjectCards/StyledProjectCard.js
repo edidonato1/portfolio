@@ -7,13 +7,13 @@ const StyledProjectCard = styled.div`
  min-width: 300px;
 
 
- h3 {
+h3 {
   font-weight: 600;
 }
 
- h4 {
+h4 {
   display: inline;
-}
+} 
 h5 {
   margin-bottom: -5px;
   color: #818181
@@ -85,6 +85,7 @@ section {
   color: #818181;
 }
 
+
 .media {
   width: 100%;
 }
@@ -96,9 +97,8 @@ section {
   justify-content: space-between;
 }
 .media-child {
-width: 49%;
+  width: 49%;
 }
-
 
 .next-last {
   margin: 0 auto;
