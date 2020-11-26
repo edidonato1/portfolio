@@ -24,7 +24,7 @@ export default function PopsLiquorCabinet(props) {
 
     <StyledProjectCard>
       <h2 className="title">Pop's Liquor Cabinet</h2>
-      <h3 className="subtitle">a responsive home bar inventory keeper</h3>
+      <h3 className="subtitle">a responsive home bar inventory manager</h3>
       <div className="project-links">
         <div className="link-mini-div">
           <a href="https://pops-liquor-cabinet.netlify.app/" target="_blank">

@@ -14,6 +14,10 @@ const StyledProjectCard = styled.div`
  h4 {
   display: inline;
 }
+h5 {
+  margin-bottom: -5px;
+  color: #818181
+}
 
 a {
   color: #DB686F;
@@ -26,21 +30,21 @@ a:hover {
 }
 
 section {
-  margin: 25px 0;
+  margin: 40px 0;
 }
  
  .title {
    font-size: 3rem;
    text-decoration: none;
    color: rgb(207, 207, 207);
-   margin: 0;
+   margin: 8px;
  }
 
  .subtitle {
   color: #35a3a3;
   margin-top: -5px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
 }
 
 .project-links {
@@ -88,10 +92,13 @@ section {
 #media-container {
   display :flex;
   background: #252525;
+  align-items: center;
+  justify-content: space-between;
 }
 .media-child {
-width: 50%;
+width: 49%;
 }
+
 
 .next-last {
   margin: 0 auto;
