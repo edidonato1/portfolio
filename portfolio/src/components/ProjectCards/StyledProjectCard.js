@@ -1,11 +1,28 @@
 import styled from 'styled-components'
 
 const StyledProjectCard = styled.div`
- text-align: center;
- width: 70%;
- max-width: 550px;
- min-width: 300px;
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
+  animation: 1s ease-out 0s 1 slide;
+  text-align: center;
+  width: 70%;
+  max-width: 550px;
+  min-width: 300px;
+
+  .vl {
+    /* border-left: 1px solid green;
+    height: 100vh;
+    position: absolute;
+    left: -22%;
+    z-index: -1; */
+  }
 
 h3 {
   font-weight: 600;

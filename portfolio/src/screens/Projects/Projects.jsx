@@ -25,7 +25,7 @@ export default function Projects() {
           <div className="left-div" >
             <div className="left-div-child">
               <div className="projects-title-inline">
-                <h1>projects</h1>
+                <h1 onClick={() => setCurrentProject('home')}>projects</h1>
                 <div className="icon-container" >
                   <FontAwesomeIcon
                     style={!open ? {} : { transform: "rotate(180deg)" }}

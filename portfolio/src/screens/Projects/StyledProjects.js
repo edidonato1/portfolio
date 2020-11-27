@@ -11,6 +11,10 @@ ul {
   padding-inline-start: 5px;
 }
 
+h1 {
+  cursor: pointer;
+}
+
 .projects-title-inline {
   position: relative;
   background: #202020;
