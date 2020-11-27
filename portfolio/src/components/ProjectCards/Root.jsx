@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import StyledProjectCard from './StyledProjectCard';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
@@ -16,7 +14,6 @@ import mobile from '../../assets/videos/root_mobile_recording.mov'
 import profile from '../../assets/images/root_profile.png'
 import transportation from '../../assets/images/root_transportation.png'
 import plan from '../../assets/images/root_mobile_plan.png';
-import grabMobile from '../../assets/videos/pops_screen2.mov'
 
 
 
@@ -27,7 +24,6 @@ export default function Root(props) {
   return (
 
     <StyledProjectCard>
-      <section>
         <h2 className="title">ROOT</h2>
         <h3 className="subtitle">a travel companion for the mindful communter</h3>
         <div className="project-links">
@@ -42,7 +38,6 @@ export default function Root(props) {
             </a>
           </div>
         </div>
-      </section>
       <hr />
         <h4>toolkit: </h4>
         <div className="tools">
@@ -119,8 +114,8 @@ export default function Root(props) {
       </section>
       <hr />
       <div className="next-last">
-        <Link onClick={() => setCurrentProject('colab')}>last</Link>
-        <Link onClick={() => setCurrentProject('pops')} >next</Link>
+        <p onClick={() => setCurrentProject('colab')}>last</p>
+        <p onClick={() => setCurrentProject('pops')} >next</p>
       </div>
     </StyledProjectCard>
 

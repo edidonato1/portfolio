@@ -21,22 +21,6 @@ ul {
   height: 100px;
 }
 
-@keyframes pulse {
-  from {
-    font-size: 22px;
-    color: #DB686F;
-    }
-  50% {  
-    color: #35a3a3;
-    font-size: 26px;
-    margin-left: -1px;
-    }
-  100% {
-    font-size: 22px;
-    color: #DB686F;
-    }
-}
-
 .icon {
   font-size: 22px;
   transition: .1s;
@@ -44,12 +28,6 @@ ul {
   margin-top: 4px;
 }
 
-.pulse {
-  animation-name: pulse;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
 
 .icon:hover {
   color: #35a3a3;

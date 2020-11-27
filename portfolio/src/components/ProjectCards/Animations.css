@@ -1,46 +1,44 @@
 @keyframes appear {
   from {opacity: 0}
-  40% {opacity: 1;
-  color: #f0ebeb}
-  50% {opacity: 1;
-    color: #f0ebeb}
-  70% {opacity: 1;
-    color: #f0ebeb}
-  to {opacity: 0}
+  30% {opacity: 1;}
+  70% {opacity: 1;}
+  to {opacity: 0;}
 }
 
 .appear {
-  animation-name: appear;
-  animation-duration: 7s;
-  color: #313131;
-  animation-delay: 1.5s;
-}
-
-#second {
-  animation-delay: 8s;
-}
-
-#third {
-  animation-duration: 4s;
-  animation-delay: 15s;
-}
-
-#last {
+  color: #f0ebeb;
+  animation: appear;
+  animation-delay: 1490ms;
   animation-duration: 6s;
-  animation-delay: 19s;
+  animation-iteration-count: infinite;
+}
+
+.message {
+  height: 150px;
+  position: relative;
 }
 
 @keyframes gears {
 from {opacity: 0}
-99% {opacity: 0}
+85% {opacity: 0}
 to {opacity: 1}
+}
+
+.gear-box {
+  display: flex;
+  flex-flow: column wrap;
+  width: 340px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: -100px;
+  animation-name: gears;
+  animation-duration: 26s;
 }
 
 .gears {
   color: #DB686F;
   font-size: 200px;
   animation-name: gears;
-  animation-duration: 22s;
 }
 
 @keyframes clockwise {
@@ -55,20 +53,58 @@ to {opacity: 1}
 
 #large {
   color: #DB686F;
+  margin-top: 40px;
+  margin-right: -6px;
   font-size: 200px;
   animation-name: clockwise;
   animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  animation-delay: 50ms;
 }
 
 #medium {
   color: #35a3a3;
+  margin-top: 20px;
+  margin-right: 25px;
   font-size: 150px;
   animation-name: counter;
-  animation-delay: 850ms;
   animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   margin-left: -9px;
+}
+
+#small {
+  color: #f0ebeb;
+  margin-top: -7px;
+  font-size: 100px;
+  animation-name: clockwise;
+  animation-duration: 7s;
+  animation-delay: 275ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse {
+  from {
+    font-size: 22px;
+    color: #DB686F;
+    }
+  50% {  
+    color: white;
+    font-size: 28px;
+    margin-left: -2px;
+    }
+  100% {
+    font-size: 22px;
+    color: #DB686F;
+    }
+}
+.pulse {
+  animation-name: pulse;
+  animation-delay: 8s;
+  animation-duration: 1500ms;
+  animation-iteration-count: 4;
+  animation-timing-function: ease-in-out;
 }

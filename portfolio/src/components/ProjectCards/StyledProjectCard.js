@@ -16,7 +16,7 @@ h4 {
 } 
 h5 {
   margin-bottom: -5px;
-  color: #818181
+  color: #818181;
 }
 
 a {
@@ -49,6 +49,7 @@ section {
 
 .project-links {
   margin: 0 auto;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   width: 70%;

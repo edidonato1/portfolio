@@ -8,6 +8,7 @@ import CoLab from '../../components/ProjectCards/CoLab';
 import StyledProjects from './StyledProjects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown, faFlask } from '@fortawesome/free-solid-svg-icons';
+import '../../components/ProjectCards/Animations.css'
 
 
 
