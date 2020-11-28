@@ -13,24 +13,42 @@ background: #DB686F;
 height: 100vh;
 width: 80px;
 
+@keyframes spin {
+  0% {transform: rotate(0)}
+  100%{transform: rotate(1800deg)}
+}
+
+h1 {
+  font-weight: 700;
+}
+
 .initials {
   border-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #688C8C;
   height: 50px;
   width: 50px;
   color: #DB686F;
   background: #202020;
+  margin-top: 40px;
+}
+
+.initials:hover {
+  background: #35a3a3;
+
+  color: #202020;
+  animation-name: spin;
+  animation-duration: 1700ms;
+
 }
 
 .initials-outer {
-  margin-top: 40px;
+  /* 
   border-radius: 10px;
   border: 3px solid #202020;
   height: 56px;
-  width: 56px;
+  width: 56px; */
 }
 
 ul {
@@ -41,7 +59,8 @@ ul {
 .icon-container {
   display: flex;
   justify-content: center;
-  height: 90px;
+  height: 80px;
+  width: 80px;
 }
 
 .nav-icon {

@@ -3,6 +3,23 @@ import styled from 'styled-components';
 const ContactDiv = styled.div`
 display: flex;
 
+@keyframes falling {
+  0% {transform: translateY(-2000%)}
+  /* opacity: 1} 000*/
+  100% {transform: translateY(2000%)}
+    /* opacity: 0;} */
+}
+
+.falling-text {
+  animation-name: falling;
+animation-timing-function: linear;
+
+  animation-duration: 5s;
+  
+  animation-iteration-count: infinite;
+
+}
+
 
 .contact-blurb {
 width: 360px;

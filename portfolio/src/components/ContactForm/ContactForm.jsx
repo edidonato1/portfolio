@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom'
 import emailjs from 'emailjs-com'
 import { init } from 'emailjs-com';
 init("user_yIHk6A1yfmyHXdBofkhFI");
 
 const ContactForm = () => {
+
   const [hover, setHover] = useState(false)
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({
@@ -39,6 +40,7 @@ const ContactForm = () => {
       [name]: value
     });
   };
+
 
   if (sent) {
     return <Redirect to="/" />

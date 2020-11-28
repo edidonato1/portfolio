@@ -18,7 +18,6 @@ export default function SunsetOracle(props) {
   return (
 
     <StyledProjectCard>
-      <div className='vl'></div>
       <h2 className="title">welcome.</h2>
       <h3 className="subtitle">my work</h3>
       <div className="message">
