@@ -3,6 +3,17 @@ import styled from 'styled-components';
 const ContactDiv = styled.div`
 display: flex;
 
+.contact-title {
+  position: relative;
+  background: #202020;
+  display: flex;
+  align-items: flex-end;
+  z-index: 1;
+  width: fit-content;
+  height: 90px;
+  width: 250px;
+  margin-top: -26px;
+}
 
 .contact-blurb {
 width: 360px;
@@ -26,6 +37,33 @@ margin-bottom: 20px;
 .show-contact {
   color: #43a8a8;
   cursor: pointer;
+}
+
+.pointer {
+  width: 40px;
+  height: 57px;
+  margin-right: -25px;
+  padding-top: 15px;
+  border-bottom: 1px solid #ecc8cb;
+  border-left: 1px solid #ecc8cb;
+  transition: .3s;
+}
+
+.inline-span {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: fit-content;
+  margin-top: -10px;
+  transform: ${({ showContact }) => (showContact ? "translateY(0)" : "translateY(-120%)")};
+  line-height: ${({ showContact }) => (showContact ? "25px" : "0px")};
+  transition: .5s;
+  z-index: 0;
+}
+
+.inline-span {
+
 }
 
 

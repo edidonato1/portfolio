@@ -42,19 +42,20 @@ ul {
   display: flex;
   justify-content: center;
   height: 90px;
+  width: 80px;
 }
 
 .nav-icon {
   color: #202020;
   padding: 30px 0;
   font-size: 30px;
-  transition: .3s;
+  transition: .2s;
 }
 
 .nav-icon:hover {
   color: #35a3a3;
-  margin-top: -2px;
-  font-size: 34px;
+  /* margin-top: -2px; */
+  font-size: 33px;
 }
 
 a {

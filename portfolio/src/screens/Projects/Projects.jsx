@@ -47,7 +47,7 @@ export default function Projects() {
             {currentProject === 'sunset' ? <SunsetOracle setCurrentProject={setCurrentProject}/> : <> </>}
             {currentProject === 'pops' ? <PopsLiquorCabinet setCurrentProject={setCurrentProject}/> : <> </>}
             {currentProject === 'root' ? <Root setCurrentProject={setCurrentProject}/> : <> </>}
-            {currentProject === 'colab' ? <CoLab setCurrentProject={setCurrentProject}/> : <> </>}
+            {currentProject === 'colab' ? <CoLab setCurrentProject={setCurrentProject} /> : <> </>}
           </div>
         </StyledProjects>
       </Layout>

@@ -7,16 +7,15 @@ export default function Contact() {
   const [showContact, setShowContact] = useState(false)
 
 
+
   return (
     <div>
       <Layout>
-        <ContactDiv>
+        <ContactDiv showContact={showContact}>
           <div className="left-div" >
             <div className="left-div-child">
-              <h1>contact</h1>
-              {showContact ? 
+              <h1 className="contact-title">contact</h1>
                 <span className="inline-span opened"> <div className="pointer"></div><p>203.430.0261<br></br>edward.f.didonato@gmail.com</p></span>  
-                  : <></>}
             </div>
           </div>
           <div className="right-div" >
