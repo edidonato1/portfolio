@@ -43,13 +43,7 @@ h1 {
 
 }
 
-.initials-outer {
-  /* 
-  border-radius: 10px;
-  border: 3px solid #202020;
-  height: 56px;
-  width: 56px; */
-}
+
 
 ul {
   padding-inline-start: 0px;
@@ -67,13 +61,12 @@ ul {
   color: #202020;
   padding: 30px 0;
   font-size: 30px;
-  transition: .3s;
+  transition: .2s;
 }
 
 .nav-icon:hover {
   color: #35a3a3;
-  margin-top: -2px;
-  font-size: 34px;
+  font-size: 33px;
 }
 
 a {

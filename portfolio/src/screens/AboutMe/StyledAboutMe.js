@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const AboutMeDiv = styled.div`
 display: flex;
+text-align: justify;
 
 
 #about-me-right {
