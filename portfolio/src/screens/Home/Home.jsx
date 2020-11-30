@@ -4,20 +4,23 @@ import HomeDiv from './StyledHome';
 
 export default function Home() {
 
-  const h2 = `<h> web developer </h>`
+
   return (
     <div>
       <Layout>
         <HomeDiv>
           <div className="left-div">
             <div className="left-div-child">
-        <div className="title">
-        <h1>hello, <br></br> i'm eddie.</h1>
-            <h2>web developer</h2>
-            <small>front end developer with full stack capability</small>
+              <div className="title">
+                <h1>hello, <br></br> i'm eddie.</h1>
+                <h2>web developer</h2>
+                <small>front end / full stack developer</small>
+              </div>
             </div>
-            </div>
-            </div>
+          </div>
+          <div className="right-div" id="home-right">
+            <h1> FILL THIS SPACE</h1>
+          </div>
         </HomeDiv>
       </Layout>
     </div>
