@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
@@ -9,7 +9,7 @@ import rails from '../../assets/icons/rails.png'
 import postgres from '../../assets/icons/postgres.png'
 import axios from '../../assets/icons/axios_logo.png';
 import git from '../../assets/icons/git.png'
-import github from '../../assets/icons/github3.svg'
+import home from '../../assets/images/colab_home_web.png'
 import StyledProjectCard from './StyledProjectCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFlask } from '@fortawesome/free-solid-svg-icons';
@@ -64,12 +64,17 @@ export default function CoLab(props) {
       <hr />
       <section>
         <h4>the app:</h4>
-        <p>CoLab is a messageboard-style application, connecting artists of different media for otherwise unlikely collaborations. 
+        <p>CoLab is a messageboard-style application, connecting artists of different media for otherwise unlikely collaborations.
       </p>
       </section>
+      <img className="media" src={home} alt="colab home web" />
+      <section>
+        <p></p>
+      </section>
       <hr />
+
       <div className="next-last">
-        <Link > </Link>
+        <Link> </Link>
         <Link onClick={() => setCurrentProject('root')} >next</Link>
       </div>
     </StyledProjectCard>

@@ -100,11 +100,11 @@ section {
 
 .media {
   width: 100%;
+
 }
 
 #media-container {
   display :flex;
-  background: #252525;
   align-items: center;
   justify-content: space-between;
 }

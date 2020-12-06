@@ -10,9 +10,9 @@ import airtable from '../../assets/icons/airtable.svg'
 import axios from '../../assets/icons/axios_logo.png';
 import git from '../../assets/icons/git.png'
 import home from '../../assets/images/pops_home_web.png'
-import grab from '../../assets/videos/pops_screen.mov'
-import add from '../../assets/images/pops_add_mobile.png';
-import grabMobile from '../../assets/videos/pops_screen2.mov'
+import grab from '../../assets/videos/pops_mobile_recording.mov'
+import add from '../../assets/images/pops_mobile_add.png';
+import grabMobile from '../../assets/videos/pops_tablet_inv.mov'
 
 
 
@@ -79,7 +79,7 @@ export default function PopsLiquorCabinet(props) {
       <div className="media" id="media-container">
         <img className="media-child" src={add} alt="add bottle" />
         <video className="media-child" autoPlay loop muted >
-          <source src={grabMobile} type="video/mp4" />
+          <source src={grab} type="video/mp4" />
         </video>
       </div>
       <section>
@@ -88,7 +88,7 @@ export default function PopsLiquorCabinet(props) {
       </p>
       </section>
       <video className="media" autoPlay loop muted >
-        <source src={grab} type="video/mp4" />
+        <source src={grabMobile} type="video/mp4" />
       </video>
       <section>
         <p>Built using Airtable API as a third-party database, Pops' current iteration is a prototype for a full stack, user-focused
