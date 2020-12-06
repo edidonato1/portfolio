@@ -3,20 +3,23 @@ import { Link } from 'react-router-dom';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
 import js from '../../assets/icons/js_logo.png';
-import react from '../../assets/icons/react.svg'
-import ruby from '../../assets/icons/ruby.png'
-import rails from '../../assets/icons/rails.png'
-import postgres from '../../assets/icons/postgres.png'
+import react from '../../assets/icons/react.svg';
+import ruby from '../../assets/icons/ruby.png';
+import rails from '../../assets/icons/rails.png';
+import postgres from '../../assets/icons/postgres.png';
 import axios from '../../assets/icons/axios_logo.png';
-import git from '../../assets/icons/git.png'
-import home from '../../assets/images/colab_home_web.png'
+import git from '../../assets/icons/git.png';
+import home from '../../assets/images/colab_home_web.png';
+import medium from '../../assets/images/colab_medium_web.png';
+import mobileMedium from '../../assets/images/colab_medium_mobile.png';
+import mobileVid from '../../assets/videos/colab_mobile.mov';
 import StyledProjectCard from './StyledProjectCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFlask } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function CoLab(props) {
-  const { setCurrentProject } = props
+  const { setCurrentProject } = props;
   const [logoText, setLogoText] = useState('');
 
   return (
@@ -64,13 +67,34 @@ export default function CoLab(props) {
       <hr />
       <section>
         <h4>the app:</h4>
-        <p>CoLab is a messageboard-style application, connecting artists of different media for otherwise unlikely collaborations.
+        <p>CoLab is a full stack messageboard-style application, connecting artists of different media for otherwise unlikely collaborations.
       </p>
       </section>
       <img className="media" src={home} alt="colab home web" />
       <section>
-        <p></p>
+        <p>The back end is powered by a PostgreSQL relational database, and gets its structure from Ruby on Rails.  </p>
+        <p>The first and current iteration incorporates three tables with several associations among them.  Doing so gives the user 
+         quick access to the messageboards associated with their primary art forms.
+        </p>
       </section>
+      <section>
+      <img className="media" src={medium} alt="colab home web" />
+      </section>
+      <section>
+        <p>Built in React, and optimized for either web or mobile, CoLab uses several layers of conditional rendering to
+        maintain a clean UI for seamless, user-friendly navigation.</p>
+      </section>
+      <div className="media" id="media-container">
+        < img className="media-child" src={mobileMedium } />
+        <video className="media-child" autoPlay loop muted >
+          <source src={mobileVid} type="video/mp4" />
+        </video>
+      </div>
+        <section>
+          <p>A second iteration of CoLab is currently underway, and will incorporate the concept of multi-user associations
+            and tools for collaboration.
+          </p>
+        </section>
       <hr />
 
       <div className="next-last">

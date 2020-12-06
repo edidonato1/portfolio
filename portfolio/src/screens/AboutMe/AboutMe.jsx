@@ -28,7 +28,7 @@ export default function AboutMe() {
             </p>
               <p>In a past life, I was an award winning cocktail bartender, competing in all corners of the country,
                and around the world.  And while I've left a lot behind to pursue web development, there are certain defining 
-               traits and values that will I carry in any project I contribute to.
+               traits and values that I inject into any project I contribute to.
               </p>
               I'm obsessed with creating products with purpose, driven to invoke delight.  I believe 
               that there's no problem that isn't worth solving, and it's my goal to make products that will inspire, excite, 

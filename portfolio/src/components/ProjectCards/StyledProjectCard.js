@@ -40,6 +40,10 @@ a:hover {
   font-size: 105%;
 }
 
+p {
+  text-align: justify;
+}
+
 section {
   margin: 40px 0;
 }
