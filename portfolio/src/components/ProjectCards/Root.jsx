@@ -82,7 +82,7 @@ export default function Root(props) {
       </section>
       <img className="media" src={home} alt="pops home web" />
       <section>
-        <p>Built out from the back end using the Express framework in conjucation with MongoDB, ROOT
+        <p>Built out from the back end using the Express framework in conjunction with MongoDB, ROOT
         incorporates user login concepts and multiple layers of fullstack-driven CRUD (Create, Read, Update, Delete) functionality.</p>
       </section>
       <img className="media" src={profile} alt="root profile page" />
@@ -105,11 +105,13 @@ export default function Root(props) {
         </video>
       </div>
       <section>
-        <p>The inventory updates in real time, and comes complete with sorting functionality integrated tastefully into
-        the UI.
+        <p>An invaluable exercise in teamwork and collaboration, ROOT put us face-to-face with our UX/UI counterparts on a regular
+         basis.  
       </p>
-        <p>Built using Airtable API as a third-party database, Pops' current iteration is a prototype for a full stack, user-focused
-          mobile application.</p>
+        <p>Within our own development team, we gained vital experience in team development in a remote setting.
+         Maintaining an open line of communication was key to our success in the ROOT build, where we were able to avoid, but 
+          also manage merge conflicts, and execute efficient problem-solving methods through pair programming.
+        </p>
       </section>
       <hr />
       <div className="next-last">
