@@ -9,7 +9,7 @@
   color: #f0ebeb;
   animation: appear;
   animation-delay: 1490ms;
-  animation-duration: 6s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 
@@ -20,7 +20,7 @@
 
 @keyframes gears {
 from {opacity: 0}
-85% {opacity: 0}
+65% {opacity: 0}
 to {opacity: 1}
 }
 
@@ -32,7 +32,7 @@ to {opacity: 1}
   margin: 0 auto;
   margin-top: -100px;
   animation-name: gears;
-  animation-duration: 26s;
+  animation-duration: 20s;
 }
 
 .gears {

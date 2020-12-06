@@ -8,11 +8,10 @@ export default function SunsetOracle(props) {
   const [showMessage, setShowMessage] = useState('')
 
   useEffect(() => {
-    setTimeout(() => setShowMessage('all work is 100% my own, unless specified otherwise'), 1500)
-    setTimeout(() => setShowMessage('feel free to navigate from the drop-down menu to the left'), 7500)
-    setTimeout(() => setShowMessage('thanks for stopping by'), 13500)
-    setTimeout(() => setShowMessage('enjoy'), 19500)
-    setTimeout(() => setShowMessage(''), 25500)
+    setTimeout(() => setShowMessage('thanks for stopping by'), 1500)
+    setTimeout(() => setShowMessage('feel free to navigate from the drop-down menu to the left'), 6500)
+    setTimeout(() => setShowMessage('enjoy'), 11500)
+    setTimeout(() => setShowMessage(''), 16500)
   }, [])
 
   return (
@@ -21,7 +20,7 @@ export default function SunsetOracle(props) {
       <h2 className="title">welcome.</h2>
       <h3 className="subtitle">my work</h3>
       <div className="message">
-        <p className="appear">{showMessage}</p>
+        <h6 className="appear">{showMessage}</h6>
       </div>
       <div className="gear-box">
         <FontAwesomeIcon icon={faCog} className="gears" id="large" />

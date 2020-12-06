@@ -3,7 +3,10 @@ import styled from 'styled-components'
 const StyledProjectCard = styled.div`
 @keyframes slide {
   0% {
-    transform: translateX(100%);
+    transform: translateX(150%);
+  }
+  20% {
+    transform: translateX(150%);
   }
   100% {
     transform: translateX(0);
@@ -16,8 +19,6 @@ const StyledProjectCard = styled.div`
   max-width: 550px;
   min-width: 300px;
 
-
-
 h3 {
   font-weight: 600;
 }
@@ -28,6 +29,11 @@ h4 {
 h5 {
   margin-bottom: -5px;
   color: #818181;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 300;
 }
 
 a {

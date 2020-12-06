@@ -12,6 +12,7 @@ align-items: center;
 background: #DB686F;
 height: 100vh;
 width: 80px;
+z-index: 99;
 
 @keyframes spin {
   0% {transform: rotate(0)}
@@ -42,8 +43,6 @@ h1 {
   animation-duration: 1700ms;
 
 }
-
-
 
 ul {
   padding-inline-start: 0px;
