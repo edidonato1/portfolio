@@ -33,7 +33,6 @@ export default function SunsetOracle(props) {
           </a>
         </div>
       </div>
-      <hr />
       <h4>toolkit: </h4>
       <div className="tools">
         <ul className="logo-box">

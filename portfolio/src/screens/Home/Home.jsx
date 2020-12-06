@@ -14,7 +14,7 @@ export default function Home() {
               <div className="title">
                 <h1>hello, <br></br> i'm eddie.</h1>
                 <h2>web developer</h2>
-                <small>front end / full stack developer</small>
+                <small>front end  |  full stack</small>
               </div>
             </div>
           </div>
