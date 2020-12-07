@@ -6,19 +6,14 @@ text-align: justify;
 
 
 #about-me-right {
-  /* justify-content: space-evenly; */
   flex-direction: column;
 }
 
-.etc {
-  color: lightcoral;
-}
 #get-in-touch {
   color: #43a8a8;
   cursor: pointer;
   text-decoration: none;
 }
-
 
 .about-text {
   width: 400px;
@@ -27,6 +22,17 @@ text-align: justify;
 #eddie-bnw {
   width: 300px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 800px) {
+#eddie-bnw {
+  width: 47%;
+}
+
+.about-text {
+  width: 85%
+}
+
 }
 
 `

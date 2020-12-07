@@ -68,10 +68,12 @@ export default function Root(props) {
       <hr />
       <section>
         <h4>the team:</h4>
+        {/* For this section, rework it so the devs and ux/ui are in their own boxes
+        and flex them side-by-side for the first media query */}
         <h5>Developers</h5>
         <p>eddie didonato | allison quiroz | nathan wigen | daniel michael</p>
         <h5>UX/UI Design</h5>
-        <p>claudia zacharias | erica cleary | toni brown | kendall kessler</p>
+        <p>claudia zacharias  |  erica cleary  | toni brown  |  kendall kessler</p>
       </section>
       <hr />
       <section>

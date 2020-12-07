@@ -130,6 +130,21 @@ section {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 800px) {
+
+  min-width: 85%;
+
+  .title {
+    font-size: 44px;
+  }
+
+  .subtitle {
+    font-weight: 400;
+
+  }
+}
+
+
 `
 
 export default StyledProjectCard;
