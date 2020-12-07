@@ -37,7 +37,6 @@ h1 {
 
 .initials:hover {
   background: #35a3a3;
-
   color: #202020;
   animation-name: spin;
   animation-duration: 1700ms;
@@ -96,6 +95,35 @@ a {
 .social-icons:hover {
   width: 38px;
   margin: 6px;
+}
+
+@media screen and (max-width: 820px) {
+  left: initial;  
+  flex-direction: row;
+
+
+  height: 80px;
+  width: 100vw;
+}
+
+.initials {
+  margin-top: initial;
+  margin-left: 15px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-container {
+  flex-direction: row;
+  margin-bottom: initial;
+  margin-right: 5px;
+}
+
+.icon-container {
+  align-items: center;
 }
 
 `
