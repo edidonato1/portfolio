@@ -32,7 +32,7 @@ h1 {
   width: 50px;
   color: #DB686F;
   background: #202020;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .initials:hover {
@@ -74,7 +74,7 @@ a {
 .social-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .nav-hidden {
@@ -97,14 +97,12 @@ a {
   margin: 6px;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 800px) {
   left: initial;  
   flex-direction: row;
-
-
   height: 80px;
   width: 100vw;
-}
+
 
 .initials {
   margin-top: initial;
@@ -124,6 +122,8 @@ ul {
 
 .icon-container {
   align-items: center;
+}
+
 }
 
 `

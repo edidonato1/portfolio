@@ -15,7 +15,7 @@ export default function Contact() {
           <div className="left-div" >
             <div className="left-div-child">
               <h1 className="contact-title">contact</h1>
-                <span className="inline-span opened"> <div className="pointer"></div><p>203.430.0261<br></br>edward.f.didonato@gmail.com</p></span>  
+                <span className="inline-span opened"> <div className="pointer"></div><p>203.430.0261<br></br><a href="mailto: edward.f.didonato@gmail.com">gmail</a></p></span>  
             </div>
           </div>
           <div className="right-div" >

@@ -30,7 +30,7 @@ animation-timing-function: linear;
   z-index: 1;
   width: fit-content;
   height: 90px;
-  width: 250px;
+  width: 100%;
   margin-top: -26px;
 }
 
@@ -59,9 +59,18 @@ margin-bottom: 20px;
   cursor: pointer;
 }
 
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #35a3a3;
+  font-size: 18px;
+}
+
 .pointer {
   width: 40px;
-  height: 57px;
+  height: 60px;
   margin-right: -25px;
   padding-top: 15px;
   border-bottom: 1px solid #ecc8cb;

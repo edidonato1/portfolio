@@ -25,10 +25,8 @@ max-width: 100vw;
 }
 
 hr {
-  /* color: #f0ebeb; */
   background-color: #818181;
   border: none;
-  /* background-color: #f0ebeb; */
   height: 1px;
   margin: 20px 0;
 }
@@ -45,6 +43,18 @@ hr {
   width: 70%;
   color: #f0ebeb;
   padding-bottom: 70px;
+}
+
+@media screen and (max-width: 800px) {
+  .left-div {
+    margin-left: 0px;
+    min-width: 180px;
+    padding-left: 30px;
+  }
+
+  .right-div {
+    padding-top: 120px;
+  }
 }
 
 
