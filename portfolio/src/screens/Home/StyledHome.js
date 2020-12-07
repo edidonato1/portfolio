@@ -109,37 +109,37 @@ display: flex;
 
   #color-1 {
     border: 3px solid #DB686F;
-    animation-delay: 2.5s;
+    animation-delay: 2s;
   }
   #color-2 {
     border: 3px solid #35a3a3;
-    animation-delay: 4s;
+    animation-delay: 2.3s;
   }
   #color-3 {
     border: 3px solid #f0ebeb;
-    animation-delay: 5.5s;
+    animation-delay: 2.6s;
   }
 
   #color-4 {
-    border: 1px solid #DB686F;
-    animation-delay: 9s;
+    animation-delay: 2.9s;
+    border: 3px solid #35a3a3;
   }
-
+  
   #color-5 {
-    border: 1px solid #35a3a3;
-    animation-delay: 10.5s;
+    animation-delay: 3.2s;
+    border: 3px solid #DB686F;
   }
-
+  
   #color-4 {
-    border: 1px solid #f0ebeb;
-    animation-delay: 12s;
+    border: 3px solid #f0ebeb;
+    animation-delay: 1.5s;
   }
 
 
 
   .home-links {
     animation: 15s linear 1s infinite rotate;
-    color: lightpink;
+    color: #f0ebeb;
     font-size: 30px;
     position: absolute;
   }
@@ -147,7 +147,9 @@ display: flex;
   .home-links:hover {
     animation-play-state: paused;
     color: #35a3a3;
-    transform: rotateX(initial);
+    font-size: 34px;
+    text-shadow: 2px 2px #202020;
+    transition: .3s;
   }
 
   #item1 {
