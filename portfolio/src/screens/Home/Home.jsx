@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Layout from '../../components/shared/Layout/Layout';
 import HomeDiv from './StyledHome';
 
@@ -37,9 +37,9 @@ export default function Home() {
               <div className="circle2" id="color-4"></div>
               <div className="circle2" id="color-5"></div>
               <div className="circle2" id="color-6"></div>
-              <NavLink to="/about" className="home-links" id="item1">about me</NavLink>
-              <NavLink to="/contact" className="home-links" id="item2">contact me</NavLink>
-              <NavLink to="/projects" className="home-links" id="item3">my work</NavLink>
+              <Link to="/about" className="home-links" id="item1">about me</Link>
+              <Link to="/contact" className="home-links" id="item2">contact me</Link>
+              <Link to="/projects" className="home-links" id="item3">my work</Link>
             </div>
             <div className="shadow"></div>
           </div>

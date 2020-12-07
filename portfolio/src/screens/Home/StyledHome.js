@@ -175,7 +175,7 @@ display: flex;
   background: rgba(0,0,0,.1);
   border-radius: 50%;
   margin-top: 60px;
-  box-shadow: 5px 5px  30px 50px rgba(0,0,0,.1);
+  box-shadow: 5px 5px 30px 50px rgba(0,0,0,.1);
   transform: rotateY(190deg)
 }
 
