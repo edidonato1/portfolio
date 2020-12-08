@@ -9,10 +9,12 @@ export default function Home() {
     <div>
       <Layout>
         <HomeDiv>
-          <div className="left-div">
+          <div className="left-div" id="home-left">
             <div className="left-div-child">
               <div className="title">
-                <h1>hello, <br></br><span className="introduction">
+                {/* <div className="title-child"> */}
+
+                <h1 className="title-child">hello, <br></br><span className="introduction">
                   i'm 
                     <Link className="name" to="/about">
                     <div id="e1"> e</div>
@@ -24,6 +26,7 @@ export default function Home() {
                     </Link>
                 </span>
                 </h1>
+                {/* </div> */}
                 <h2>web developer</h2>
                 <small>front end  |  full stack</small>
               </div>

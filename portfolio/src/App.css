@@ -36,3 +36,19 @@ body {
   overflow: hidden;
   height: 100%;
 }
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow: auto;
+    height: initial;
+    scroll-behavior: smooth;
+    background: #313131;
+  }
+  
+  html {
+    overflow: auto;
+    height: initial;
+    scroll-behavior: smooth;
+    background: #313131;
+  }
+}

@@ -68,22 +68,30 @@ hr {
     padding-left: 0;
     border-bottom: 3px solid #43a8a8;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
+    z-index: 5;
   }
   
   .left-div-child {
-    padding-left: 40px;
+    padding-left: 20px;
     height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .right-div {
     width: 100vw;
     border-left: none;
     padding-bottom: initial;
-    padding-top: initial;
+    padding-top: 8vh;
+    height: 100%;
     margin-top: 160px;
-    height: calc(100vh - 160px);
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding-bottom: 80px;
   }
+
 
 }
 
