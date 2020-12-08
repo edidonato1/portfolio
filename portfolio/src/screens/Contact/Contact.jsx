@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import Layout from '../../components/shared/Layout/Layout';
 import ContactDiv from './StyledContact';
@@ -15,7 +15,7 @@ export default function Contact() {
           <div className="left-div" >
             <div className="left-div-child">
               <h1 className="contact-title">contact</h1>
-                <span className="inline-span opened"> <div className="pointer"></div><p>203.430.0261<br></br><a href="mailto: edward.f.didonato@gmail.com">gmail</a></p></span>  
+              <span className="inline-span opened"> <div className="pointer"></div><p id="contact-extra">203 . 430 . 0261<br></br><a id="email" href="mailto: edward.f.didonato@gmail.com">gmail</a></p></span>
             </div>
           </div>
           <div className="right-div" id="form-right">
@@ -26,9 +26,9 @@ export default function Contact() {
                   onClick={() => setShowContact(!showContact)}
                   className="show-contact"> contact me directly </span> for inquiries.</p>
             </section>
-          <ContactForm />
+            <ContactForm />
           </div>
-          </ContactDiv>
+        </ContactDiv>
       </Layout>
     </div>
   )

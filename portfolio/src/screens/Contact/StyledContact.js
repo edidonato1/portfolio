@@ -16,7 +16,6 @@ display: flex;
   margin-top: -26px;
 }
 
-
 .contact-blurb {
 width: 360px;
 text-align: center; 
@@ -58,6 +57,8 @@ a:hover {
   border-bottom: 1px solid #ecc8cb;
   border-left: 1px solid #ecc8cb;
   transition: .3s;
+  border-bottom-color:  ${({ showContact }) => (showContact ? "#ecc8cb" : "#202020")};
+  border-left-color:  ${({ showContact }) => (showContact ? "#ecc8cb" : "#202020")};
 }
 
 .inline-span {
@@ -147,6 +148,24 @@ button:hover {
 
 @media screen and (max-width: 600px) {
 
+  .left-div-child {
+    height: 100%;
+
+  }
+
+  .contact-title {
+  position: initial;
+  background: #202020;
+  margin: initial;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  display: flex;
+  z-index: 1;
+  width: 150px;
+  
+}
+
   .form {
     padding-top: 10px;
   }
@@ -171,9 +190,37 @@ button:hover {
     font-size: 18px;
   }
 
+  .inline-span {
+    overflow: visible;
+    margin-left: 0px;
+    transform: ${({ showContact }) => (showContact ? "translateX(0)" : "translateX(-120%)")};
+    line-height:  25px;
+    
+  }
+  
+  .pointer {
+  overflow: auto;
+  width: 140px;
+  height: 30px;
+  margin-right: -120px;
+  margin-top: 25px;
+}
+
+#contact-extra {
+  display: flex;
+  flex-flow: column-reverse;
+  color: #35a3a3;
+}
+
+#email {
+}
+
+
 }
 
 @media screen and (max-width: 400px)  {
+
+
   .form {
     width: 95vw;
   }
@@ -181,6 +228,7 @@ button:hover {
   #form-right {
     overflow: initial;
   }
+
 
 
 }
