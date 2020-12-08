@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledLayout = styled.div`
-width: 100vw;
+width: 100%;
 max-width: 100vw;
 .left-div {
   position: sticky;
@@ -55,6 +55,36 @@ hr {
   .right-div {
     padding-top: 120px;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .left-div {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    margin-top: 80px;
+    margin-left: 0;
+    padding-left: 0;
+    border-bottom: 3px solid #43a8a8;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .left-div-child {
+    padding-left: 40px;
+    height: 100%;
+  }
+
+  .right-div {
+    width: 100vw;
+    border-left: none;
+    padding-bottom: initial;
+    padding-top: initial;
+    margin-top: 160px;
+    height: calc(100vh - 160px);
+  }
+
 }
 
 
