@@ -174,13 +174,27 @@ display: flex;
   animation: 15s linear 4s infinite rotate;
   width: 200px;
   height: 50px;
-  background: rgba(0,0,0,.1);
+  background: rgba(0,0,0,.2);
   border-radius: 50%;
   margin-top: 60px;
-  box-shadow: 5px 5px 30px 50px rgba(0,0,0,.1);
+  box-shadow: 5px 5px 30px 50px rgba(0, 0, 0,.2);
   transform: rotateY(190deg)
 }
 
+
+@media screen and (max-width: 800px) {
+  .circle, .circle2 {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .shadow {
+    width: 25vw;
+    height: 30px;
+
+  }
+
+}
 
 
 `
