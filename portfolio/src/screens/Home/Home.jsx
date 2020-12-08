@@ -12,7 +12,7 @@ export default function Home() {
           <div className="left-div" id="home-left">
             <div className="left-div-child">
               <div className="title">
-                {/* <div className="title-child"> */}
+
 
                 <h1 className="title-child">hello, <br></br><span className="introduction">
                   i'm 
@@ -26,7 +26,7 @@ export default function Home() {
                     </Link>
                 </span>
                 </h1>
-                {/* </div> */}
+
                 <h2>web developer</h2>
                 <small>front end  |  full stack</small>
               </div>

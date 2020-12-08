@@ -27,18 +27,18 @@ a {
 }
 
 html {
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
 }
 
 body {
   width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
 }
 
 @media screen and (max-width: 800px) {
-  body {
+  /* body {
     overflow: auto;
     height: initial;
     scroll-behavior: smooth;
@@ -50,5 +50,5 @@ body {
     height: initial;
     scroll-behavior: smooth;
     background: #313131;
-  }
+  } */
 }
