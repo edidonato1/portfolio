@@ -12,7 +12,7 @@ export default function AboutMe() {
         <AboutMeDiv>
           <div className="left-div" id="about-me-left">
             <div className="left-div-child">
-            <h1>about me</h1>
+            <h1 className="left-div-title">about me</h1>
             </div>
           </div>
           <div className="right-div" id="about-me-right">

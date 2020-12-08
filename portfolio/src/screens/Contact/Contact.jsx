@@ -14,7 +14,7 @@ export default function Contact() {
         <ContactDiv showContact={showContact}>
           <div className="left-div" >
             <div className="left-div-child">
-              <h1 className="contact-title">contact</h1>
+              <h1 className="contact-title left-div-title">contact</h1>
               <span className="inline-span opened"> <div className="pointer"></div><p id="contact-extra">203 . 430 . 0261<br></br><a id="email" href="mailto: edward.f.didonato@gmail.com">gmail</a></p></span>
             </div>
           </div>

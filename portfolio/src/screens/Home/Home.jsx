@@ -11,7 +11,7 @@ export default function Home() {
         <HomeDiv>
           <div className="left-div" id="home-left">
             <div className="left-div-child">
-              <div className="title">
+              <div className="title left-div-title">
 
 
                 <h1 className="title-child">hello, <br></br><span className="introduction">

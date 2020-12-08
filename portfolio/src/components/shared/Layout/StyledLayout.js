@@ -16,12 +16,14 @@ const StyledLayout = styled.div`
   margin: 0 0 0 80px;
   padding-left: 50px;
   color: #DB686F;
+  z-index: 98;
 }
 
 
 .left-div-child {
   padding-top: 0px;
   height: 60%;
+  z-index: 1;
 }
 
 hr {
@@ -72,9 +74,12 @@ hr {
     justify-content: flex-start;
     z-index: 5;
   }
+
+  .left-div-title {
+    padding-left: 20px;
+  }
   
   .left-div-child {
-    padding-left: 20px;
     height: 100%;
     display: flex;
     align-items: center;
