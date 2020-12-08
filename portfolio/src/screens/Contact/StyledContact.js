@@ -4,24 +4,6 @@ const ContactDiv = styled.div`
 display: flex;
 
 
-@keyframes falling {
-  0% {transform: translateY(-2000%)}
-  /* opacity: 1} 000*/
-  100% {transform: translateY(2000%)}
-    /* opacity: 0;} */
-}
-
-.falling-text {
-  animation-name: falling;
-animation-timing-function: linear;
-
-  animation-duration: 5s;
-  
-  animation-iteration-count: infinite;
-
-}
-
-
 .contact-title {
   position: relative;
   background: #202020;
@@ -163,7 +145,45 @@ button:hover {
   font-weight: 500;
 }
 
+@media screen and (max-width: 600px) {
 
+  .form {
+    padding-top: 10px;
+  }
+
+  #form-right {
+    margin-top: 130px;
+  }
+
+  .top-row {
+    flex-direction: column;
+  }
+
+  #name, #email {
+    width: initial;
+  }
+
+  #contact-blurb-bottom {
+    margin-top: -10px;
+  }
+
+  input, textarea {
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width: 400px)  {
+  .form {
+    width: 95vw;
+  }
+
+  #form-right {
+    overflow: initial;
+  }
+
+
+}
 
 
 

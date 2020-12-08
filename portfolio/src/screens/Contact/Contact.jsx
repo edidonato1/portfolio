@@ -18,10 +18,10 @@ export default function Contact() {
                 <span className="inline-span opened"> <div className="pointer"></div><p>203.430.0261<br></br><a href="mailto: edward.f.didonato@gmail.com">gmail</a></p></span>  
             </div>
           </div>
-          <div className="right-div" >
+          <div className="right-div" id="form-right">
             <section className="contact-blurb">
               <p>currently available for full time,<br></br> or freelance opportunities.</p><br></br>
-              <p>feel free to fill out the form below, <br></br>or
+              <p id="contact-blurb-bottom">feel free to fill out the form below, <br></br>or
               <span
                   onClick={() => setShowContact(!showContact)}
                   className="show-contact"> contact me directly </span> for inquiries.</p>

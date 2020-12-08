@@ -27,28 +27,16 @@ a {
 }
 
 html {
-  /* overflow: hidden; */
+  overflow: hidden;
   height: 100%;
 }
 
 body {
-  width: 100vw;
-  /* overflow: hidden; */
+  overflow: hidden auto;
   height: 100%;
+  background-color: #313131;
 }
 
 @media screen and (max-width: 800px) {
-  /* body {
-    overflow: auto;
-    height: initial;
-    scroll-behavior: smooth;
-    background: #313131;
-  }
-  
-  html {
-    overflow: auto;
-    height: initial;
-    scroll-behavior: smooth;
-    background: #313131;
-  } */
+
 }

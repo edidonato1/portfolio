@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const StyledLayout = styled.div`
-width: 100%;
-max-width: 100vw;
+/* width: 100%; */
+/* max-width: 100vw; */
 .left-div {
   position: sticky;
   top: 0;

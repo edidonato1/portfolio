@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 const HomeDiv = styled.div`
 display: flex;
+overflow: hidden;
+height: 100vh;
+
   h1 {
     margin-bottom: 0px;
   }
