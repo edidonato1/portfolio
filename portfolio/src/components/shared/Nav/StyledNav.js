@@ -26,7 +26,6 @@ z-index: 99;
   height: 73%;
 }
 
-
 @keyframes spin {
   0% {transform: rotate(0)}
   100%{transform: rotate(1800deg)}
@@ -166,7 +165,7 @@ ul {
   .burger {
     display: block;
   }
-
+  
   .social-container {
     position: initial;
   }
@@ -177,8 +176,6 @@ ul {
     transition-timing-function: ease-in-out;
     position: fixed;
     margin-right: initial;
-    justify-content: center;
-    align-items: center;
     right: 0;
     top: ${({ home }) => (home ? "200px" : "160px")};
     background: #202020;
@@ -186,6 +183,8 @@ ul {
     width: 100%;
     border-top: 3px solid #35a3a3;
     border-bottom: 3px solid #f0ebeb;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     /* border-left: 3px solid #35a3a3; */
   }
 
@@ -193,8 +192,12 @@ ul {
     color: #35a3a3;
   }
 
-  .social-icons {
-    margin: 20px;
+.social-container {
+  margin-left: 15px;
+}
+  
+  .social {
+    color: #DB686F;
   }
 
 

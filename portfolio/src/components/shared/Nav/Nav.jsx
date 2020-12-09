@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Burger from './Burger';
 import { Link } from 'react-router-dom';
-import git from '../../../assets/icons/github.svg';
-import git2 from '../../../assets/icons/github2.svg';
-import linked from '../../../assets/icons/linkedin.svg';
-import linked2 from '../../../assets/icons/linkedin2.svg';
 import Navbar from './StyledNav';
-
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAstronaut, faPaperPlane, faBriefcase } from '@fortawesome/free-solid-svg-icons';
@@ -15,12 +10,28 @@ import { faUserAstronaut, faPaperPlane, faBriefcase } from '@fortawesome/free-so
 
 export default function Nav(props) {
   const { home } = props
+
+  const [mobile, setMobile] = useState(false);
   const [open, setOpen] = useState(false);
-  const [gitHover, setGitHover] = useState(false);
-  const [linkHover, setLinkHover] = useState(false);
   const [meHover, setMeHover] = useState(false);
   const [contactHover, setContactHover] = useState(false);
   const [workHover, setWorkHover] = useState(false);
+
+  const handler = () => {
+    window.innerWidth <= 500 ? setMobile(true) : setMobile(false);
+  }
+
+  useEffect(() => {
+    handler();
+    window.addEventListener("resize", handler);
+
+    return () => 
+      window.removeEventListener("resize", handler)
+
+  }, [])
+
+
+
 
 
 
@@ -42,7 +53,7 @@ export default function Nav(props) {
                 onMouseOver={() => setMeHover(true)}
                 onMouseLeave={() => setMeHover(false)}>
                 <FontAwesomeIcon icon={faUserAstronaut} />
-                {meHover ? <p className="nav-hidden" >about</p> : <> </>}
+                {meHover  ? <p className="nav-hidden" >about</p> : <> </>}
               </li>
             </div>
           </Link>

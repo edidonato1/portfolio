@@ -19,13 +19,13 @@ const BurgerStyles = styled.div`
 
   #line-1 {
     transform: ${({ open }) => (open ? "rotate(-405deg) translateX(-6px) translateY(9px)" : "rotate(0deg)")};
-
-
+    -webkit-transform: ${({ open }) => (open ? "rotate(-405deg) translateX(-6px) translateY(9px)" : "rotate(0deg)")};
     transition: .4s;
   }
 
   #line-2 {
     transform: ${({ open }) => (open ? "rotate(405deg) translateX(-6px) translateY(-9px)" : "rotate(0deg)")};
+    -webkit-transform: ${({ open }) => (open ? "rotate(405deg) translateX(-6px) translateY(-9px)" : "rotate(0deg)")};
     transition: .4s;
   }
 
