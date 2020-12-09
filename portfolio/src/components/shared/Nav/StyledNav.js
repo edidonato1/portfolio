@@ -18,6 +18,15 @@ z-index: 99;
   display: none;
 }
 
+.all-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 73%;
+}
+
+
 @keyframes spin {
   0% {transform: rotate(0)}
   100%{transform: rotate(1800deg)}
@@ -52,11 +61,17 @@ ul {
   text-align: center;
 }
 
-.icon-container {
+.icon-container, .social-icon-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 80px;
   width: 80px;
+}
+
+.social-icon-container {
+  height: 50px;
+  width: 50px;
 }
 
 .nav-icon {
@@ -77,8 +92,10 @@ a {
 
 .social-container {
   display: flex;
+  height: 100px;
+  justify-content: space-between;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .nav-hidden {
@@ -89,12 +106,11 @@ a {
   transition: .3s;
 }
 
-.social-icons {
-  width: 30px;
-  margin: 10px;
-  border-radius: 50%;
-  transition: .3s;
+.social{ 
+  padding: 0;
+
 }
+
 
 .social-icons:hover {
   width: 38px;
@@ -107,6 +123,15 @@ a {
   height: 80px;
   width: 100vw;
 
+.all-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+}
 
 .initials {
   margin-top: initial;
@@ -122,6 +147,13 @@ ul {
   flex-direction: row;
   margin-bottom: initial;
   margin-right: 5px;
+  position: absolute;
+  right: 20px;
+}
+.social-container {
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .icon-container {
@@ -133,8 +165,40 @@ ul {
 @media screen and (max-width: 500px) {
   .burger {
     display: block;
-    
   }
+
+  .social-container {
+    position: initial;
+  }
+
+  .all-icons {
+    transform: ${({ open }) => (open ? "translateX(0%)" : "translateX(101%)")};
+    transition: .4s;
+    transition-timing-function: ease-in-out;
+    position: fixed;
+    margin-right: initial;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: ${({ home }) => (home ? "200px" : "160px")};
+    background: #202020;
+    height: 80px;
+    width: 100%;
+    border-top: 3px solid #35a3a3;
+    border-bottom: 3px solid #f0ebeb;
+    /* border-left: 3px solid #35a3a3; */
+  }
+
+  .nav-icon {
+    color: #35a3a3;
+  }
+
+  .social-icons {
+    margin: 20px;
+  }
+
+
+
 }
 
 `

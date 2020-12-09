@@ -6,12 +6,15 @@ import git2 from '../../../assets/icons/github2.svg';
 import linked from '../../../assets/icons/linkedin.svg';
 import linked2 from '../../../assets/icons/linkedin2.svg';
 import Navbar from './StyledNav';
+
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAstronaut, faPaperPlane, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 
 
-export default function Nav() {
+export default function Nav(props) {
+  const { home } = props
   const [open, setOpen] = useState(false);
   const [gitHover, setGitHover] = useState(false);
   const [linkHover, setLinkHover] = useState(false);
@@ -22,7 +25,7 @@ export default function Nav() {
 
 
   return (
-    <Navbar>
+    <Navbar open={open} home={home}>
       <Link to='/'>
         <div className="initials-outer">
           <div className="initials">
@@ -30,60 +33,54 @@ export default function Nav() {
           </div>
         </div>
       </Link>
-      <ul id="nav-icon-main">
-        <Link to="/about">
-          <div className="icon-container">
-            <li
-              className="nav-icon"
-              onMouseOver={() => setMeHover(true)}
-              onMouseLeave={() => setMeHover(false)}>
-              <FontAwesomeIcon icon={faUserAstronaut} />
-              {meHover ? <p className="nav-hidden" >about</p> : <> </>}
-            </li>
+      <div className="all-icons">
+        <ul id="nav-icon-main">
+          <Link to="/about">
+            <div className="icon-container">
+              <li
+                className="nav-icon"
+                onMouseOver={() => setMeHover(true)}
+                onMouseLeave={() => setMeHover(false)}>
+                <FontAwesomeIcon icon={faUserAstronaut} />
+                {meHover ? <p className="nav-hidden" >about</p> : <> </>}
+              </li>
+            </div>
+          </Link>
+          <Link to="/contact">
+            <div className="icon-container">
+              <li
+                className="nav-icon"
+                onMouseOver={() => setContactHover(true)}
+                onMouseLeave={() => setContactHover(false)}>
+                <FontAwesomeIcon icon={faPaperPlane} />
+                {contactHover ? <p className="nav-hidden">contact</p> : <></>}
+              </li>
+            </div>
+          </Link>
+          <Link to="/projects">
+            <div className="icon-container">
+              <li
+                className="nav-icon"
+                onMouseOver={() => setWorkHover(true)}
+                onMouseLeave={() => setWorkHover(false)}>
+                <FontAwesomeIcon icon={faBriefcase} />
+                {workHover ? <p className="nav-hidden" >projects</p> : <></>}
+              </li>
+            </div>
+          </Link>
+        </ul>
+        <div className="social-container">
+          <div className="social-icon-container">
+            <a href="https://github.com/edidonato1" target="blank">
+              <FontAwesomeIcon icon={faGithub} className="nav-icon social" id="github" />
+            </a>
           </div>
-        </Link>
-        <Link to="/contact">
-          <div className="icon-container">
-            <li
-              className="nav-icon"
-              onMouseOver={() => setContactHover(true)}
-              onMouseLeave={() => setContactHover(false)}>
-              <FontAwesomeIcon icon={faPaperPlane} />
-              {contactHover ? <p className="nav-hidden">contact</p> : <></>}
-            </li>
+          <div className="social-icon-container">
+            <a href="https://www.linkedin.com/in/eddie-didonato/" target="blank">
+              <FontAwesomeIcon icon={faLinkedin} className="nav-icon social" id="linkein" />
+            </a>
           </div>
-        </Link>
-        <Link to="/projects">
-          <div className="icon-container">
-            <li
-              className="nav-icon"
-              onMouseOver={() => setWorkHover(true)}
-              onMouseLeave={() => setWorkHover(false)}>
-              <FontAwesomeIcon icon={faBriefcase} />
-              {workHover ? <p className="nav-hidden" >projects</p> : <></>}
-            </li>
-          </div>
-        </Link>
-      </ul>
-      <div className="social-container">
-        <a href="https://github.com/edidonato1" target="blank">
-          <img
-            onMouseOver={() => setGitHover(true)}
-            onMouseLeave={() => setGitHover(false)}
-            src={gitHover ? git2 : git}
-            alt="github"
-            className="social-icons"
-            id="github" />
-        </a>
-        <a href="https://www.linkedin.com/in/eddie-didonato/" target="blank">
-          <img
-            onMouseOver={() => setLinkHover(true)}
-            onMouseLeave={() => setLinkHover(false)}
-            src={linkHover ? linked2 : linked}
-            alt="linkedin"
-            className="social-icons"
-            id="linkedin" />
-        </a>
+        </div>
       </div>
       <div className="burger">
         <Burger open={open} setOpen={setOpen} />

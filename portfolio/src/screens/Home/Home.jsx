@@ -1,19 +1,26 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../../components/shared/Layout/Layout';
 import HomeDiv from './StyledHome';
 
-export default function Home() {
+export default function Home(props) {
+  const { home, setHome } = props
+
+  useEffect(() => {
+    setHome(true);
+    return () => {
+      setHome(false);
+    }
+  },[])
 
 
   return (
     <div>
-      <Layout>
+      <Layout home={home}>
         <HomeDiv>
           <div className="left-div" id="home-left">
             <div className="left-div-child">
               <div className="title left-div-title">
-
-
                 <h1 className="title-child">hello, <br></br><span className="introduction">
                   i'm 
                     <Link className="name" to="/about">

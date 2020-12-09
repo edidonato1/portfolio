@@ -5,12 +5,12 @@ import StyledLayout from './StyledLayout'
 
 
 export default function Layout(props) {
-
+  const { home } = props
 
 
   return (
     <StyledLayout>
-      <Nav />
+      <Nav home={home}/>
       {props.children}
    </StyledLayout>
   )

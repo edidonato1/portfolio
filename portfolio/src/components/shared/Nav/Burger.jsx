@@ -13,12 +13,13 @@ const BurgerStyles = styled.div`
   .burger-line {
     height: 4px;
     width: 50px;
-    background-color: #202020;
+    background-color:#202020;
     border-radius: 20px;
   }
 
   #line-1 {
     transform: ${({ open }) => (open ? "rotate(-405deg) translateX(-6px) translateY(9px)" : "rotate(0deg)")};
+
 
     transition: .4s;
   }
