@@ -14,6 +14,10 @@ height: 100vh;
 width: 80px;
 z-index: 99;
 
+.burger {
+  display: none;
+}
+
 @keyframes spin {
   0% {transform: rotate(0)}
   100%{transform: rotate(1800deg)}
@@ -124,6 +128,13 @@ ul {
   align-items: center;
 }
 
+}
+
+@media screen and (max-width: 500px) {
+  .burger {
+    display: block;
+    
+  }
 }
 
 `

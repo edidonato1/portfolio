@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Burger from './Burger';
 import { Link } from 'react-router-dom';
 import git from '../../../assets/icons/github.svg';
 import git2 from '../../../assets/icons/github2.svg';
@@ -11,6 +12,7 @@ import { faUserAstronaut, faPaperPlane, faBriefcase } from '@fortawesome/free-so
 
 
 export default function Nav() {
+  const [open, setOpen] = useState(false);
   const [gitHover, setGitHover] = useState(false);
   const [linkHover, setLinkHover] = useState(false);
   const [meHover, setMeHover] = useState(false);
@@ -28,7 +30,7 @@ export default function Nav() {
           </div>
         </div>
       </Link>
-      <ul>
+      <ul id="nav-icon-main">
         <Link to="/about">
           <div className="icon-container">
             <li
@@ -82,6 +84,9 @@ export default function Nav() {
             className="social-icons"
             id="linkedin" />
         </a>
+      </div>
+      <div className="burger">
+        <Burger open={open} setOpen={setOpen} />
       </div>
     </Navbar>
   )
