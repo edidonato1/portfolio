@@ -11,7 +11,7 @@ export default function Home(props) {
     return () => {
       setHome(false);
     }
-  },[])
+  }, [])
 
 
   return (
@@ -20,12 +20,14 @@ export default function Home(props) {
         openBurger={openBurger}
         setOpenBurger={setOpenBurger}
         home={home}>
-        <HomeDiv>
+        <HomeDiv
+          openBurger={openBurger}
+          setOpenBurger={setOpenBurger}>
           <div className="left-div" id="home-left">
             <div className="left-div-child">
               <div className="title left-div-title">
                 <h1 className="title-child">hello, <br></br><span className="introduction">
-                  i'm 
+                  i'm
                     <Link className="name" to="/about">
                     <div id="e1"> e</div>
                     <div id="d1">d</div>
@@ -33,7 +35,7 @@ export default function Home(props) {
                     <div id="i">i</div>
                     <div id="e2">e</div>
                     <div id="dot">.</div>
-                    </Link>
+                  </Link>
                 </span>
                 </h1>
 

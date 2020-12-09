@@ -6,7 +6,6 @@ import './Animations.css'
 
 export default function ProjectsHome(props) {
   const [showMessage, setShowMessage] = useState('')
-  const { openBurger } = props ;
   const [mobile, setMobile] = useState(false);
 
   const handler = () => {
@@ -22,7 +21,7 @@ export default function ProjectsHome(props) {
   }, [])
 
   useEffect(() => {
-    // document.querySelector('body').scrollTo(0, 0)
+    document.querySelector('body').scrollTo(0, 0)
     setTimeout(() => setShowMessage('thanks for stopping by'), 1500)
     setTimeout(() => setShowMessage(`you can navigate with the drop-down by "projects"`), 6500)
     setTimeout(() => setShowMessage('enjoy'), 11500)
@@ -31,7 +30,7 @@ export default function ProjectsHome(props) {
 
   return (
 
-    <StyledProjectCard openBurger={openBurger}>
+    <StyledProjectCard >
       <h2 className="title">welcome.</h2>
       <h3 className="subtitle">my work</h3>
       <div className="message">

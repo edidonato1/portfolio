@@ -92,6 +92,8 @@ hr {
     padding-top: 8vh;
     height: 100%;
     margin-top: 160px;
+    margin-top: ${({ openBurger }) => (openBurger ? "220px" : "160px")};
+    transition: .6s;
     overflow: scroll;
     scroll-behavior: smooth;
     padding-bottom: 80px;

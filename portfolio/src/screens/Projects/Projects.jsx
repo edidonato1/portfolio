@@ -47,28 +47,23 @@ export default function Projects(props) {
           <div className="right-div" id="projects-right">
             {currentProject === 'home' ?
               <ProjectsHome
-                currentProject={currentProject}
-                openBurger={openBurger}/> : <> </>}
+                currentProject={currentProject} /> : <> </>}
             {currentProject === 'sunset' ?
               <SunsetOracle
                 currentProject={currentProject}
-                setCurrentProject={setCurrentProject}
-                openBurger={openBurger}/> : <> </>}
+                setCurrentProject={setCurrentProject} /> : <> </>}
             {currentProject === 'pops' ?
               <PopsLiquorCabinet
                 currentProject={currentProject}
-                setCurrentProject={setCurrentProject}
-                openBurger={openBurger}/> : <> </>}
+                setCurrentProject={setCurrentProject} /> : <> </>}
             {currentProject === 'root' ?
               <Root
                 currentProject={currentProject}
-                setCurrentProject={setCurrentProject}
-                openBurger={openBurger}/> : <> </>}
+                setCurrentProject={setCurrentProject} /> : <> </>}
             {currentProject === 'colab' ?
               <CoLab
                 currentProject={currentProject}
-                setCurrentProject={setCurrentProject}
-                openBurger={openBurger}/> : <> </>}
+                setCurrentProject={setCurrentProject} /> : <> </>}
           </div>
         </StyledProjects>
       </Layout>

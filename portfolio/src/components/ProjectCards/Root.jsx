@@ -20,7 +20,7 @@ import plan from '../../assets/images/root_mobile_plan.png';
 
 export default function Root(props) {
   const [logoText, setLogoText] = useState('');
-  const { setCurrentProject, openBurger } = props;
+  const { setCurrentProject } = props;
 
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0)
@@ -28,7 +28,7 @@ export default function Root(props) {
 
   return (
 
-    <StyledProjectCard openBurger={openBurger}>
+    <StyledProjectCard >
         <h2 className="title">ROOT</h2>
         <h3 className="subtitle">a travel companion for the mindful communter</h3>
         <div className="project-links">

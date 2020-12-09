@@ -10,10 +10,9 @@ export default function Layout(props) {
 
 
   return (
-    <StyledLayout>
+    <StyledLayout openBurger={openBurger}>
       <Nav home={home} openBurger={openBurger} setOpenBurger={setOpenBurger}/>
       {props.children}
-      
    </StyledLayout>
   )
 }

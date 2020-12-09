@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const HomeDiv = styled.div`
+perspective: 1000px;
 display: flex;
 overflow: hidden;
 height: 100vh;
@@ -32,7 +33,6 @@ height: 100vh;
     font-size: 40px;
     -webkit-text-stroke: .8px #f0ebeb;
     text-shadow: 2px 2px #35a3a3;
-    /* letter-spacing: 1px; */
   }
 
   #e1 {
@@ -59,11 +59,7 @@ height: 100vh;
     animation: 8.5s ease-in-out 1.85s infinite bounce;
   }
 
-  .title {
-  }
-
   #home-right {
-
     background: #313131;
   }
 
@@ -84,6 +80,7 @@ height: 100vh;
       transform: rotateY(-360deg)
     }
   }
+  
 
   .circle {
     animation: 15s linear 1s infinite rotate;
@@ -99,7 +96,6 @@ height: 100vh;
     animation-play-state: paused;
   }
 
-  perspective: 1000px;
 
   .circle2 {
     position: absolute;
@@ -114,6 +110,7 @@ height: 100vh;
     border: 3px solid #DB686F;
     animation-delay: 2s;
   }
+
   #color-2 {
     border: 3px solid #35a3a3;
     animation-delay: 2.3s;
@@ -137,8 +134,6 @@ height: 100vh;
     border: 3px solid #f0ebeb;
     animation-delay: 1.5s;
   }
-
-
 
   .home-links {
     animation: 15s linear 1s infinite rotate;
@@ -199,55 +194,66 @@ height: 100vh;
 
 @media screen and (max-width: 600px) {
 
-#home-left {
-  height: 120px;
+  #home-left {
+    height: 120px;
+  }
+
+  .title {
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .title-child {
+    margin-top: 0;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0;
+  }
+
+  .introduction {
+    margin-left: 5px;
+  }
+
+  #e1, #e2, #d1, #d2, #i, #dot {
+    margin-bottom: -1px;
+  }
+
+  small {
+    display: none;
+  }
+
+  h2 {
+    margin-top: initial;
+    margin: inherit;
+    width: fit-content;
+    color: #818181;
+    font-weight: 500;
+  }
+
+  .circle, .circle2 {
+    width: 70vw;
+    height: 70vw;
+    }
 }
 
-#home-right {
-
- /* z-index: 0; */
-}
-
-.title {
-  align-items: flex-end;
-  justify-content: space-between;
-}
-.title-child {
-  margin-top: 0;
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 0;
-}
-
-.introduction {
-  margin-left: 5px;
-}
-
-#e1, #e2, #d1, #d2, #i, #dot {
-  margin-bottom: -1px;
-
-}
-
-small {
-  display: none;
-}
-
-h2 {
-  margin-top: initial;
-  margin: inherit;
-  width: fit-content;
-  color: #818181;
-  font-weight: 500;
-}
-
-.circle, .circle2 {
-  width: 70vw;
-  height: 70vw;
-  /* margin-top: 10vh; */
-}
-}
 @media screen and (max-width: 600px){
-  
+  .home-links {
+    font-size: 28px;
+  }
+
+  #item1 {
+    top: 10px;
+    left: 30%;
+  }
+
+  #item2 {
+    top: 40%;
+  }
+
+  #item3 {
+    top: 70%;
+  }
+
+
 }
 
 `

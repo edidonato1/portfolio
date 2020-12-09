@@ -19,7 +19,7 @@ import { faFlask } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function CoLab(props) {
-  const { setCurrentProject, openBurger } = props;
+  const { setCurrentProject } = props;
   const [logoText, setLogoText] = useState('');
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function CoLab(props) {
   },[])
 
   return (
-    <StyledProjectCard openBurger={openBurger}>
+    <StyledProjectCard >
       <h2 className="title"> C o L <FontAwesomeIcon icon={faFlask} /> b</h2>
       <h3 className="subtitle">a social app bringing creative-doers together</h3>
       <div className="project-links">
