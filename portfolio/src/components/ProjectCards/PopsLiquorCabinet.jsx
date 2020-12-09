@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import StyledProjectCard from './StyledProjectCard';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
@@ -18,7 +17,11 @@ import grabMobile from '../../assets/videos/pops_tablet_inv.mov'
 
 export default function PopsLiquorCabinet(props) {
   const [logoText, setLogoText] = useState('');
-  const { setCurrentProject } = props;
+  const { currentProject, setCurrentProject } = props;
+
+  useEffect(() => {
+    document.querySelector('body').scrollTo(0, 0)
+  }, [])
 
   return (
 

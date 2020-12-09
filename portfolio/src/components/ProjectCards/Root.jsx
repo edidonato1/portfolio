@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import StyledProjectCard from './StyledProjectCard';
 import html from '../../assets/icons/html_logo.png';
@@ -21,6 +21,10 @@ import plan from '../../assets/images/root_mobile_plan.png';
 export default function Root(props) {
   const [logoText, setLogoText] = useState('');
   const { setCurrentProject } = props;
+
+  useEffect(() => {
+    document.querySelector('body').scrollTo(0, 0)
+  },[])
 
   return (
 

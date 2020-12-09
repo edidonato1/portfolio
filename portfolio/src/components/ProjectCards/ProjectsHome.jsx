@@ -6,10 +6,25 @@ import './Animations.css'
 
 export default function SunsetOracle(props) {
   const [showMessage, setShowMessage] = useState('')
+  const currentProject = { props };
+  const [mobile, setMobile] = useState(false);
+  
+  const handler = () => {
+    window.innerWidth <= 500 ? setMobile(true) : setMobile(false);
+  }
 
   useEffect(() => {
+    handler();
+    window.addEventListener("resize", handler);
+
+    return () => 
+      window.removeEventListener("resize", handler)
+  }, [])
+
+  useEffect(() => {
+    document.querySelector('body').scrollTo(0, 0)
     setTimeout(() => setShowMessage('thanks for stopping by'), 1500)
-    setTimeout(() => setShowMessage('feel free to navigate from the drop-down menu to the left'), 6500)
+    setTimeout(() => setShowMessage(`you can navigate with the drop-down by "projects"`), 6500)
     setTimeout(() => setShowMessage('enjoy'), 11500)
     setTimeout(() => setShowMessage(''), 16500)
   }, [])

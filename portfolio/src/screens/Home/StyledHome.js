@@ -246,7 +246,9 @@ h2 {
   /* margin-top: 10vh; */
 }
 }
-
+@media screen and (max-width: 600px){
+  
+}
 
 `
 

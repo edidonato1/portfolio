@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
@@ -21,6 +21,10 @@ import { faFlask } from '@fortawesome/free-solid-svg-icons';
 export default function CoLab(props) {
   const { setCurrentProject } = props;
   const [logoText, setLogoText] = useState('');
+
+  useEffect(() => {
+    document.querySelector('body').scrollTo(0, 0)
+  },[])
 
   return (
     <StyledProjectCard>

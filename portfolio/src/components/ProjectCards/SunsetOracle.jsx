@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import StyledProjectCard from './StyledProjectCard';
 import zip from '../../assets/videos/enter_zip_code.mov';
 import html from '../../assets/icons/html_logo.png';
@@ -14,7 +13,11 @@ import data from '../../assets/images/weather_data.png';
 
 export default function SunsetOracle(props) {
   const [logoText, setLogoText] = useState('');
-  const { setCurrentProject } = props
+  const { setCurrentProject } = props;
+
+  useEffect(() => {
+    document.querySelector('body').scrollTo(0, 0);
+  }, []);
 
   return (
 

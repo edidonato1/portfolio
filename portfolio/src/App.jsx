@@ -10,6 +10,7 @@ import './App.css'
 function App() {
   const [home, setHome] = useState(false);
 
+
   return (
     <Switch>
       <Route exact path="/" >
@@ -21,7 +22,7 @@ function App() {
       <Route path="/contact">
         <Contact />
       </Route>
-      <Route >
+      <Route path="/projects">
         <Projects />
       </Route>
     </Switch>

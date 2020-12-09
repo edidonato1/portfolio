@@ -30,7 +30,7 @@ to {opacity: 1}
   width: 340px;
   height: 300px;
   margin: 0 auto;
-  margin-top: -100px;
+  margin-top: -150px;
   animation-name: gears;
   animation-duration: 20s;
 }
@@ -107,4 +107,17 @@ to {opacity: 1}
   animation-duration: 1500ms;
   animation-iteration-count: 4;
   animation-timing-function: ease-in-out;
+}
+
+@media screen and(max-width: 600px) {
+  .gear-box {
+    display: flex;
+    flex-flow: column wrap;
+    width: 340px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: -100px;
+    animation-name: gears;
+    animation-duration: 20s;
+  }
 }

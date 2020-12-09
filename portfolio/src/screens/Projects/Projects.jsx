@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../../components/shared/Layout/Layout';
 import ProjectsHome from '../../components/ProjectCards/ProjectsHome';
 import SunsetOracle from '../../components/ProjectCards/SunsetOracle';
@@ -17,11 +17,12 @@ export default function Projects() {
   const [open, setOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState('home')
 
+
+
   return (
     <div>
       <Layout>
         <StyledProjects open={open}>
-
           <div className="left-div" >
             <div className="left-div-child">
               <div className="projects-title-inline">
@@ -43,11 +44,11 @@ export default function Projects() {
             </div>
           </div>
           <div className="right-div" id="projects-right">
-            {currentProject === 'home' ? <ProjectsHome /> : <> </>}
-            {currentProject === 'sunset' ? <SunsetOracle setCurrentProject={setCurrentProject}/> : <> </>}
-            {currentProject === 'pops' ? <PopsLiquorCabinet setCurrentProject={setCurrentProject}/> : <> </>}
-            {currentProject === 'root' ? <Root setCurrentProject={setCurrentProject}/> : <> </>}
-            {currentProject === 'colab' ? <CoLab setCurrentProject={setCurrentProject} /> : <> </>}
+            {currentProject === 'home' ? <ProjectsHome  currentProject={currentProject} /> : <> </>}
+            {currentProject === 'sunset' ? <SunsetOracle currentProject={currentProject} setCurrentProject={setCurrentProject} /> : <> </>}
+            {currentProject === 'pops' ? <PopsLiquorCabinet currentProject={currentProject} setCurrentProject={setCurrentProject} /> : <> </>}
+            {currentProject === 'root' ? <Root currentProject={currentProject} setCurrentProject={setCurrentProject} /> : <> </>}
+            {currentProject === 'colab' ? <CoLab currentProject={currentProject} setCurrentProject={setCurrentProject} /> : <> </>}
           </div>
         </StyledProjects>
       </Layout>
