@@ -3,14 +3,17 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 import Layout from '../../components/shared/Layout/Layout';
 import ContactDiv from './StyledContact';
 
-export default function Contact() {
-  const [showContact, setShowContact] = useState(false)
+export default function Contact(props) {
+  const [showContact, setShowContact] = useState(false);
+  const { openBurger, setOpenBurger } = props;
 
 
 
   return (
     <div>
-      <Layout>
+      <Layout
+        openBurger={openBurger}
+        setOpenBurger={setOpenBurger}>
         <ContactDiv showContact={showContact}>
           <div className="left-div" >
             <div className="left-div-child">

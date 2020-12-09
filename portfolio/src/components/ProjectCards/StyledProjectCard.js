@@ -144,6 +144,14 @@ section {
   }
 }
 
+@media screen and (max-width: 600px) {
+
+  .title {
+    margin-top: ${({ openBurger }) => (openBurger ? "60px" : "0px")};
+    transition: .5s;
+  }
+}
+
 
 `
 

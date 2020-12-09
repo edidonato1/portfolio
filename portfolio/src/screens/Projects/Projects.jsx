@@ -45,11 +45,30 @@ export default function Projects(props) {
             </div>
           </div>
           <div className="right-div" id="projects-right">
-            {currentProject === 'home' ? <ProjectsHome  currentProject={currentProject} /> : <> </>}
-            {currentProject === 'sunset' ? <SunsetOracle currentProject={currentProject} setCurrentProject={setCurrentProject} /> : <> </>}
-            {currentProject === 'pops' ? <PopsLiquorCabinet currentProject={currentProject} setCurrentProject={setCurrentProject} /> : <> </>}
-            {currentProject === 'root' ? <Root currentProject={currentProject} setCurrentProject={setCurrentProject} /> : <> </>}
-            {currentProject === 'colab' ? <CoLab currentProject={currentProject} setCurrentProject={setCurrentProject} /> : <> </>}
+            {currentProject === 'home' ?
+              <ProjectsHome
+                currentProject={currentProject}
+                openBurger={openBurger}/> : <> </>}
+            {currentProject === 'sunset' ?
+              <SunsetOracle
+                currentProject={currentProject}
+                setCurrentProject={setCurrentProject}
+                openBurger={openBurger}/> : <> </>}
+            {currentProject === 'pops' ?
+              <PopsLiquorCabinet
+                currentProject={currentProject}
+                setCurrentProject={setCurrentProject}
+                openBurger={openBurger}/> : <> </>}
+            {currentProject === 'root' ?
+              <Root
+                currentProject={currentProject}
+                setCurrentProject={setCurrentProject}
+                openBurger={openBurger}/> : <> </>}
+            {currentProject === 'colab' ?
+              <CoLab
+                currentProject={currentProject}
+                setCurrentProject={setCurrentProject}
+                openBurger={openBurger}/> : <> </>}
           </div>
         </StyledProjects>
       </Layout>

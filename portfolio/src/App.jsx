@@ -14,16 +14,25 @@ function App() {
 
   return (
     <Switch>
+      <Route exact path="layoutlayout" >
+        <Layout />
+      </Route>
       <Route exact path="/" >
         <Home
           home={home}
-          setHome={setHome} />
+          setHome={setHome}
+          openBurger={openBurger}
+          setOpenBurger={setOpenBurger} />
       </Route>
       <Route path="/about">
-        <AboutMe />
+        <AboutMe
+          openBurger={openBurger}
+          setOpenBurger={setOpenBurger} />
       </Route>
       <Route path="/contact">
-        <Contact />
+        <Contact
+          openBurger={openBurger}
+          setOpenBurger={setOpenBurger} />
       </Route>
       <Route path="/projects" >
         <Projects

@@ -4,7 +4,7 @@ import Layout from '../../components/shared/Layout/Layout';
 import HomeDiv from './StyledHome';
 
 export default function Home(props) {
-  const { home, setHome } = props
+  const { home, setHome, openBurger, setOpenBurger } = props
 
   useEffect(() => {
     setHome(true);
@@ -16,7 +16,10 @@ export default function Home(props) {
 
   return (
     <div>
-      <Layout home={home}>
+      <Layout
+        openBurger={openBurger}
+        setOpenBurger={setOpenBurger}
+        home={home}>
         <HomeDiv>
           <div className="left-div" id="home-left">
             <div className="left-div-child">

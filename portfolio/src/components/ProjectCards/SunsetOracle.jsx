@@ -13,7 +13,7 @@ import data from '../../assets/images/weather_data.png';
 
 export default function SunsetOracle(props) {
   const [logoText, setLogoText] = useState('');
-  const { setCurrentProject } = props;
+  const { setCurrentProject, openBurger } = props;
 
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0);
@@ -21,7 +21,7 @@ export default function SunsetOracle(props) {
 
   return (
 
-    <StyledProjectCard>
+    <StyledProjectCard openBurger={openBurger}>
       <h2 className="title">Sunset Oracle</h2>
       <h3 className="subtitle">a cheeky single-page weather application</h3>
       <div className="project-links">

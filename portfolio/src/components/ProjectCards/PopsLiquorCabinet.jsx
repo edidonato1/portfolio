@@ -17,7 +17,7 @@ import grabMobile from '../../assets/videos/pops_tablet_inv.mov'
 
 export default function PopsLiquorCabinet(props) {
   const [logoText, setLogoText] = useState('');
-  const { currentProject, setCurrentProject } = props;
+  const { currentProject, setCurrentProject, openBurger } = props;
 
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0)
@@ -25,7 +25,7 @@ export default function PopsLiquorCabinet(props) {
 
   return (
 
-    <StyledProjectCard>
+    <StyledProjectCard openBurger={openBurger}>
       <h2 className="title">Pop's Liquor Cabinet</h2>
       <h3 className="subtitle">an intuitive home bar inventory manager</h3>
       <div className="project-links">

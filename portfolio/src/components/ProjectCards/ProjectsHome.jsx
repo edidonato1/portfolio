@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import './Animations.css'
 
-export default function SunsetOracle(props) {
+export default function ProjectsHome(props) {
   const [showMessage, setShowMessage] = useState('')
-  const currentProject = { props };
+  const { openBurger } = props ;
   const [mobile, setMobile] = useState(false);
-  
+
   const handler = () => {
     window.innerWidth <= 500 ? setMobile(true) : setMobile(false);
   }
@@ -17,12 +17,12 @@ export default function SunsetOracle(props) {
     handler();
     window.addEventListener("resize", handler);
 
-    return () => 
+    return () =>
       window.removeEventListener("resize", handler)
   }, [])
 
   useEffect(() => {
-    document.querySelector('body').scrollTo(0, 0)
+    // document.querySelector('body').scrollTo(0, 0)
     setTimeout(() => setShowMessage('thanks for stopping by'), 1500)
     setTimeout(() => setShowMessage(`you can navigate with the drop-down by "projects"`), 6500)
     setTimeout(() => setShowMessage('enjoy'), 11500)
@@ -31,7 +31,7 @@ export default function SunsetOracle(props) {
 
   return (
 
-    <StyledProjectCard>
+    <StyledProjectCard openBurger={openBurger}>
       <h2 className="title">welcome.</h2>
       <h3 className="subtitle">my work</h3>
       <div className="message">
