@@ -35,7 +35,6 @@ hr {
 
 
 .right-div {
-
   border-left: 3px solid #43a8a8;
   padding-top: 10vh;
   display: flex;
@@ -91,7 +90,6 @@ hr {
     padding-bottom: initial;
     padding-top: 8vh;
     height: 100%;
-    margin-top: 160px;
     margin-top: ${({ openBurger }) => (openBurger ? "220px" : "160px")};
     transition: .6s;
     overflow: scroll;

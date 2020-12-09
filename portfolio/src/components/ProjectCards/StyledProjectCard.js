@@ -46,6 +46,10 @@ a:hover {
   font-size: 105%;
 }
 
+.friends:hover {
+  font-size: 100%;
+}
+
 p {
   text-align: justify;
 }
@@ -107,6 +111,17 @@ section {
   color: #818181;
 }
 
+.dev-team {
+display: flex;
+margin: 15px auto;
+flex-direction: row;
+flex-wrap: wrap;
+align-content: center;
+justify-items: center;
+justify-content: center;
+align-items: center;
+width: 70%;
+}
 
 .media {
   width: 100%;
@@ -145,7 +160,9 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-
+  h5 {
+    font-weight: 500;
+  }
 
   }
 

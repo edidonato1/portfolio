@@ -74,11 +74,6 @@ a:hover {
   z-index: 0;
 }
 
-.inline-span {
-
-}
-
-
 .input {
   font-family: avenir;
   height: 50px;
@@ -150,7 +145,6 @@ button:hover {
 
   .left-div-child {
     height: 100%;
-
   }
 
   .contact-title {
@@ -163,15 +157,10 @@ button:hover {
   display: flex;
   z-index: 1;
   width: 150px;
-  
 }
 
   .form {
     padding-top: 10px;
-  }
-
-  #form-right {
-    margin-top: 130px;
   }
 
   .top-row {
@@ -195,26 +184,21 @@ button:hover {
     margin-left: 0px;
     transform: ${({ showContact }) => (showContact ? "translateX(0)" : "translateX(-120%)")};
     line-height:  25px;
-    
   }
   
   .pointer {
-  overflow: auto;
-  width: 140px;
-  height: 30px;
-  margin-right: -120px;
-  margin-top: 25px;
-}
+    overflow: auto;
+    width: 140px;
+    height: 30px;
+    margin-right: -120px;
+    margin-top: 25px;
+  }
 
-#contact-extra {
-  display: flex;
-  flex-flow: column-reverse;
-  color: #35a3a3;
-}
-
-#email {
-}
-
+  #contact-extra {
+    display: flex;
+    flex-flow: column-reverse;
+    color: #35a3a3;
+  }
 
 }
 
