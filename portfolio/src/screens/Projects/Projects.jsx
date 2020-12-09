@@ -13,16 +13,17 @@ import '../../components/ProjectCards/Animations.css'
 
 
 
-export default function Projects() {
+export default function Projects(props) {
   const [open, setOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState('home')
+  const { openBurger, setOpenBurger } = props
 
 
 
   return (
     <div>
-      <Layout>
-        <StyledProjects open={open}>
+      <Layout openBurger={openBurger} setOpenBurger={setOpenBurger}>
+        <StyledProjects openBurger={openBurger} setOpenBurger={setOpenBurger} open={open}>
           <div className="left-div" >
             <div className="left-div-child">
               <div className="projects-title-inline">

@@ -9,10 +9,9 @@ import { faUserAstronaut, faPaperPlane, faBriefcase } from '@fortawesome/free-so
 
 
 export default function Nav(props) {
-  const { home } = props
+  const { home, openBurger, setOpenBurger } = props
 
   const [mobile, setMobile] = useState(false);
-  const [open, setOpen] = useState(false);
   const [meHover, setMeHover] = useState(false);
   const [contactHover, setContactHover] = useState(false);
   const [workHover, setWorkHover] = useState(false);
@@ -36,7 +35,7 @@ export default function Nav(props) {
 
 
   return (
-    <Navbar open={open} home={home}>
+    <Navbar openBurger={openBurger} home={home}>
       <Link to='/'>
         <div className="initials-outer">
           <div className="initials">
@@ -94,7 +93,7 @@ export default function Nav(props) {
         </div>
       </div>
       <div className="burger">
-        <Burger open={open} setOpen={setOpen} />
+        <Burger openBurger={openBurger} setOpenBurger={setOpenBurger} />
       </div>
     </Navbar>
   )

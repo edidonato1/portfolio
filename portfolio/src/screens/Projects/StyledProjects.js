@@ -96,6 +96,7 @@ h1 {
   justify-content: center;
   padding: 0 20px;
   border-bottom: ${({ open }) => (open ? "3px solid #43a8a8" : "none")};
+  padding-top: ${({ openBurger }) => (openBurger ? "85px" : "0")};
   border-top: none;
 }
 

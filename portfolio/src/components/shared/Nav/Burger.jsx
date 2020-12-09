@@ -18,14 +18,14 @@ const BurgerStyles = styled.div`
   }
 
   #line-1 {
-    transform: ${({ open }) => (open ? "rotate(-405deg) translateX(-6px) translateY(9px)" : "rotate(0deg)")};
-    -webkit-transform: ${({ open }) => (open ? "rotate(-405deg) translateX(-6px) translateY(9px)" : "rotate(0deg)")};
+    transform: ${({ openBurger }) => (openBurger ? "rotate(-405deg) translateX(-6px) translateY(9px)" : "rotate(0deg)")};
+    -webkit-transform: ${({ openBurger }) => (openBurger ? "rotate(-405deg) translateX(-6px) translateY(9px)" : "rotate(0deg)")};
     transition: .4s;
   }
 
   #line-2 {
-    transform: ${({ open }) => (open ? "rotate(405deg) translateX(-6px) translateY(-9px)" : "rotate(0deg)")};
-    -webkit-transform: ${({ open }) => (open ? "rotate(405deg) translateX(-6px) translateY(-9px)" : "rotate(0deg)")};
+    transform: ${({ openBurger }) => (openBurger ? "rotate(405deg) translateX(-6px) translateY(-9px)" : "rotate(0deg)")};
+    -webkit-transform: ${({ openBurger }) => (openBurger ? "rotate(405deg) translateX(-6px) translateY(-9px)" : "rotate(0deg)")};
     transition: .4s;
   }
 
@@ -33,10 +33,10 @@ const BurgerStyles = styled.div`
 `
 
 export default function Burger(props) {
-  const { open, setOpen } = props
+  const { openBurger, setOpenBurger } = props
 
   return (
-    <BurgerStyles open={open} className="burger-box" onClick={() => setOpen(!open)}>
+    <BurgerStyles openBurger={openBurger} className="burger-box" onClick={() => setOpenBurger(!openBurger)}>
       <div className="burger-line" id="line-1"></div>
       <div className="burger-line" id="line-2"></div>
     </BurgerStyles>
