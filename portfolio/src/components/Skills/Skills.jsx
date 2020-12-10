@@ -8,17 +8,16 @@ import rails from '../../assets/icons/rails.png';
 import postgres from '../../assets/icons/postgres.png';
 import axios from '../../assets/icons/axios_logo.png';
 import git from '../../assets/icons/git.png';
-import github from '../../assets/icons/github3.svg'
 import mongodb from '../../assets/icons/mongodb.png'
 import express from '../../assets/icons/express.png'
 import node from '../../assets/icons/node.png'
 import StyledSkills from './StyledSkills';
 
 export default function Skills(props) {
-  const { showSkills, setShowSkills } = props
+  const { showSkills, setShowSkills, home, openBurger, setOpenBurger } = props
 
   return (
-    <StyledSkills showSkills={showSkills}>
+    <StyledSkills showSkills={showSkills} home={home}>
       <div id="title-box">
         <h1>skills</h1>
         <small onClick={() => setShowSkills(false)}>[ hide ]</small>

@@ -18,7 +18,7 @@ export default function Nav(props) {
   const [skillsHover, setSkillsHover] = useState(false);
 
   const handler = () => {
-    window.innerWidth <= 500 ? setMobile(true) : setMobile(false);
+    window.innerWidth <= 550 ? setMobile(true) : setMobile(false);
   }
 
   useEffect(() => {
@@ -30,17 +30,21 @@ export default function Nav(props) {
 
   }, [])
 
+  const handleSkills = () => {
+    if (mobile) {
+      setOpenBurger(false);
+    }
+    setShowSkills(!showSkills)
+  }
+
   const activeLinkStyles = {
     color: "#35a3a3",
     fontSize: "33px"
   }
 
-
-
   return (
     <Navbar openBurger={openBurger} home={home}>
-      <NavLink
-        to='/'>
+      <NavLink to='/'>
         <div className="initials-outer">
           <div className="initials">
             <h1>ED</h1>
@@ -89,7 +93,7 @@ export default function Nav(props) {
                 className="nav-icon"
                 onMouseOver={() => setSkillsHover(true)}
                 onMouseLeave={() => setSkillsHover(false)}
-                onClick={() => setShowSkills(!showSkills)}>
+                onClick={handleSkills}>
                 <FontAwesomeIcon icon={faTools} />
                 {skillsHover ? <p className="nav-hidden">skills</p> : <></>}
               </li>

@@ -23,6 +23,9 @@ export default function Layout(props) {
         setOpenBurger={setOpenBurger} />
       {props.children}
       <Skills
+        openBurger={openBurger} 
+        setOpenBurger={setOpenBurger}
+        home={home}
         showSkills={showSkills}
         setShowSkills={setShowSkills} />
     </StyledLayout>
