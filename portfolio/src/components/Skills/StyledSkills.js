@@ -6,7 +6,7 @@ const StyledSkills = styled.div`
 
 transform: ${({ showSkills }) => (showSkills ? "translateX(0%)" : "translateX(102%)")};
 transition:.4s;
-position: absolute;
+position: fixed;
 right: 0;
 top: 0;
 color: lightgray;
@@ -20,7 +20,6 @@ align-items: center;
 background: #202020;
 overflow-y: scroll;
 color: #DB686F;
-
 
 
 #title-box {
