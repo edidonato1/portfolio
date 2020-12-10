@@ -1,92 +1,82 @@
 import styled from 'styled-components';
 
 const StyledSkills = styled.div`
-position: sticky;
-bottom: 0;
+transform: ${({ showSkills }) => (showSkills ? "translateX(0%)" : "translateX(100%)")};
+transition:.4s;
+position: absolute;
+right: 0;
+top: 0;
 color: lightgray;
-width: 30%;
-margin: 0 0 0 80px;
-min-width: 290px;
 display: flex;
 flex-direction: column;
 border-top: 3px solid #43a8a8;
-height: 65vh;
-padding-left: 10px;
+height: 100vh;
+width: 35vw;
 z-index: 98;
-
-h1 {
-  margin-left: 40px;
-}
-
-.skills-list {
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0;
-  
-}
-.icon-box {
-  display: flex;
-  width: 100%;
-  height: 80%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 0px;
-}
-
-.skill-icon {
-  width: 30px;
-  padding: 15px;
-}
-#feature {
-  height: 200px;
-  position: absolute;
-  width: 100px;
-  left: 30%;
-  bottom: 0;
+border-left: 3px solid #43a8a8;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  
+  background: #202020;
+overflow-y: scroll;
+  /* color: #f0ebeb; */
+  color: #DB686F;
+
+
+h1 {
+
 }
 
-.big-icon {
-
-  width: ${({ hover }) => (hover ? "91px" : "0px")};
-  height: ${({ hover }) => (hover ? "91px" : "0px")};
-  transition: .4s;
-  position: absolute;
-  bottom: 70px;
-  right: ${({ hover }) => (hover ? "35%" : "50%")};
-  /* right: 35%; */
+#title-box {
+  display: flex;
+  width: 100%;
+  padding-left: 60px;
 }
 
-#platform {
-  height: 100px;
-  width: 100px;
-  background: white;
-  border-radius: 50%;
-  transform: rotateX(70deg);
+.skill-icon {
+  width: 25px;
+  height: 25px;
 }
 
-#platform-shadow {
-  position: absolute;
-  bottom: 50%;
-  right: ${({ hover }) => (hover ? "35%" : "50%")};
-  /* right: 35%; */
-  width: ${({ hover }) => (hover ? "40px" : "0px")};
-  height: ${({ hover }) => (hover ? "20px" : "0px")};
+h3 {
+  font-weight: 400;
+  margin: 10px;
+  font-size: 18px;
+  color: #f0ebeb; 
+}
+
+
+
+.icon-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  margin-left: 0px;
+  margin-bottom: 100px;
+}
+
+.skills-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 155px;
+  height: 40px;
+  margin: 10px 5px;
+  background: #313131;
+  border-radius: 10px;
+  padding: 5px 5px 5px 10px;
+  box-shadow:  1px 2px 2px #DB686F;
+  /* box-shadow: 1px 1px 2px 2px  #43a8a8;  */
   transition: .3s;
-  /* height: 20px; */
-  /* width: 40px; */
-  border-radius: 50%;
-  background: rgba(0, 0, 0, .5);
-  box-shadow: ${({ hover }) => (hover ? "5px 5px 10px 20px rgba(0, 0, 0,.5);" : "none")};
-  /* box-shadow: 5px 5px 10px 20px rgba(0, 0, 0,.5); */
-  transition: .3s;
+
 }
+
+
+
 
 `
 

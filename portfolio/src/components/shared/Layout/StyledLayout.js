@@ -12,6 +12,7 @@ const StyledLayout = styled.div`
   background: #202020;
   flex-direction: column;
   justify-content: flex-end;
+  transition: .3s;
   height: 100vh;
   margin: 0 0 0 80px;
   padding-left: 50px;
@@ -97,8 +98,6 @@ hr {
     padding-bottom: 80px;
   }
 
-
-}
 
 
 `
