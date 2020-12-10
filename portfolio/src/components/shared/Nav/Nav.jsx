@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Burger from './Burger';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Navbar from './StyledNav';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserAstronaut, faPaperPlane, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faUserAstronaut, faPaperPlane, faBriefcase, faTools } from '@fortawesome/free-solid-svg-icons';
 
 
 
 export default function Nav(props) {
-  const { home, openBurger, setOpenBurger } = props
+  const { home, openBurger, setOpenBurger, showSkills, setShowSkills } = props
 
   const [mobile, setMobile] = useState(false);
   const [meHover, setMeHover] = useState(false);
   const [contactHover, setContactHover] = useState(false);
   const [workHover, setWorkHover] = useState(false);
+  const [skillsHover, setSkillsHover] = useState(false);
 
   const handler = () => {
     window.innerWidth <= 500 ? setMobile(true) : setMobile(false);
@@ -24,38 +25,42 @@ export default function Nav(props) {
     handler();
     window.addEventListener("resize", handler);
 
-    return () => 
+    return () =>
       window.removeEventListener("resize", handler)
 
   }, [])
 
-
-
+  const activeLinkStyles = {
+    color: "#35a3a3",
+    fontSize: "33px"
+  }
 
 
 
   return (
     <Navbar openBurger={openBurger} home={home}>
-      <Link to='/'>
+      <NavLink
+        to='/'>
         <div className="initials-outer">
           <div className="initials">
             <h1>ED</h1>
           </div>
         </div>
-      </Link>
+      </NavLink>
       <div className="all-icons">
         <ul id="nav-icon-main">
-          <Link to="/about">
+          <NavLink to="/about"
+            activeStyle={activeLinkStyles}>
             <div className="icon-container">
               <li
                 className="nav-icon"
                 onMouseOver={() => setMeHover(true)}
                 onMouseLeave={() => setMeHover(false)}>
                 <FontAwesomeIcon icon={faUserAstronaut} />
-                {meHover  ? <p className="nav-hidden" >about</p> : <> </>}
+                {meHover ? <p className="nav-hidden" >about</p> : <> </>}
               </li>
             </div>
-          </Link>
+          </NavLink>
           <Link to="/contact">
             <div className="icon-container">
               <li
@@ -78,6 +83,18 @@ export default function Nav(props) {
               </li>
             </div>
           </Link>
+          <div id="skills">
+            <div className="icon-container">
+              <li
+                className="nav-icon"
+                onMouseOver={() => setSkillsHover(true)}
+                onMouseLeave={() => setSkillsHover(false)}
+                onClick={() => setShowSkills(!showSkills)}>
+                <FontAwesomeIcon icon={faTools} />
+                {skillsHover ? <p className="nav-hidden">skills</p> : <></>}
+              </li>
+            </div>
+          </div>
         </ul>
         <div className="social-container">
           <div className="social-icon-container">

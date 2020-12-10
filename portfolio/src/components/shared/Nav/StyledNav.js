@@ -73,6 +73,10 @@ ul {
   width: 50px;
 }
 
+#skills {
+  cursor: pointer;
+}
+
 .nav-icon {
   color: #202020;
   padding: 30px 0;

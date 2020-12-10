@@ -15,12 +15,13 @@ import node from '../../assets/icons/node.png'
 import StyledSkills from './StyledSkills';
 
 export default function Skills(props) {
-  const { showSkills } = props
+  const { showSkills, setShowSkills } = props
 
   return (
     <StyledSkills showSkills={showSkills}>
       <div id="title-box">
         <h1>skills</h1>
+        <small onClick={() => setShowSkills(false)}>[ hide ]</small>
       </div>
       <div className="icon-box">
         <div className="skills-box">

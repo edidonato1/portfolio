@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledSkills = styled.div`
-transform: ${({ showSkills }) => (showSkills ? "translateX(0%)" : "translateX(100%)")};
+transform: ${({ showSkills }) => (showSkills ? "translateX(0%)" : "translateX(102%)")};
 transition:.4s;
 position: absolute;
 right: 0;
@@ -9,34 +9,33 @@ top: 0;
 color: lightgray;
 display: flex;
 flex-direction: column;
-border-top: 3px solid #43a8a8;
+/* border-top: 3px solid #43a8a8; */
 height: 100vh;
 width: 35vw;
 z-index: 98;
 border-left: 3px solid #43a8a8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  background: #202020;
+align-items: center;
+background: #202020;
 overflow-y: scroll;
-  /* color: #f0ebeb; */
-  color: #DB686F;
+color: #DB686F;
 
 
-h1 {
-
-}
 
 #title-box {
   display: flex;
-  width: 100%;
-  padding-left: 60px;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding-left: 40px;
+}
+
+small {
+  color: #35a3a3;
+  cursor: pointer;
 }
 
 .skill-icon {
   width: 25px;
-  height: 25px;
 }
 
 h3 {
@@ -45,8 +44,6 @@ h3 {
   font-size: 18px;
   color: #f0ebeb; 
 }
-
-
 
 .icon-box {
   display: flex;
@@ -70,12 +67,39 @@ h3 {
   border-radius: 10px;
   padding: 5px 5px 5px 10px;
   box-shadow:  1px 2px 2px #DB686F;
-  /* box-shadow: 1px 1px 2px 2px  #43a8a8;  */
-  transition: .3s;
-
 }
 
+#react {
+  width: 40px;
+  margin-right: -7px;
+}
 
+#ruby, #postgres, #axios {
+  width: 23px;
+}
+
+#rails {
+  width: 37px;
+  margin-right: -10px;
+}
+
+#express {
+  width: 37px;
+  margin-right: -7px;
+}
+#mongodb {
+  width: 30px;
+  margin-right: -5px;
+}
+
+#node, #html {
+  width: 22px;
+}
+
+#css {
+  width: 29px;
+  margin-right: -5px;
+}
 
 
 `

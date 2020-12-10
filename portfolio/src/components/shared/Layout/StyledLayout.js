@@ -98,7 +98,7 @@ hr {
     padding-bottom: 80px;
   }
 
-
+}
 
 `
 
