@@ -12,6 +12,8 @@ height: 100vh;
 
   h2 {
     margin-top: 0px;
+    color: #818181;
+    font-weight: 500;
   }
 
   @keyframes bounce {
@@ -61,6 +63,28 @@ height: 100vh;
 
   #home-right {
     background: #313131;
+    position: relative;
+  }
+
+  #why {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+  }
+
+  #arrow {
+    margin-right: 6px;
+    color: #818181;
+  }
+
+  h5 {
+    font-weight: 500;
+    color: #818181;
   }
 
   @keyframes rotate {
@@ -180,6 +204,15 @@ height: 100vh;
 
 
 @media screen and (max-width: 800px) {
+
+  #why {
+    top: 80px;
+  }
+
+  #arrow {
+    transform: rotate(30deg);
+  }
+
   .circle, .circle2 {
     width: 50vw;
     height: 50vw;
@@ -193,6 +226,18 @@ height: 100vh;
 }
 
 @media screen and (max-width: 600px) {
+  #why {
+    top: 40px;
+  }
+  
+  h5, #arrow {
+    color: ${({ openBurger }) => (openBurger ? "#313131" : "")};
+    transition: .4s;
+  }
+
+  #arrow {
+    transform: rotate(90deg);
+  }
 
   #home-left {
     height: 120px;
@@ -217,25 +262,18 @@ height: 100vh;
     margin-bottom: -1px;
   }
 
-  small {
-    display: none;
-  }
 
   h2 {
     margin-top: initial;
     margin: inherit;
     width: fit-content;
-    color: #818181;
-    font-weight: 500;
   }
 
   .circle, .circle2 {
     width: 70vw;
     height: 70vw;
     }
-}
 
-@media screen and (max-width: 600px){
   .home-links {
     font-size: 28px;
   }

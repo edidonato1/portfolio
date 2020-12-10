@@ -2,9 +2,13 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../../components/shared/Layout/Layout';
 import HomeDiv from './StyledHome';
+import Pineapple from './Pineapple';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home(props) {
   const { home, setHome, openBurger, setOpenBurger } = props
+  const [showPineapple, setShowPineapple] = useState(false);
 
   useEffect(() => {
     setHome(true);
@@ -38,13 +42,15 @@ export default function Home(props) {
                   </Link>
                 </span>
                 </h1>
-
                 <h2>web developer</h2>
-                <small>front end  |  full stack</small>
               </div>
             </div>
           </div>
           <div className="right-div" id="home-right">
+            <div id="why">
+              <FontAwesomeIcon id="arrow" icon={ faArrowLeft }/>
+              <h5 onClick={() => setShowPineapple(!showPineapple)}>why the pineapple?</h5>
+            </div>
             <div className="circle">
               <div className="circle2" id="color-1"></div>
               <div className="circle2" id="color-2"></div>
@@ -58,6 +64,7 @@ export default function Home(props) {
             </div>
             <div className="shadow"></div>
           </div>
+          <Pineapple showPineapple={showPineapple} setShowPineapple={setShowPineapple}/>
         </HomeDiv>
       </Layout>
     </div>

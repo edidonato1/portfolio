@@ -17,6 +17,7 @@ display: flex;
 }
 
 .contact-blurb {
+  animation: 1s linear 0s 1 appears;
 width: 360px;
 text-align: center; 
 margin-bottom: 20px;
@@ -26,6 +27,7 @@ margin-bottom: 20px;
   margin: 0 auto;
 }
 .form {
+  animation: 1s linear 0s 1 appears;
   display: flex;
   flex-direction: column;
   height: fit-content;
