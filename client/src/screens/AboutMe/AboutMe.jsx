@@ -25,7 +25,7 @@ export default function AboutMe(props) {
           <div className="right-div" id="about-me-right">
             <img id="eddie-bnw" src={eddie} alt="eddie didonato" />
             <h2>eddie didonato</h2>
-            <h3>web developer</h3>
+            <h3> full stack web developer</h3>
             <section className="about-text">
               {/* <p>organized | creative thinker | problem solver </p> */}
               <p>An ambitious lifetime learner, I've always been curious about the architecture of the internet —

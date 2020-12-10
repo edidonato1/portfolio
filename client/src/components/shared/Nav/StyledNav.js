@@ -26,11 +26,6 @@ z-index: 99;
   height: 73%;
 }
 
-@keyframes spin {
-  0% {transform: rotate(0)}
-  100%{transform: rotate(1800deg)}
-}
-
 h1 {
   font-weight: 700;
 }
@@ -50,15 +45,11 @@ h1 {
 #initials-text {
   transform: rotate(-70deg);
   width: 31px;
-
 }
 
 .initials:hover {
   background: #35a3a3;
   color: #202020;
-  animation-name: spin;
-  animation-duration: 1700ms;
-
 }
 
 ul {

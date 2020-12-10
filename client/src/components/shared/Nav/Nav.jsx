@@ -39,24 +39,21 @@ export default function Nav(props) {
     setShowSkills(!showSkills)
   }
 
-  const activeLinkStyles = {
-    color: "#35a3a3",
-    fontSize: "33px"
-  }
-
   return (
     <Navbar openBurger={openBurger} home={home}>
       <NavLink to='/'>
         <div className="initials-outer">
           <div className="initials" onMouseOver = {() => setHoverHome(true)} onMouseLeave={() => setHoverHome(false)}>
-            <img src={hoverHome ? pina2 : pina} id="initials-text" />
+            <img
+              style={hoverHome ? { width: "35px" } : {}}
+              src={hoverHome ? pina2 : pina}
+              id="initials-text" />
           </div>
         </div>
       </NavLink>
       <div className="all-icons">
         <ul id="nav-icon-main">
-          <NavLink to="/about"
-            activeStyle={activeLinkStyles}>
+          <Link to="/about">
             <div className="icon-container">
               <li
                 className="nav-icon"
@@ -66,7 +63,7 @@ export default function Nav(props) {
                 {meHover ? <p className="nav-hidden" >about</p> : <> </>}
               </li>
             </div>
-          </NavLink>
+          </Link>
           <Link to="/contact">
             <div className="icon-container">
               <li

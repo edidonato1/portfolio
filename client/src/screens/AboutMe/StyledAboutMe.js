@@ -4,6 +4,19 @@ const AboutMeDiv = styled.div`
 display: flex;
 text-align: justify;
 
+h2 {
+  color: #bf6b72;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-top: 0;
+  font-weight: 500;
+  color: #35a3a3;
+}
+
 
 #about-me-right {
   flex-direction: column;
