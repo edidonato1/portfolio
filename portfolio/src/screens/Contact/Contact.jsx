@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import Layout from '../../components/shared/Layout/Layout';
 import ContactDiv from './StyledContact';
@@ -7,13 +7,16 @@ export default function Contact(props) {
   const [showContact, setShowContact] = useState(false);
   const { openBurger, setOpenBurger } = props;
 
-
+  useEffect(() => {
+    document.querySelector('body').scrollTo(0, 0)
+  }, [])
 
   return (
     <div>
       <Layout
         openBurger={openBurger}
-        setOpenBurger={setOpenBurger}>
+        setOpenBurger={setOpenBurger}
+      >
         <ContactDiv showContact={showContact}>
           <div className="left-div" >
             <div className="left-div-child">

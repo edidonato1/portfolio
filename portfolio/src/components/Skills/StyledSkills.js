@@ -2,6 +2,8 @@ import { callbackPromise } from 'nodemailer/lib/shared';
 import styled from 'styled-components';
 
 const StyledSkills = styled.div`
+/* opacity: ${({ showSkills }) => (showSkills ? "1" : "0")}; */
+
 transform: ${({ showSkills }) => (showSkills ? "translateX(0%)" : "translateX(102%)")};
 transition:.4s;
 position: absolute;
@@ -10,7 +12,6 @@ top: 0;
 color: lightgray;
 display: flex;
 flex-direction: column;
-/* border-top: 3px solid #43a8a8; */
 height: 100vh;
 width: 35vw;
 z-index: 98;
