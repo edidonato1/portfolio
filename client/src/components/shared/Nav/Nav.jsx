@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Burger from './Burger';
 import { Link, NavLink } from 'react-router-dom';
+import pina from '../../../assets/icons/pineapple.svg'
+import pina2 from '../../../assets/icons/pina2.svg'
 import Navbar from './StyledNav';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +12,7 @@ import { faUserAstronaut, faPaperPlane, faBriefcase, faTools } from '@fortawesom
 
 export default function Nav(props) {
   const { home, openBurger, setOpenBurger, showSkills, setShowSkills } = props
-
+  const [hoverHome, setHoverHome] = useState(false)
   const [mobile, setMobile] = useState(false);
   const [meHover, setMeHover] = useState(false);
   const [contactHover, setContactHover] = useState(false);
@@ -46,8 +48,8 @@ export default function Nav(props) {
     <Navbar openBurger={openBurger} home={home}>
       <NavLink to='/'>
         <div className="initials-outer">
-          <div className="initials">
-            <h1>ED</h1>
+          <div className="initials" onMouseOver = {() => setHoverHome(true)} onMouseLeave={() => setHoverHome(false)}>
+            <img src={hoverHome ? pina2 : pina} id="initials-text" />
           </div>
         </div>
       </NavLink>

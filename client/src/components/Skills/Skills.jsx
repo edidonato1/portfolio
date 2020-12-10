@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
 import js from '../../assets/icons/js_logo.png';
@@ -14,12 +13,12 @@ import node from '../../assets/icons/node.png'
 import StyledSkills from './StyledSkills';
 
 export default function Skills(props) {
-  const { showSkills, setShowSkills, home, openBurger, setOpenBurger } = props
+  const { showSkills, setShowSkills, home} = props
 
   return (
     <StyledSkills showSkills={showSkills} home={home}>
       <div id="title-box">
-        <h1>skills</h1>
+        <span><h1>skills</h1></span>
         <small onClick={() => setShowSkills(false)}>[ hide ]</small>
       </div>
       <div className="icon-box">

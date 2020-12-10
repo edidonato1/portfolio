@@ -1,19 +1,14 @@
 import styled from 'styled-components'
 
 const StyledProjectCard = styled.div`
-@keyframes slide {
-  0% {
-    transform: translateX(150%);
-  }
-  20% {
-    transform: translateX(150%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+
+@keyframes appears {
+  from {opacity: 0}
+  30% {opacity: 0}
+  to {opacity: 1;}
 }
 
-  animation: 1s linear 0s 1 slide;
+  animation: 1.5s linear 0s 1 appears;
   text-align: center;
   width: 70%;
   max-width: 550px;
@@ -70,6 +65,10 @@ section {
   margin-top: -5px;
   font-weight: 500;
   margin-bottom: 17px;
+}
+
+#my-work {
+  margin-bottom: -10px;
 }
 
 .project-links {
@@ -164,6 +163,10 @@ width: 70%;
     font-weight: 500;
   }
 
+  .title {
+    font-weight: 500;
+    margin-top: -20px;
+  }
   }
 
 

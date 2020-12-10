@@ -1,8 +1,6 @@
-import { callbackPromise } from 'nodemailer/lib/shared';
 import styled from 'styled-components';
 
 const StyledSkills = styled.div`
-/* opacity: ${({ showSkills }) => (showSkills ? "1" : "0")}; */
 
 transform: ${({ showSkills }) => (showSkills ? "translateX(0%)" : "translateX(102%)")};
 transition:.4s;
@@ -124,7 +122,7 @@ h3 {
   width: 100%;
   /* height: 100%; */
   height: fit-content;
-  overflow-y: auto;
+  overflow-y: scroll;
   z-index: 0;
   border-left: initial;
   border-top: 3px solid #43a8a8;
@@ -132,7 +130,7 @@ h3 {
   /* top: 80px; */
   height: ${({home}) => (home ? "calc(100vh - 200px )" : "calc(100vh - 160px)")};
   top: ${({ home }) => (home ? "200px" : "160px")};
-  ;
+  padding-bottom: 40px;
 
 h1 {
   color: #f0ebeb;
@@ -143,7 +141,7 @@ h1 {
     overflow-y: scroll;
     margin-bottom: 20px;
     height: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
   }
 
   .skills-box {

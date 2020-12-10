@@ -47,6 +47,12 @@ h1 {
   margin-top: 20px;
 }
 
+#initials-text {
+  transform: rotate(-70deg);
+  width: 31px;
+
+}
+
 .initials:hover {
   background: #35a3a3;
   color: #202020;

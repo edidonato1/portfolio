@@ -9,32 +9,25 @@ export default function ProjectsHome(props) {
   const [mobile, setMobile] = useState(false);
 
   const handler = () => {
-    window.innerWidth <= 500 ? setMobile(true) : setMobile(false);
+    window.innerWidth <= 600 ? setMobile(true) : setMobile(false);
   }
 
   useEffect(() => {
+    document.querySelector('body').scrollTo(0, 0)
     handler();
     window.addEventListener("resize", handler);
-
     return () =>
       window.removeEventListener("resize", handler)
-  }, [])
-
-  useEffect(() => {
-    document.querySelector('body').scrollTo(0, 0)
-    setTimeout(() => setShowMessage('thanks for stopping by'), 1500)
-    setTimeout(() => setShowMessage(`you can navigate with the drop-down by "projects"`), 6500)
-    setTimeout(() => setShowMessage('enjoy'), 11500)
-    setTimeout(() => setShowMessage(''), 16500)
   }, [])
 
   return (
 
     <StyledProjectCard >
       <h2 className="title">welcome.</h2>
-      <h3 className="subtitle">my work</h3>
+      <h3 className="subtitle" id="my-work">my work</h3>
       <div className="message">
-        <h6 className="appear">{showMessage}</h6>
+        <h6 className="appear">thanks for stopping by. <br />
+  you can navigate with the drop-down{ mobile ? " above." : " to the left."}</h6>
       </div>
       <div className="gear-box">
         <FontAwesomeIcon icon={faCog} className="gears" id="large" />
