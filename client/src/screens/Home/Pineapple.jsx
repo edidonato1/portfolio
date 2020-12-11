@@ -8,7 +8,7 @@ export default function Pineapple(props) {
     <StyledPineapple showPineapple={showPineapple}>
       <div className="main"> 
       <h3>what's up with the pineapple?</h3>
-        <p>While I'll admit that I have an affinity for their overall aesthetic ( and flavor ), and am fascinated
+        <p>While I'll admit that I have an affinity for their overall aesthetic ( and flavor ) and am fascinated
         by their naturally-occurring Fibonacci pattern, that's not why you see a pineapple icon
         on my portfolio website.</p>
         <p>Pineapples are a global symbol of hospitality.</p>

@@ -2,6 +2,9 @@ import { useState } from 'react';
 import Home from './screens/Home/Home';
 import AboutMe from './screens/AboutMe/AboutMe';
 import Contact from './screens/Contact/Contact';
+
+import Test from './screens/Home/Test';
+
 import Projects from './screens/Projects/Projects';
 import Layout from './components/shared/Layout/Layout';
 import { Route, Switch } from 'react-router-dom'
@@ -39,6 +42,7 @@ function App() {
           openBurger={openBurger}
           setOpenBurger={setOpenBurger} />
       </Route>
+      <Route exact path="/Test" component={Test}/>
     </Switch>
   );
 }
