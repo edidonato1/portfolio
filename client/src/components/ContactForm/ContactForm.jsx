@@ -30,9 +30,6 @@ const ContactForm = () => {
       message: '',
     });
     setSent(true)
-    if (!sent) {
-      alert("something went wrong, please try again later.");
-    }
   };
 
   const handleChange = (e) => {
