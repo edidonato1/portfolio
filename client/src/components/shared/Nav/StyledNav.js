@@ -195,6 +195,11 @@ ul {
     color: #35a3a3;
   }
 
+  .nav-icon:hover {
+    color: #f0ebeb;
+    font-size: 30px;
+  }
+
   .social-container {
     margin-left: 15px;
   }
@@ -211,6 +216,16 @@ ul {
   #nav-icon-main {
     margin-left: initial;
   }
+
+  .nav-hidden {
+  font-size: 12.5px;
+  font-weight: 400;
+  margin-top: -5px;
+  margin-bottom: 0;
+  color: #c0c0c0;
+  transition: .3s;
+}
+
 
 }
 

@@ -93,11 +93,11 @@ export default function CoLab(props) {
         {mobile ?
           <video className="media-child" controls muted >
             <source src={mobileVid} type="video/mp4" />
-          </video> : 
-        <video className="media-child" autoPlay loop muted >
-          <source src={mobileVid} type="video/mp4" />
-        </video>
-      }
+          </video> :
+          <video className="media-child" autoPlay loop muted >
+            <source src={mobileVid} type="video/mp4" />
+          </video>
+        }
       </div>
       <section>
         <p>A second iteration of CoLab is currently underway, and will incorporate the concept of multi-user associations

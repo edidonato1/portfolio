@@ -61,7 +61,7 @@ export default function Nav(props) {
                 onMouseOver={() => setMeHover(true)}
                 onMouseLeave={() => setMeHover(false)}>
                 <FontAwesomeIcon icon={faUserAstronaut} />
-                {meHover ? <p className="nav-hidden" >about</p> : <> </>}
+                {meHover || mobile ? <p className="nav-hidden" >about</p> : <> </>}
               </li>
             </div>
           </Link>
@@ -72,7 +72,7 @@ export default function Nav(props) {
                 onMouseOver={() => setContactHover(true)}
                 onMouseLeave={() => setContactHover(false)}>
                 <FontAwesomeIcon icon={faPaperPlane} />
-                {contactHover ? <p className="nav-hidden">contact</p> : <></>}
+                {contactHover || mobile ? <p className="nav-hidden">contact</p> : <></>}
               </li>
             </div>
           </Link>
@@ -83,7 +83,7 @@ export default function Nav(props) {
                 onMouseOver={() => setWorkHover(true)}
                 onMouseLeave={() => setWorkHover(false)}>
                 <FontAwesomeIcon icon={faBriefcase} />
-                {workHover ? <p className="nav-hidden" >projects</p> : <></>}
+                {workHover || mobile ? <p className="nav-hidden" >projects</p> : <></>}
               </li>
             </div>
           </Link>
@@ -95,7 +95,7 @@ export default function Nav(props) {
                 onMouseLeave={() => setSkillsHover(false)}
                 onClick={handleSkills}>
                 <FontAwesomeIcon icon={faTools} />
-                {skillsHover ? <p className="nav-hidden">skills</p> : <></>}
+                {skillsHover || mobile ? <p className="nav-hidden">skills</p> : <></>}
               </li>
             </div>
           </div>
