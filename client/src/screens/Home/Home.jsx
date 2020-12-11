@@ -4,11 +4,23 @@ import Layout from '../../components/shared/Layout/Layout';
 import HomeDiv from './StyledHome';
 import Pineapple from './Pineapple';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home(props) {
   const { home, setHome, openBurger, setOpenBurger } = props
   const [showPineapple, setShowPineapple] = useState(false);
+  const [mobile, setMobile] = useState(false);
+
+  const handler = () => {
+    window.innerWidth <= 600 ? setMobile(true) : setMobile(false);
+  }
+
+  useEffect(() => {
+    handler();
+    window.addEventListener("resize", handler);
+    return () =>
+      window.removeEventListener("resize", handler)
+  }, [])
 
   useEffect(() => {
     setHome(true);
@@ -44,12 +56,30 @@ export default function Home(props) {
                 </h1>
                 <h2>web developer</h2>
               </div>
+              {showPineapple ?
+                <span id="hide-that">
+                  <h6 onClick={() => setShowPineapple(false)}>hide </h6>
+                  <FontAwesomeIcon id="down-arrow" icon={faArrowDown} />
+                </span>
+                :  
+                <> </>
+            }
             </div>
           </div>
           <div className="right-div" id="home-right">
             <div id="why">
-              <FontAwesomeIcon id="arrow" icon={ faArrowLeft }/>
-              <h5 onClick={() => setShowPineapple(!showPineapple)}>why the pineapple?</h5>
+              {!showPineapple ?
+                <>
+                  <FontAwesomeIcon id="arrow" icon={faArrowLeft} />
+                  <h5 onClick={() => setShowPineapple(!showPineapple)}>why the pineapple?</h5>
+                </>
+                :
+                mobile ? <></> :
+                <> 
+                  <h5 id="hide" onClick={() => setShowPineapple(!showPineapple)}>hide that </h5>
+                  <FontAwesomeIcon id="arrow-right" icon={faArrowRight} />
+                </>
+              }
             </div>
             <div className="circle">
               <div className="circle2" id="color-1"></div>
@@ -64,7 +94,7 @@ export default function Home(props) {
             </div>
             <div className="shadow"></div>
           </div>
-          <Pineapple showPineapple={showPineapple} setShowPineapple={setShowPineapple}/>
+          <Pineapple showPineapple={showPineapple} />
         </HomeDiv>
       </Layout>
     </div>

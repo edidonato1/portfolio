@@ -10,6 +10,7 @@ top: 0;
 color: lightgray;
 display: flex;
 flex-direction: column;
+justify-content: center;
 height: 100vh;
 width: 35vw;
 z-index: 98;
@@ -19,86 +20,36 @@ background: #202020;
 overflow-y: scroll;
 color: #DB686F;
 
-
-#title-box {
+.main {
+  text-align: justify;
+  width: 90%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  width: 80%;
-  padding-left: 40px;
 }
 
-small {
+a {
   color: #35a3a3;
-  cursor: pointer;
+}
+p {
+  color: #f0ebeb;
 }
 
-.skill-icon {
-  width: 25px;
+#me {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 25px;
+  color: #bf6b72;
 }
+
 
 h3 {
-  font-weight: 400;
+  font-weight: 600;
   margin: 10px;
   font-size: 18px;
-  color: #f0ebeb; 
+  color: #bf6b72; 
 }
 
-.icon-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  margin-left: 0px;
-  margin-bottom: 80px;
-}
 
-.skills-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 155px;
-  height: 40px;
-  margin: 10px 5px;
-  background: #313131;
-  border-radius: 10px;
-  padding: 5px 5px 5px 10px;
-  box-shadow:  1px 2px 2px #DB686F;
-}
-
-#react {
-  width: 40px;
-  margin-right: -7px;
-}
-
-#ruby, #postgres, #axios {
-  width: 23px;
-}
-
-#rails {
-  width: 37px;
-  margin-right: -10px;
-}
-
-#express {
-  width: 37px;
-  margin-right: -7px;
-}
-#mongodb {
-  width: 30px;
-  margin-right: -5px;
-}
-
-#node, #html {
-  width: 22px;
-}
-
-#css {
-  width: 29px;
-  margin-right: -5px;
-}
 
 @media screen and (max-width: 800px) {
   top: 80px;
@@ -116,46 +67,31 @@ h3 {
 
 @media screen and (max-width: 600px) {
   transform: ${({ showPineapple }) => (showPineapple ? "translateY(0%)" : "translateY(102%)")};
-  /* top: 220px; */
   bottom: 0;
   right: initial;
   width: 100%;
-  /* height: 100%; */
   height: fit-content;
   overflow-y: scroll;
   z-index: 0;
   border-left: initial;
   border-top: 3px solid #43a8a8;
   transition: .7s;
-  /* top: 80px; */
-  height: ${({home}) => (home ? "calc(100vh - 200px )" : "calc(100vh - 160px)")};
-  top: ${({ home }) => (home ? "200px" : "160px")};
+  height: calc(100vh - 200px);
+  top: 200px;
   padding-bottom: 40px;
 
+  .main {
+    margin-top: 20px;
+    overflow: scroll;
+    margin-bottom: 60px;
+    text-align: left;
+  }
 h1 {
   color: #f0ebeb;
   margin-bottom: 10px;
 }
-.icon-box {
 
-    overflow-y: scroll;
-    margin-bottom: 20px;
-    height: 100%;
-    padding-bottom: 100px;
-  }
 
-  .skills-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 155px;
-  height: 37px;
-  margin: 7px 5px;
-  background: #313131;
-  border-radius: 10px;
-  padding: 5px 5px 5px 10px;
-  box-shadow:  1px 2px 2px #DB686F;
-}
 
 
 

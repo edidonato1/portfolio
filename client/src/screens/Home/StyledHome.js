@@ -79,12 +79,24 @@ height: 100vh;
 
   #arrow {
     margin-right: 6px;
-    color: #818181;
+    color: #616161;
+  }
+
+  #arrow-right {
+    color: #919191;
   }
 
   h5 {
+    margin-right: 6px;
     font-weight: 500;
-    color: #818181;
+    color: #616161;
+  }
+  #hide {
+    color: #919191;
+  }
+
+  #hide-that {
+    display: none;
   }
 
   @keyframes rotate {
@@ -228,6 +240,34 @@ height: 100vh;
 @media screen and (max-width: 600px) {
   #why {
     top: 40px;
+  }
+
+  #hide-that {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    background: #bf6b72;
+    border: 1px solid #313131;
+    border-radius: 10px;
+    height: 30px;
+    padding: 0 5px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #hide-that:hover {
+    background: #35a3a3;
+  }
+
+  #down-arrow {
+    color: #202020;
+  }
+
+  h6 {
+    color: #f0ebeb;
+    margin-right: 5px;
+    font-size: 15px;
   }
   
   h5, #arrow {
