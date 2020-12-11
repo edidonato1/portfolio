@@ -45,6 +45,7 @@ export default function Nav(props) {
         <div className="initials-outer">
           <div className="initials" onMouseOver = {() => setHoverHome(true)} onMouseLeave={() => setHoverHome(false)}>
             <img
+              alt="pineapple"
               style={hoverHome ? { width: "35px" } : {}}
               src={hoverHome ? pina2 : pina}
               id="initials-text" />

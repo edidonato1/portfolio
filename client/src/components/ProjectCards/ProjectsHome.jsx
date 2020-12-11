@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import StyledProjectCard from './StyledProjectCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
@@ -6,7 +5,6 @@ import './Animations.css';
 
 export default function ProjectsHome(props) {
   const { mobile } = props;
-  const [showMessage, setShowMessage] = useState('');
 
   return (
     <StyledProjectCard >

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Layout from '../../components/shared/Layout/Layout';
 import ProjectsHome from '../../components/ProjectCards/ProjectsHome';
 import SunsetOracle from '../../components/ProjectCards/SunsetOracle';
