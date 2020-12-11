@@ -28,7 +28,7 @@ export default function Contact(props) {
           </div>
           <div className="right-div" id="form-right">
             <section className="contact-blurb">
-              <p>currently available for full time,<br></br> or freelance opportunities.</p><br></br>
+              <p>i'm currently available for full time,<br></br> or freelance opportunities.</p><br></br>
               <p id="contact-blurb-bottom">feel free to fill out the form below, <br></br>or
                 <span
                   onClick={() => setShowContact(!showContact)}

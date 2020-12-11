@@ -94,7 +94,7 @@ export default function Root(props) {
       <img className="media" src={home} alt="pops home web" />
       <section>
         <p>Built out from the back end using the Express framework in conjunction with MongoDB, ROOT
-        incorporates user login concepts and multiple layers of fullstack-driven CRUD (Create, Read, Update, Delete) functionality.</p>
+        incorporates user login concepts and multiple layers of full stack CRUD (Create, Read, Update, Delete) functionality.</p>
       </section>
       <img className="media" src={profile} alt="root profile page" />
       <section>

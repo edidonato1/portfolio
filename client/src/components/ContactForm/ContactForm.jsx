@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom'
 import emailjs from 'emailjs-com'
 import { init } from 'emailjs-com';
@@ -6,8 +6,7 @@ init("user_yIHk6A1yfmyHXdBofkhFI");
 
 const ContactForm = () => {
 
-  const [hover, setHover] = useState(false)
-  const [sent, setSent] = useState(false)
+  const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -23,14 +22,17 @@ const ContactForm = () => {
       email: email,
       subject: subject,
       message: message
-    })
+    });
     setForm({
       name: '',
       email: '',
       subject: '',
       message: '',
-    })
+    });
     setSent(true)
+    if (!sent) {
+      alert("something went wrong, please try again later.");
+    }
   };
 
   const handleChange = (e) => {
