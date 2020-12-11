@@ -42,7 +42,6 @@ function App() {
           openBurger={openBurger}
           setOpenBurger={setOpenBurger} />
       </Route>
-      <Route exact path="/Test" component={Test}/>
     </Switch>
   );
 }
