@@ -33,12 +33,12 @@ export default function Root(props) {
       <h3 className="subtitle">a travel companion for the mindful communter</h3>
       <div className="project-links">
         <div className="link-mini-div">
-          <a href="https://root-green-transport.netlify.app/" target="_blank">
+          <a href="https://root-green-transport.netlify.app/" target="_blank" rel="noreferrer">
             <h3>Live</h3>
           </a>
         </div>
         <div className="link-mini-div">
-          <a href="https://github.com/allicue/root" target="_blank">
+          <a href="https://github.com/allicue/root" target="_blank" rel="noreferrer">
             <h3>GitHub </h3>
           </a>
         </div>
@@ -74,14 +74,14 @@ export default function Root(props) {
         <h4>the team:</h4>
         <h5>Developers</h5>
         <p className="dev-team">
-          <span> eddie didonato |<a className="friends" href="https://www.linkedin.com/in/allisonquiroz/" target="_blank"> allison quiroz</a>
-          </span><span><a className="friends" href="https://www.linkedin.com/in/nathan-wigen-6337121b0/" target="_blank"></a>
-            <a className="friends" href="https://www.linkedin.com/in/nathan-wigen-6337121b0/" target="_blank">nathan wigen</a> |
-            <a className="friends" href="https://www.linkedin.com/in/daniel-michael-718825155/" target="_blank"> daniel michael</a> </span></p>
+          <span> eddie didonato |<a className="friends" href="https://www.linkedin.com/in/allisonquiroz/" target="_blank" rel="noreferrer"> allison quiroz</a>
+          </span><span><a className="friends" href="https://www.linkedin.com/in/nathan-wigen-6337121b0/" target="_blank" rel="noreferrer"></a>
+            <a className="friends" href="https://www.linkedin.com/in/nathan-wigen-6337121b0/" target="_blank" rel="noreferrer">nathan wigen</a> |
+            <a className="friends" href="https://www.linkedin.com/in/daniel-michael-718825155/" target="_blank" rel="noreferrer"> daniel michael</a> </span></p>
         <h5>UX/UI Design</h5>
         <p className="dev-team">
-          <span><a className="friends" href=" http://www.claudiazacharias.com" target="_blank">claudia zacharias</a>  |  erica cleary  </span>
-          <span> <a className="friends" href="https://www.linkedin.com/in/toni-marie-brown-b44b7696/" target="_blank">toni brown </a> |  kendall kessler</span></p>
+          <span><a className="friends" href=" http://www.claudiazacharias.com" target="_blank" rel="noreferrer">claudia zacharias</a>  |  erica cleary  </span>
+          <span> <a className="friends" href="https://www.linkedin.com/in/toni-marie-brown-b44b7696/" target="_blank" rel="noreferrer">toni brown </a> |  kendall kessler</span></p>
       </section>
       <hr />
       <section>

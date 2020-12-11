@@ -32,12 +32,12 @@ export default function CoLab(props) {
       <h3 className="subtitle">a social app bringing creative-doers together</h3>
       <div className="project-links">
         <div className="link-mini-div">
-          <a href="https://colab.netlify.app/" target="_blank">
+          <a href="https://colab.netlify.app/" target="_blank" rel="noreferrer">
             <h3>Live</h3>
           </a>
         </div>
         <div className="link-mini-div">
-          <a href="https://github.com/edidonato1/CoLab" target="_blank">
+          <a href="https://github.com/edidonato1/CoLab" target="_blank" rel="noreferrer">
             <h3>GitHub </h3>
           </a>
         </div>

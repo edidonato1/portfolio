@@ -26,12 +26,12 @@ export default function SunsetOracle(props) {
       <h3 className="subtitle">a cheeky single-page weather application</h3>
       <div className="project-links">
         <div className="link-mini-div">
-          <a href="https://edidonato1.github.io/Sunset-Oracle/" target="_blank">
+          <a href="https://edidonato1.github.io/Sunset-Oracle/" target="_blank" rel="noreferrer">
             <h3>Live</h3>
           </a>
         </div>
         <div className="link-mini-div">
-          <a href="https://github.com/edidonato1/Sunset-Oracle" target="_blank">
+          <a href="https://github.com/edidonato1/Sunset-Oracle" target="_blank" rel="noreferrer">
             <h3>GitHub </h3>
           </a>
         </div>

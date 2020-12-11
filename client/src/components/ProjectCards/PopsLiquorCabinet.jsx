@@ -30,12 +30,12 @@ export default function PopsLiquorCabinet(props) {
       <h3 className="subtitle">an intuitive home bar inventory manager</h3>
       <div className="project-links">
         <div className="link-mini-div">
-          <a href="https://pops-liquor-cabinet.netlify.app/" target="_blank">
+          <a href="https://pops-liquor-cabinet.netlify.app/" target="_blank" rel="noreferrer">
             <h3>Live</h3>
           </a>
         </div>
         <div className="link-mini-div">
-          <a href="https://github.com/edidonato1/Pops_Liquor_Cabinet" target="_blank">
+          <a href="https://github.com/edidonato1/Pops_Liquor_Cabinet" target="_blank" rel="noreferrer">
             <h3>GitHub </h3>
           </a>
         </div>
