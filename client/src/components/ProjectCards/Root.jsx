@@ -75,8 +75,7 @@ export default function Root(props) {
         <h5>Developers</h5>
         <p className="dev-team">
           <span> eddie didonato |<a className="friends" href="https://www.linkedin.com/in/allisonquiroz/" target="_blank" rel="noreferrer"> allison quiroz</a>
-          </span><span><a className="friends" href="https://www.linkedin.com/in/nathan-wigen-6337121b0/" target="_blank" rel="noreferrer"></a>
-            <a className="friends" href="https://www.linkedin.com/in/nathan-wigen-6337121b0/" target="_blank" rel="noreferrer">nathan wigen</a> |
+          </span><span><a className="friends" href="https://www.linkedin.com/in/nathan-wigen-6337121b0/" target="_blank" rel="noreferrer">nathan wigen</a> |
             <a className="friends" href="https://www.linkedin.com/in/daniel-michael-718825155/" target="_blank" rel="noreferrer"> daniel michael</a> </span></p>
         <h5>UX/UI Design</h5>
         <p className="dev-team">

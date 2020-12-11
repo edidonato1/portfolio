@@ -89,7 +89,7 @@ export default function CoLab(props) {
         maintain a clean UI for seamless, user-friendly navigation.</p>
       </section>
       <div className="media" id="media-container">
-        < img className="media-child" src={mobileMedium} />
+        < img className="media-child" alt="medium page mobile" src={mobileMedium} />
         {mobile ?
           <video className="media-child" controls muted >
             <source src={mobileVid} type="video/mp4" />
