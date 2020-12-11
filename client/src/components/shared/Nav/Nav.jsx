@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Burger from './Burger';
 import { Link, NavLink } from 'react-router-dom';
-import pina from '../../../assets/icons/pineapple.svg'
-import pina2 from '../../../assets/icons/pina2.svg'
+import pina from '../../../assets/icons/pineapple.svg';
+import pina2 from '../../../assets/icons/pina2.svg';
 import Navbar from './StyledNav';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAstronaut, faPaperPlane, faBriefcase, faTools } from '@fortawesome/free-solid-svg-icons';
 
 
 
 export default function Nav(props) {
-  const { home, openBurger, setOpenBurger, showSkills, setShowSkills } = props
-  const [hoverHome, setHoverHome] = useState(false)
+  const { home, openBurger, setOpenBurger, showSkills, setShowSkills } = props;
+  const [hoverHome, setHoverHome] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [meHover, setMeHover] = useState(false);
   const [contactHover, setContactHover] = useState(false);
@@ -28,15 +28,15 @@ export default function Nav(props) {
     window.addEventListener("resize", handler);
 
     return () =>
-      window.removeEventListener("resize", handler)
+      window.removeEventListener("resize", handler);
 
-  }, [])
+  }, []);
 
   const handleSkills = () => {
     if (mobile) {
       setOpenBurger(false);
     }
-    setShowSkills(!showSkills)
+    setShowSkills(!showSkills);
   }
 
   return (

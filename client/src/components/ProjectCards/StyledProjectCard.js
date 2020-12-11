@@ -21,6 +21,7 @@ h3 {
 h4 {
   display: inline;
 } 
+
 h5 {
   margin-bottom: -5px;
   color: #818181;
@@ -53,14 +54,14 @@ section {
   margin: 40px 0;
 }
  
- .title {
-   font-size: 3rem;
-   text-decoration: none;
-   color: rgb(207, 207, 207);
-   margin: 8px;
- }
+.title {
+  font-size: 3rem;
+  text-decoration: none;
+  color: rgb(207, 207, 207);
+  margin: 8px;
+}
 
- .subtitle {
+.subtitle {
   color: #35a3a3;
   margin-top: -5px;
   font-weight: 500;
@@ -111,20 +112,19 @@ section {
 }
 
 .dev-team {
-display: flex;
-margin: 15px auto;
-flex-direction: row;
-flex-wrap: wrap;
-align-content: center;
-justify-items: center;
-justify-content: center;
-align-items: center;
-width: 70%;
+  display: flex;
+  margin: 15px auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
 }
 
 .media {
   width: 100%;
-
 }
 
 #media-container {
@@ -159,6 +159,7 @@ width: 70%;
 }
 
 @media screen and (max-width: 600px) {
+
   h5 {
     font-weight: 500;
   }
@@ -167,7 +168,7 @@ width: 70%;
     font-weight: 500;
     margin-top: -20px;
   }
-  }
+}
 
 
 

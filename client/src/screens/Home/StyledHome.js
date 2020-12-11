@@ -238,6 +238,7 @@ height: 100vh;
 }
 
 @media screen and (max-width: 600px) {
+  
   #why {
     top: 40px;
   }

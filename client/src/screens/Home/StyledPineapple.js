@@ -31,6 +31,7 @@ color: #DB686F;
 a {
   color: #35a3a3;
 }
+
 p {
   color: #f0ebeb;
 }
@@ -41,7 +42,6 @@ p {
   color: #bf6b72;
 }
 
-
 h3 {
   font-weight: 600;
   margin: 10px;
@@ -50,8 +50,8 @@ h3 {
 }
 
 
-
 @media screen and (max-width: 800px) {
+
   top: 80px;
   height: 100%;
   overflow-y: auto;
@@ -66,6 +66,7 @@ h3 {
 }
 
 @media screen and (max-width: 600px) {
+
   transform: ${({ showPineapple }) => (showPineapple ? "translateY(0%)" : "translateY(102%)")};
   bottom: 0;
   right: initial;
@@ -86,14 +87,11 @@ h3 {
     margin-bottom: 60px;
     text-align: left;
   }
-h1 {
-  color: #f0ebeb;
-  margin-bottom: 10px;
-}
 
-
-
-
+  h1 {
+    color: #f0ebeb;
+    margin-bottom: 10px;
+  }
 
 }
 

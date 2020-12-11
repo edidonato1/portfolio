@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 const StyledLayout = styled.div`
-/* width: 100%; */
-/* max-width: 100vw; */
+
 .left-div {
   position: sticky;
   top: 0;
@@ -19,7 +18,6 @@ const StyledLayout = styled.div`
   color: #DB686F;
   z-index: 98;
 }
-
 
 .left-div-child {
   padding-top: 0px;
@@ -48,6 +46,7 @@ hr {
 }
 
 @media screen and (max-width: 800px) {
+
   .left-div {
     margin-left: 0px;
     min-width: 180px;
@@ -60,6 +59,7 @@ hr {
 }
 
 @media screen and (max-width: 600px) {
+  
   .left-div {
     position: fixed;
     top: 0;

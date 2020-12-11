@@ -34,7 +34,6 @@ h1 {
   margin-top: 4px;
 }
 
-
 .icon:hover {
   color: #35a3a3;
   font-size: 26px;
@@ -54,7 +53,6 @@ h1 {
   transition: .5s;
   z-index: -1;
 }
-
 
 .project-li {
   color: #DB686F;

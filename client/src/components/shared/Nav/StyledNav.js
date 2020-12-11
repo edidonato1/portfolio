@@ -118,6 +118,7 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+  
   left: initial;  
   flex-direction: row;
   height: 80px;
@@ -164,6 +165,7 @@ ul {
 }
 
 @media screen and (max-width: 550px) {
+
   .burger {
     display: block;
   }
@@ -187,31 +189,28 @@ ul {
     border-bottom: 3px solid #f0ebeb;
     flex-direction: row-reverse;
     padding: 0px 10px;
-
   }
 
   .nav-icon {
     color: #35a3a3;
   }
 
-.social-container {
-  margin-left: 15px;
-
-}
+  .social-container {
+    margin-left: 15px;
+  }
   
   .social {
     color: #DB686F;
   }
 
   .icon-container {
-  height: 60px;
-  width: 60px;
-}
+    height: 60px;
+    width: 60px;
+  }
 
-#nav-icon-main {
-  margin-left: initial;
-}
-
+  #nav-icon-main {
+    margin-left: initial;
+  }
 
 }
 

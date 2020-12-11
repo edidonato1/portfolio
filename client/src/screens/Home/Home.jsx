@@ -7,20 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home(props) {
-  const { home, setHome, openBurger, setOpenBurger } = props
+  const { home, setHome, openBurger, setOpenBurger, mobile } = props;
   const [showPineapple, setShowPineapple] = useState(false);
-  const [mobile, setMobile] = useState(false);
-
-  const handler = () => {
-    window.innerWidth <= 600 ? setMobile(true) : setMobile(false);
-  }
-
-  useEffect(() => {
-    handler();
-    window.addEventListener("resize", handler);
-    return () =>
-      window.removeEventListener("resize", handler)
-  }, [])
 
   useEffect(() => {
     setHome(true);
@@ -61,8 +49,7 @@ export default function Home(props) {
                   <h6 onClick={() => setShowPineapple(false)}>hide </h6>
                   <FontAwesomeIcon id="down-arrow" icon={faArrowDown} />
                 </span>
-                :  
-                <> </>
+                :  <> </>
             }
             </div>
           </div>
@@ -72,8 +59,7 @@ export default function Home(props) {
                 <>
                   <FontAwesomeIcon id="arrow" icon={faArrowLeft} />
                   <h5 onClick={() => setShowPineapple(!showPineapple)}>why the pineapple?</h5>
-                </>
-                :
+                </> :
                 mobile ? <></> :
                 <> 
                   <h5 id="hide" onClick={() => setShowPineapple(!showPineapple)}>hide that </h5>

@@ -17,7 +17,7 @@ import grabMobile from '../../assets/videos/pops_tablet_inv.mov'
 
 export default function PopsLiquorCabinet(props) {
   const [logoText, setLogoText] = useState('');
-  const { currentProject, setCurrentProject } = props;
+  const { setCurrentProject, mobile } = props;
 
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0)
@@ -52,7 +52,7 @@ export default function PopsLiquorCabinet(props) {
           <li><img onMouseOver={() => setLogoText('Axios')} onMouseLeave={() => setLogoText(' ')}
             className="logos" alt="axios logo" src={axios} style={{ width: "27px", padding: "4px" }} /></li>
           <li><img onMouseOver={() => setLogoText('React')} onMouseLeave={() => setLogoText(' ')}
-            className="logos" alt="react logo" src={react} style={{ width: "45px", margin: "-4px"}} /></li>
+            className="logos" alt="react logo" src={react} style={{ width: "45px", margin: "-4px" }} /></li>
           <li><img onMouseOver={() => setLogoText('Airtable')} onMouseLeave={() => setLogoText(' ')}
             className="logos" alt="airtable logo" src={airtable} style={{ padding: "2px" }} /></li>
           <li><img onMouseOver={() => setLogoText('Git')} onMouseLeave={() => setLogoText(' ')}
@@ -81,18 +81,30 @@ export default function PopsLiquorCabinet(props) {
       </section>
       <div className="media" id="media-container">
         <img className="media-child" src={add} alt="add bottle" />
-        <video className="media-child" autoPlay loop muted >
-          <source src={grab} type="video/mp4" />
-        </video>
+        {mobile ?
+          <video className="media-child" controls muted >
+            <source src={grab} type="video/mp4" />
+          </video>
+          :
+          <video className="media-child" autoPlay loop muted >
+            <source src={grab} type="video/mp4" />
+          </video>
+        }
       </div>
       <section>
         <p>The inventory updates in real time, and comes complete with sorting functionality integrated tastefully into
         the UI.
       </p>
       </section>
-      <video className="media" autoPlay loop muted >
-        <source src={grabMobile} type="video/mp4" />
-      </video>
+      {mobile ?
+        <video className="media" controls muted >
+          <source src={grabMobile} type="video/mp4" />
+        </video>
+        :
+        <video className="media" autoPlay loop muted >
+          <source src={grabMobile} type="video/mp4" />
+        </video>
+      }
       <section>
         <p>Built using Airtable API as a third-party database, Pops' current iteration is a prototype for a full stack, user-focused
           mobile application.</p>

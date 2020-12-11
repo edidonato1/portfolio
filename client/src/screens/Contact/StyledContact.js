@@ -18,9 +18,9 @@ display: flex;
 
 .contact-blurb {
   animation: 1s linear 0s 1 appears;
-width: 360px;
-text-align: center; 
-margin-bottom: 20px;
+  width: 360px;
+  text-align: center; 
+  margin-bottom: 20px;
 }
 
 .form-main {
@@ -90,9 +90,9 @@ a:hover {
 }
 
 textarea {
-resize: vertical;
-min-height: 100px;
-max-height: 250px;
+  resize: vertical;
+  min-height: 100px;
+  max-height: 250px;
 }
 
 .input:focus {
@@ -150,16 +150,16 @@ button:hover {
   }
 
   .contact-title {
-  position: initial;
-  background: #202020;
-  margin: initial;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  display: flex;
-  z-index: 1;
-  width: 150px;
-}
+    position: initial;
+    background: #202020;
+    margin: initial;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+    width: 150px;
+  }
 
   .form {
     padding-top: 10px;
@@ -206,7 +206,6 @@ button:hover {
 
 @media screen and (max-width: 400px)  {
 
-
   .form {
     width: 95vw;
   }
@@ -214,8 +213,6 @@ button:hover {
   #form-right {
     overflow: initial;
   }
-
-
 
 }
 

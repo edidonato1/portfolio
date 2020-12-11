@@ -29,11 +29,10 @@ const BurgerStyles = styled.div`
     transition: .4s;
   }
 
-
 `
 
 export default function Burger(props) {
-  const { openBurger, setOpenBurger } = props
+  const { openBurger, setOpenBurger } = props;
 
   return (
     <BurgerStyles openBurger={openBurger} className="burger-box" onClick={() => setOpenBurger(!openBurger)}>

@@ -19,12 +19,12 @@ import { faFlask } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function CoLab(props) {
-  const { setCurrentProject } = props;
+  const { setCurrentProject, mobile } = props;
   const [logoText, setLogoText] = useState('');
 
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0)
-  },[])
+  }, [])
 
   return (
     <StyledProjectCard >
@@ -77,28 +77,33 @@ export default function CoLab(props) {
       <img className="media" src={home} alt="colab home web" />
       <section>
         <p>The back end is powered by a PostgreSQL relational database, and gets its structure from Ruby on Rails.  </p>
-        <p>The first and current iteration incorporates three tables with several associations among them.  Doing so gives the user 
-         quick access to the messageboards associated with their primary art forms.
+        <p>The first and current iteration incorporates three tables with several associations among them.  Doing so gives the user
+        quick access to the messageboards associated with their primary art forms.
         </p>
       </section>
       <section>
-      <img className="media" src={medium} alt="colab home web" />
+        <img className="media" src={medium} alt="colab home web" />
       </section>
       <section>
         <p>Built in React, and optimized for either web or mobile, CoLab uses several layers of conditional rendering to
         maintain a clean UI for seamless, user-friendly navigation.</p>
       </section>
       <div className="media" id="media-container">
-        < img className="media-child" src={mobileMedium } />
+        < img className="media-child" src={mobileMedium} />
+        {mobile ?
+          <video className="media-child" controls muted >
+            <source src={mobileVid} type="video/mp4" />
+          </video> : 
         <video className="media-child" autoPlay loop muted >
           <source src={mobileVid} type="video/mp4" />
         </video>
+      }
       </div>
-        <section>
-          <p>A second iteration of CoLab is currently underway, and will incorporate the concept of multi-user associations
-            and tools for collaboration.
+      <section>
+        <p>A second iteration of CoLab is currently underway, and will incorporate the concept of multi-user associations
+        and tools for collaboration.
           </p>
-        </section>
+      </section>
       <hr />
 
       <div className="next-last">

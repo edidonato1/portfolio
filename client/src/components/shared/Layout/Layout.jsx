@@ -1,15 +1,13 @@
 import { useState } from 'react';
-import Nav from '../Nav/Nav'
+import Nav from '../Nav/Nav';
 import Skills from '../../Skills/Skills';
-import StyledLayout from './StyledLayout'
+import StyledLayout from './StyledLayout';
 
 
 
 export default function Layout(props) {
-  const { home, openBurger, setOpenBurger } = props
+  const { home, openBurger, setOpenBurger } = props;
   const [showSkills, setShowSkills] = useState(false);
-
-
 
   return (
     <StyledLayout

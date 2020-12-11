@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 const AboutMeDiv = styled.div`
+
 @keyframes appears {
   from {opacity: 0}
   30% {opacity: 0}
   to {opacity: 1;}
 }
+
 display: flex;
 text-align: justify;
 
@@ -24,8 +26,6 @@ h3 {
   font-weight: 500;
   color: #35a3a3;
 }
-
-
 
 #about-me-right {
   flex-direction: column;
