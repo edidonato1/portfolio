@@ -11,8 +11,8 @@ export default function ProjectsHome(props) {
       <h2 className="title">welcome.</h2>
       <h3 className="subtitle" id="my-work">my work</h3>
       <div className="message">
-        <h6 className="appear">thanks for stopping by. <br />
-          you can navigate with the drop-down{mobile ? " above." : " to the left."}</h6>
+        <h6 className="appear">
+          you can navigate with the drop-down{mobile ? " above" : " to the left"} by "projects"</h6>
       </div>
       <div className="gear-box">
         <FontAwesomeIcon icon={faCog} className="gears" id="large" />

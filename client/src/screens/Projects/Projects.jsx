@@ -23,6 +23,7 @@ export default function Projects(props) {
     }
 }
 
+
   return (
     <div>
       <Layout openBurger={openBurger} setOpenBurger={setOpenBurger}>

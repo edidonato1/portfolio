@@ -28,6 +28,7 @@ h1 {
 }
 
 .icon {
+  color: ${({ open }) => (open ? "#35a3a3" : "#bf6b72")};
   font-size: 22px;
   transition: .1s;
   background: #202020;
