@@ -45,8 +45,8 @@ export default function Home(props) {
                 <h2>web developer</h2>
               </div>
               {showPineapple ?
-                <span id="hide-that">
-                  <h6 onClick={() => setShowPineapple(false)}>hide </h6>
+                <span id="hide-that" onClick={() => setShowPineapple(false)}>
+                  <h6 >hide </h6>
                   <FontAwesomeIcon id="down-arrow" icon={faArrowDown} />
                 </span>
                 :  <> </>
@@ -56,15 +56,15 @@ export default function Home(props) {
           <div className="right-div" id="home-right">
             <div id="why">
               {!showPineapple ?
-                <>
+                <div className="show-pineapple" onClick={() => setShowPineapple(!showPineapple)}>
                   <FontAwesomeIcon id="arrow" icon={faArrowLeft} />
                   <h5 onClick={() => setShowPineapple(!showPineapple)}>why the pineapple?</h5>
-                </> :
+                </div> :
                 mobile ? <></> :
-                <> 
-                  <h5 id="hide" onClick={() => setShowPineapple(!showPineapple)}>hide that </h5>
+                <div className="show-pineapple" onClick={() => setShowPineapple(!showPineapple)}> 
+                  <h5 id="hide" >hide that </h5>
                   <FontAwesomeIcon id="arrow-right" icon={faArrowRight} />
-                </>
+                </div>
               }
             </div>
             <div className="circle">

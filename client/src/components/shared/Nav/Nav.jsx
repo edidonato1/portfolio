@@ -47,7 +47,7 @@ export default function Nav(props) {
             <img
               alt="pineapple"
               style={hoverHome ? { width: "35px" } : {}}
-              src={hoverHome ? pina2 : pina}
+              src={hoverHome && !mobile ? pina2 : pina}
               id="initials-text" />
           </div>
         </div>

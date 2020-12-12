@@ -53,7 +53,6 @@ h1 {
 
 .initials:hover {
   background: #35a3a3;
-  color: #202020;
 }
 
 ul {
@@ -210,6 +209,10 @@ ul {
     letter-spacing: -1px;
     margin: 10px;
   }
+
+  .initials:hover {
+  background: #202020;
+}
 
   .nav-icon {
     color: #35a3a3;

@@ -66,7 +66,7 @@ height: 100vh;
     position: relative;
   }
 
-  #why {
+  .show-pineapple {
     display: flex;
     align-items: center;
     width: fit-content;
@@ -74,7 +74,6 @@ height: 100vh;
     position: absolute;
     top: 0;
     left: 20px;
-
   }
 
   #arrow {
@@ -217,7 +216,7 @@ height: 100vh;
 
 @media screen and (max-width: 800px) {
 
-  #why {
+  .show-pineapple {
     top: 80px;
   }
 
@@ -239,7 +238,7 @@ height: 100vh;
 
 @media screen and (max-width: 600px) {
   
-  #why {
+  .show-pineapple {
     top: 40px;
   }
 
