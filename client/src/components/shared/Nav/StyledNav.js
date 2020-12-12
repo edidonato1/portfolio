@@ -18,6 +18,10 @@ z-index: 99;
   display: none;
 }
 
+.script {
+  display: none;
+}
+
 .all-icons {
   display: flex;
   flex-direction: column;
@@ -189,6 +193,22 @@ ul {
     border-bottom: 3px solid #f0ebeb;
     flex-direction: row-reverse;
     padding: 0px 10px;
+  }
+  .script {
+    position: absolute;
+    left: 80px;
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    width: fit-content;
+  }
+  
+  #e-didonato {
+    font-family: 'Nothing You Could Do', cursive;
+    font-weight: 500;
+    font-size: 31px;
+    letter-spacing: -1px;
+    margin: 10px;
   }
 
   .nav-icon {

@@ -43,7 +43,7 @@ export default function Nav(props) {
     <Navbar openBurger={openBurger} home={home}>
       <NavLink to='/'>
         <div className="initials-outer">
-          <div className="initials" onMouseOver = {() => setHoverHome(true)} onMouseLeave={() => setHoverHome(false)}>
+          <div className="initials" onMouseOver={() => setHoverHome(true)} onMouseLeave={() => setHoverHome(false)}>
             <img
               alt="pineapple"
               style={hoverHome ? { width: "35px" } : {}}
@@ -52,6 +52,9 @@ export default function Nav(props) {
           </div>
         </div>
       </NavLink>
+      <div className="script">
+        <h2 id="e-didonato">e. didonato</h2>
+      </div>
       <div className="all-icons">
         <ul id="nav-icon-main">
           <Link to="/about">
