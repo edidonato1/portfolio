@@ -168,7 +168,7 @@ ul {
 }
 
 @media screen and (max-width: 550px) {
-
+height: 200px;
   .burger {
     display: block;
   }
@@ -204,10 +204,12 @@ ul {
   
   #e-didonato {
     font-family: 'Nothing You Could Do', cursive;
+    color: #202020;
     font-weight: 500;
     font-size: 31px;
     letter-spacing: -1px;
     margin: 10px;
+    margin-bottom: 70px;
   }
 
   .initials:hover {
