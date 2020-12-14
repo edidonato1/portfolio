@@ -42,7 +42,7 @@ export default function Nav(props) {
   const handleClick = () => {
     setTimeout(() => {
       setOpenBurger(false)
-    }, 500)
+    }, 800)
   }
 
   return (
