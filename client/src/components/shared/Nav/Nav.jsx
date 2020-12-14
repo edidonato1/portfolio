@@ -39,6 +39,12 @@ export default function Nav(props) {
     setShowSkills(!showSkills);
   }
 
+  const handleClick = () => {
+    setTimeout(() => {
+      setOpenBurger(false)
+    }, 500)
+  }
+
   return (
     <Navbar openBurger={openBurger} home={home}>
       <NavLink to='/'>
@@ -58,7 +64,7 @@ export default function Nav(props) {
       <div className="all-icons">
         <ul id="nav-icon-main">
           <Link to="/about">
-            <div className="icon-container">
+            <div onClick={handleClick} className="icon-container">
               <li
                 className="nav-icon"
                 onMouseOver={() => setMeHover(true)}
@@ -69,7 +75,7 @@ export default function Nav(props) {
             </div>
           </Link>
           <Link to="/contact">
-            <div className="icon-container">
+            <div onClick={handleClick} className="icon-container">
               <li
                 className="nav-icon"
                 onMouseOver={() => setContactHover(true)}
@@ -80,7 +86,7 @@ export default function Nav(props) {
             </div>
           </Link>
           <Link to="/projects">
-            <div className="icon-container">
+            <div onClick={handleClick} className="icon-container">
               <li
                 className="nav-icon"
                 onMouseOver={() => setWorkHover(true)}
