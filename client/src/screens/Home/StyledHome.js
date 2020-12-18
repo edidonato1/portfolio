@@ -213,6 +213,8 @@ height: 100vh;
 }
 
 @media screen and (max-width: 600px) {
+
+  overflow: hidden;
   
   .show-pineapple {
     top: 40px;
@@ -245,15 +247,6 @@ height: 100vh;
     margin-right: 5px;
     font-size: 15px;
   }
-  
-  h5, #arrow {
-    color: ${({ openBurger }) => (openBurger ? "#313131" : "")};
-    transition: .4s;
-  }
-
-  #arrow {
-    transform: rotate(90deg);
-  }
 
   #home-left {
     height: 120px;
@@ -285,26 +278,52 @@ height: 100vh;
     width: fit-content;
   }
 
-  .circle, .circle2 {
-    width: 70vw;
-    height: 70vw;
-    }
-
-  .home-links {
+  #fade-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    margin-left: 0;
+  }
+   
+  #pina-bg {
+    z-index: -1;
+    height: 70vh;
+    position: fixed;
+    bottom: 0;
+    transform: rotate(-70deg);
+    -webkit-animation:1.5s ease-out 0s 1 ease-right;
+    animation: 1.5s ease-out 0s 1 ease-right;
+  }
+  
+  .html-text {
+    margin: 25px 0;
     font-size: 28px;
   }
 
-  #item1 {
-    top: 10px;
-    left: 30%;
+  .ul{
+    padding: 20px 0;
+    margin-left: -10px;
+    }
+
+  .list {
+    margin-left: 31px;
+    transition: .5s;
+  }
+  
+  .list-span {
+    margin: 0 10px;
   }
 
-  #item2 {
-    top: 40%;
+  .list-span:hover {
+    color: #f0ebeb;
   }
 
-  #item3 {
-    top: 70%;
+  .list:hover {
+    color: #494949;
   }
 
 
