@@ -15,18 +15,18 @@ const BurgerStyles = styled.div`
     width: 50px;
     background-color:#202020;
     border-radius: 20px;
+    transition: .4s;
+    transition-timing-function: ease-out;
   }
 
   #line-1 {
-    transform: ${({ openBurger }) => (openBurger ? "rotate(-405deg) translateX(-6px) translateY(9px)" : "rotate(0deg)")};
-    -webkit-transform: ${({ openBurger }) => (openBurger ? "rotate(-405deg) translateX(-6px) translateY(9px)" : "rotate(0deg)")};
-    transition: .4s;
+    -webkit-transform: rotate(-405deg) translate(-6px, 9px);
+    transform: rotate(-405deg) translate(-6px, 9px);
   }
 
   #line-2 {
-    transform: ${({ openBurger }) => (openBurger ? "rotate(405deg) translateX(-6px) translateY(-9px)" : "rotate(0deg)")};
-    -webkit-transform: ${({ openBurger }) => (openBurger ? "rotate(405deg) translateX(-6px) translateY(-9px)" : "rotate(0deg)")};
-    transition: .4s;
+    -webkit-transform: rotate(405deg) translate(-6px, -9px);
+    transform: rotate(405deg) translate(-6px, -9px);
   }
 
 `
@@ -36,8 +36,8 @@ export default function Burger(props) {
 
   return (
     <BurgerStyles openBurger={openBurger} className="burger-box" onClick={() => setOpenBurger(!openBurger)}>
-      <div className="burger-line" id="line-1"></div>
-      <div className="burger-line" id="line-2"></div>
+      <div className="burger-line" id={openBurger ? "line-1" : "top"}></div>
+      <div className="burger-line" id={openBurger ? "line-2" : "bottom"}></div>
     </BurgerStyles>
   )
 }

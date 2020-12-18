@@ -177,6 +177,7 @@ ul {
   }
 
   .all-icons {
+    -webkit-transform: ${({ openBurger }) => (openBurger ? "translateX(0%)" : "translateX(101%)")};
     transform: ${({ openBurger }) => (openBurger ? "translateX(0%)" : "translateX(101%)")};
     transition: .4s;
     transition-timing-function: ease-in-out;
