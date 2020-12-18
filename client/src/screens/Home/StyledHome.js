@@ -157,7 +157,7 @@ height: 100vh;
 
   .list {
     margin-left: 41px;
-    transition: .5s;
+    transition: 1s;
   }
   
   .list-span {
