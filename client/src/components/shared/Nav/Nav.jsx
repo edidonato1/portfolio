@@ -11,7 +11,7 @@ import { faUserAstronaut, faPaperPlane, faBriefcase, faTools } from '@fortawesom
 
 
 export default function Nav(props) {
-  const { home, openBurger, setOpenBurger, showSkills, setShowSkills } = props;
+  const { home, openBurger, setOpenBurger, showSkills, setShowSkills, showPineapple, setShowPineapple } = props;
   const [hoverHome, setHoverHome] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [meHover, setMeHover] = useState(false);
@@ -45,9 +45,15 @@ export default function Nav(props) {
     }, 800)
   }
 
+  const handleHomeClick = () => {
+    if (home) {
+      setShowPineapple(!showPineapple)
+    }
+  }
+
   return (
     <Navbar openBurger={openBurger} home={home}>
-      <NavLink to='/'>
+      <NavLink to='/' onClick={handleHomeClick}>
         <div className="initials-outer">
           <div className="initials" onMouseOver={() => setHoverHome(true)} onMouseLeave={() => setHoverHome(false)}>
             <img

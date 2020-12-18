@@ -6,7 +6,7 @@ import StyledLayout from './StyledLayout';
 
 
 export default function Layout(props) {
-  const { home, openBurger, setOpenBurger } = props;
+  const { home, openBurger, setOpenBurger, showPineapple, setShowPineapple } = props;
   const [showSkills, setShowSkills] = useState(false);
 
   return (
@@ -14,6 +14,8 @@ export default function Layout(props) {
       showSkills={showSkills}
       openBurger={openBurger}>
       <Nav
+        showPineapple={showPineapple}
+        setShowPineapple={setShowPineapple}
         showSkills={showSkills}
         setShowSkills={setShowSkills}
         home={home}
@@ -21,7 +23,7 @@ export default function Layout(props) {
         setOpenBurger={setOpenBurger} />
       {props.children}
       <Skills
-        openBurger={openBurger} 
+        openBurger={openBurger}
         setOpenBurger={setOpenBurger}
         home={home}
         showSkills={showSkills}

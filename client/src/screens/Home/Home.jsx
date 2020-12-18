@@ -5,7 +5,7 @@ import HomeDiv from './StyledHome';
 import Pineapple from './Pineapple';
 import pina3 from '../../assets/icons/pina3.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowDown, faArrowRight, faPenFancy } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home(props) {
   const { home, setHome, openBurger, setOpenBurger, mobile } = props;
@@ -26,6 +26,8 @@ export default function Home(props) {
   return (
     <div>
       <Layout
+        showPineapple={showPineapple}
+        setShowPineapple={setShowPineapple}
         openBurger={openBurger}
         setOpenBurger={setOpenBurger}
         home={home}>
@@ -61,10 +63,11 @@ export default function Home(props) {
           <div className="right-div" id="home-right">
             <div id="why">
               {!showPineapple ?
-                <div className="show-pineapple" onClick={() => setShowPineapple(!showPineapple)}>
-                  <h5 onClick={() => setShowPineapple(!showPineapple)}>why the pineapple?</h5>
-                </div> :
-                mobile ? <></> :
+                < > </>
+                :
+                mobile ?
+                  <></>
+                  :
                   <div className="show-pineapple" onClick={() => setShowPineapple(!showPineapple)}>
                     <h5 id="hide" >hide that </h5>
                     <FontAwesomeIcon id="arrow-right" icon={faArrowRight} />

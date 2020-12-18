@@ -13,6 +13,7 @@ function App() {
   const [openBurger, setOpenBurger] = useState(false);
   const [mobile, setMobile] = useState(false);
 
+
   const handler = () => {
     window.innerWidth <= 600 ? setMobile(true) : setMobile(false);
   }
@@ -27,7 +28,8 @@ function App() {
   return (
     <Switch>
       <Route exact path="layoutlayout" >
-        <Layout />
+        <Layout
+ />
       </Route>
       <Route exact path="/" >
         <Home

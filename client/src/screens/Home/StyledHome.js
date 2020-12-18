@@ -137,6 +137,7 @@ height: 100vh;
     position: fixed;
     bottom: -10%;
     transform: rotate(-80deg);
+    -webkit-animation:1.5s ease-out 0s 1 ease-right;
     animation: 1.5s ease-out 0s 1 ease-right;
   }
   
@@ -145,6 +146,7 @@ height: 100vh;
     margin: 15px 0;
     font-size: 30px;
     color: #494949;
+    -webkit-animation: 1.5s ease-out 0s 1 ease-left;
     animation: 1.5s ease-out 0s 1 ease-left;
   }
 

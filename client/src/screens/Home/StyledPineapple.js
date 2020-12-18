@@ -12,7 +12,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 height: 100vh;
-width: 35vw;
+width: 40vw;
 z-index: 98;
 border-left: 3px solid #43a8a8;
 align-items: center;
@@ -26,6 +26,7 @@ color: #DB686F;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 300px;
 }
 
 a {
@@ -51,6 +52,8 @@ h3 {
 
 
 @media screen and (max-width: 800px) {
+
+width: 50vw;
 
   top: 80px;
   height: 100%;
@@ -86,6 +89,7 @@ h3 {
     overflow: scroll;
     margin-bottom: 60px;
     text-align: left;
+    max-width: initial;
   }
 
   h1 {
