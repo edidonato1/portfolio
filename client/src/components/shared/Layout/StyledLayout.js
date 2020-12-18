@@ -17,6 +17,7 @@ const StyledLayout = styled.div`
   padding-left: 50px;
   color: #DB686F;
   z-index: 98;
+  border-right: 3px solid #43a8a8;
 }
 
 .left-div-child {
@@ -34,7 +35,7 @@ hr {
 
 
 .right-div {
-  border-left: 3px solid #43a8a8;
+  /* border-left: 3px solid #43a8a8; */
   padding-top: 10vh;
   display: flex;
   flex-direction: column;

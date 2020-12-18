@@ -64,6 +64,7 @@ height: 100vh;
   #home-right {
     background: #313131;
     position: relative;
+    padding-top: 0;
   }
 
   .show-pineapple {
@@ -74,6 +75,7 @@ height: 100vh;
     position: absolute;
     top: 0;
     left: 20px;
+    z-index: 5;
   }
 
   #arrow {
@@ -98,120 +100,92 @@ height: 100vh;
     display: none;
   }
 
-  @keyframes rotate {
+  #fade-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    margin-left: 3px;
+  }
+  
+  @keyframes ease-left {
     from {
-      transform: rotateX(0deg);
+      transform: translateX(10px) translateY(-10px);
+      opacity: .3;
     }
     to {
-      transform: rotateX(360deg);
+      transform: translateX(0px) translateY(0px);
+      opacity: 1;
     }
   }
 
-  @keyframes adjust {
+  @keyframes ease-right {
     from {
-      transform: rotateY(0deg);
+      transform: translateX(-10px) translateY(10px) rotate(-90deg);
     }
     to {
-      transform: rotateY(-360deg)
+      transform: translateX(0px) translateY(0px) rotate()(-80deg);
     }
   }
   
-
-  .circle {
-    animation: 15s linear 1s infinite rotate;
-    position: relative;
-    height: 400px;
-    width: 400px;
-    background: none;
-    border-radius: 50%;
-    margin-top: 40px;
-  }
-
-  .circle:hover {
-    animation-play-state: paused;
-  }
-
-
-  .circle2 {
-    position: absolute;
-    top: 0;
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    animation: 7s linear 0s infinite adjust;
-  }
-
-  #color-1 {
-    border: 3px solid #DB686F;
-    animation-delay: 2s;
-  }
-
-  #color-2 {
-    border: 3px solid #35a3a3;
-    animation-delay: 2.3s;
-  }
-  #color-3 {
-    border: 3px solid #f0ebeb;
-    animation-delay: 2.6s;
-  }
-
-  #color-4 {
-    animation-delay: 2.9s;
-    border: 3px solid #35a3a3;
+  #pina-bg {
+    z-index: -1;
+    height: 110vh;
+    position: fixed;
+    bottom: -10%;
+    transform: rotate(-80deg);
+    animation: 1.5s ease-out 0s 1 ease-right;
   }
   
-  #color-5 {
-    animation-delay: 3.2s;
-    border: 3px solid #DB686F;
-  }
-  
-  #color-4 {
-    border: 3px solid #f0ebeb;
-    animation-delay: 1.5s;
-  }
-
-  .home-links {
-    animation: 15s linear 1s infinite rotate;
-    color: #f0ebeb;
+  .html-text {
+    font-family: 'Nothing You Could Do', cursive;
+    margin: 15px 0;
     font-size: 30px;
-    position: absolute;
+    color: #494949;
+    animation: 1.5s ease-out 0s 1 ease-left;
   }
 
-  .home-links:hover {
-    animation-play-state: paused;
+  .ul{
+    padding: 20px 0;
+    margin-left: -20px;
+    }
+
+  .list {
+    margin-left: 41px;
+    transition: .5s;
+  }
+  
+  .list-span {
+    margin: 0 10px;
+    font-family: inherit;
+    color: #f0ebeb;
+    text-shadow: 4px 4px #202020;
+    animation: 1s ease-out 1.5s 1 flash;
+    transition: .5s;
+  }
+
+  .list-span:hover {
     color: #35a3a3;
-    font-size: 34px;
-    text-shadow: 2px 2px #202020;
-    transition: .3s;
   }
 
-  #item1 {
-    top: 5px;
-    left: 40%;
+  .list:hover {
+    color: #bf6b72;
   }
 
-  #item2 {
-    left: 5px;
-    top: 50%;
+  #contact {
+    animation-delay: 1.7s;
   }
 
-  #item3 {
-    right: 30px;
-    top: 70%;
+  #work {
+    animation-delay: 1.9s;
   }
 
-
-
-.shadow {
-  animation: 15s linear 4s infinite rotate;
-  width: 200px;
-  height: 50px;
-  background: rgba(0,0,0,.2);
-  border-radius: 50%;
-  margin-top: 60px;
-  box-shadow: 5px 5px 30px 50px rgba(0, 0, 0,.2);
-  transform: rotateY(190deg)
-}
+  #resume {
+    animation-delay: 2.1s;
+  }
 
 
 @media screen and (max-width: 800px) {

@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import Layout from '../../components/shared/Layout/Layout';
 import HomeDiv from './StyledHome';
 import Pineapple from './Pineapple';
+import pina3 from '../../assets/icons/pina3.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowDown, faArrowRight, faPenFancy } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home(props) {
   const { home, setHome, openBurger, setOpenBurger, mobile } = props;
@@ -15,8 +16,12 @@ export default function Home(props) {
     return () => {
       setHome(false);
     }
-  },)
+  })
 
+  const htmlUl = "<ul>"
+  const htmlUlClose = "</ul>"
+  const liOpen = " <li> "
+  const liClose = " </li> "
 
   return (
     <div>
@@ -49,36 +54,54 @@ export default function Home(props) {
                   <h6 >hide </h6>
                   <FontAwesomeIcon id="down-arrow" icon={faArrowDown} />
                 </span>
-                :  <> </>
-            }
+                : <> </>
+              }
             </div>
           </div>
           <div className="right-div" id="home-right">
             <div id="why">
               {!showPineapple ?
                 <div className="show-pineapple" onClick={() => setShowPineapple(!showPineapple)}>
-                  <FontAwesomeIcon id="arrow" icon={faArrowLeft} />
                   <h5 onClick={() => setShowPineapple(!showPineapple)}>why the pineapple?</h5>
                 </div> :
                 mobile ? <></> :
-                <div className="show-pineapple" onClick={() => setShowPineapple(!showPineapple)}> 
-                  <h5 id="hide" >hide that </h5>
-                  <FontAwesomeIcon id="arrow-right" icon={faArrowRight} />
-                </div>
+                  <div className="show-pineapple" onClick={() => setShowPineapple(!showPineapple)}>
+                    <h5 id="hide" >hide that </h5>
+                    <FontAwesomeIcon id="arrow-right" icon={faArrowRight} />
+                  </div>
               }
+            </div >
+
+            <div id="fade-container" >
+              <img src={pina3} alt="pina" id="pina-bg" />
+              <ul className="html-text" id="home-list-container">
+                <li className="html-text ul">{htmlUl}</li>
+                <li className="html-text list">{liOpen}
+                  <Link
+                    to="/about"
+                    className="list-span"
+                    id="about"> about me </Link>{liClose}
+                </li>
+                <li className="html-text list ">{liOpen}
+                  <Link
+                    to="/contact"
+                    className="list-span"
+                    id="contact"> contact me </Link>{liClose}</li>
+                <li className="html-text list">{liOpen}
+                  <Link
+                    to="/projects"
+                    className="list-span"
+                    id="work"> my work </Link> {liClose}</li>
+                <li className="html-text list">{liOpen}
+                  <a href="https://drive.google.com/file/d/1YPFFdGHNCVJDWTfUbhE52VRk91qrM_c4/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="list-span"
+                    id="resume"> résumé </a> {liClose}</li>
+                <li className="html-text ul">{htmlUlClose}</li>
+              </ul>
             </div>
-            <div className="circle">
-              <div className="circle2" id="color-1"></div>
-              <div className="circle2" id="color-2"></div>
-              <div className="circle2" id="color-3"></div>
-              <div className="circle2" id="color-4"></div>
-              <div className="circle2" id="color-5"></div>
-              <div className="circle2" id="color-6"></div>
-              <Link to="/about" className="home-links" id="item1">about me</Link>
-              <Link to="/contact" className="home-links" id="item2">contact me</Link>
-              <Link to="/projects" className="home-links" id="item3">my work</Link>
-            </div>
-            <div className="shadow"></div>
+
           </div>
           <Pineapple showPineapple={showPineapple} />
         </HomeDiv>
