@@ -18,7 +18,7 @@ height: 100vh;
 
   @keyframes bounce {
     0% {transform: translateY(0%)}
-    5% {transform: translateY(-10%)}
+    6% {transform: translateY(-12%)}
     10% {transform: translateY(0%)}
    100% {transform: translateY(0%)}
   }
@@ -38,27 +38,27 @@ height: 100vh;
   }
 
   #e1 {
-    animation: 8.5s ease-in-out 1s infinite bounce;
+    animation: 6.5s ease-in-out 1s infinite bounce;
   }
 
   #d1 {
-    animation: 8.5s ease-in-out 1.15s infinite bounce;
+    animation: 6.5s ease-in-out 1.15s infinite bounce;
   }
 
   #d2 {
-    animation: 8.5s ease-in-out 1.3s infinite bounce;
+    animation: 6.5s ease-in-out 1.3s infinite bounce;
   }
 
   #i {
-    animation: 8.5s ease-in-out 1.45s infinite bounce;
+    animation: 6.5s ease-in-out 1.40s infinite bounce;
   }
 
   #e2 {
-    animation: 8.5s ease-in-out 1.6s infinite bounce;
+    animation: 6.5s ease-in-out 1.5s infinite bounce;
   }
 
   #dot {
-    animation: 8.5s ease-in-out 1.85s infinite bounce;
+    animation: 6.5s ease-in-out 1.63s infinite bounce;
   }
 
   #home-right {
