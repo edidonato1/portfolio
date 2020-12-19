@@ -5,7 +5,7 @@ import HomeDiv from './StyledHome';
 import Pineapple from './Pineapple';
 import pina3 from '../../assets/icons/pina3.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {  faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home(props) {
   const { home, setHome, openBurger, setOpenBurger, mobile } = props;
