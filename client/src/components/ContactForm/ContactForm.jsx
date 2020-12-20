@@ -57,7 +57,7 @@ const ContactForm = () => {
               type="text"
               name="name"
               value={form.name}
-              placeholder="full name"
+              placeholder="your name"
               onChange={handleChange}
               required
             />

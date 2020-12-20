@@ -83,6 +83,7 @@ a:hover {
   text-align: center;
   border: none;
   background: rgb(222, 222, 222);
+  border-radius: 0px;
 }
 
 *::placeholder {
@@ -207,12 +208,38 @@ button:hover {
 @media screen and (max-width: 400px)  {
 
   .form {
-    width: 95vw;
+    width: 90vw;
+    padding: 15px;
   }
+
+
 
   #form-right {
     overflow: initial;
   }
+
+  p {
+    font-size: 18px;
+  }
+
+  .button-container {
+    margin: 7px 0 3px 0;
+  }
+
+  button {
+  width: 28%;
+  height: 50px;
+  font-size: 17px;
+}
+
+textarea {
+  min-height: 170px;
+  max-height: 250px;
+}
+
+
+
+
 
 }
 
