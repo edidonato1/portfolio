@@ -167,7 +167,7 @@ ul {
 
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .burger {
     display: block;
   }

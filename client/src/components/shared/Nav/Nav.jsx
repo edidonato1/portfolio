@@ -20,7 +20,7 @@ export default function Nav(props) {
   const [skillsHover, setSkillsHover] = useState(false);
 
   const handler = () => {
-    window.innerWidth <= 550 ? setMobile(true) : setMobile(false);
+    window.innerWidth <= 600 ? setMobile(true) : setMobile(false);
   }
 
   useEffect(() => {
