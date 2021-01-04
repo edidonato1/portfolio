@@ -6,8 +6,7 @@ import StyledLayout from './StyledLayout';
 
 
 export default function Layout(props) {
-  const { home, openBurger, setOpenBurger, showPineapple, setShowPineapple } = props;
-  const [showSkills, setShowSkills] = useState(false);
+  const { home, openBurger, setOpenBurger, showPineapple, setShowPineapple, showSkills, setShowSkills } = props;
 
   return (
     <StyledLayout

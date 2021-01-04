@@ -5,10 +5,10 @@ import HomeDiv from './StyledHome';
 import Pineapple from './Pineapple';
 import pina3 from '../../assets/icons/pina3.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home(props) {
-  const { home, setHome, openBurger, setOpenBurger, mobile } = props;
+  const { home, setHome, openBurger, setOpenBurger, mobile, showSkills, setShowSkills } = props;
   const [showPineapple, setShowPineapple] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,9 @@ export default function Home(props) {
         setShowPineapple={setShowPineapple}
         openBurger={openBurger}
         setOpenBurger={setOpenBurger}
-        home={home}>
+        home={home}
+        showSkills={showSkills}
+        setShowSkills={setShowSkills} >
         <HomeDiv
           openBurger={openBurger}
           setOpenBurger={setOpenBurger}>
@@ -96,11 +98,13 @@ export default function Home(props) {
                     className="list-span"
                     id="work"> my work </Link> {liClose}</li>
                 <li className="html-text list">{liOpen}
-                  <a href="https://drive.google.com/file/d/1YPFFdGHNCVJDWTfUbhE52VRk91qrM_c4/view?usp=sharing"
-                    target="_blank"
-                    rel="noreferrer"
+                  <span
                     className="list-span"
-                    id="resume"> résumé </a> {liClose}</li>
+                    id="skills"
+                    onClick={() => setShowSkills(!showSkills)}
+                  > skills
+                </span>
+                  {liClose}</li>
                 <li className="html-text ul">{htmlUlClose}</li>
               </ul>
             </div>

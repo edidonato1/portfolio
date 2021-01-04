@@ -28,6 +28,17 @@ color: #DB686F;
   padding-left: 40px;
 }
 
+#resume {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  padding-left: 40px;
+}
+
+#resume-text {
+  margin-right: 20px;
+}
+
 small {
   color: #35a3a3;
   cursor: pointer;

@@ -5,7 +5,7 @@ import AboutMeDiv from './StyledAboutMe';
 import eddie from '../../assets/images/eddie_rwb.png';
 
 export default function AboutMe(props) {
-  const { openBurger, setOpenBurger } = props;
+  const { openBurger, setOpenBurger, showSkills, setShowSkills } = props;
 
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0);
@@ -14,6 +14,8 @@ export default function AboutMe(props) {
   return (
     <div>
       <Layout
+        showSkills={showSkills}
+        setShowSkills={setShowSkills}
         openBurger={openBurger}
         setOpenBurger={setOpenBurger}>
         <AboutMeDiv>

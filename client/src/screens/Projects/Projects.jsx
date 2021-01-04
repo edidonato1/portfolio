@@ -14,19 +14,22 @@ import '../../components/ProjectCards/Animations.css'
 export default function Projects(props) {
   const [open, setOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState('home');
-  const { openBurger, setOpenBurger, mobile } = props;
+  const { openBurger, setOpenBurger, mobile, showSkills, setShowSkills } = props;
 
   const handleClick = (project) => {
     setCurrentProject(project);
     if (mobile && open) {
       setOpen(false);
     }
-}
-
+  }
 
   return (
     <div>
-      <Layout openBurger={openBurger} setOpenBurger={setOpenBurger}>
+      <Layout
+        showSkills={showSkills}
+        setShowSkills={setShowSkills}
+        openBurger={openBurger}
+        setOpenBurger={setOpenBurger}>
         <StyledProjects openBurger={openBurger} setOpenBurger={setOpenBurger} open={open}>
           <div className="left-div" >
             <div className="left-div-child">

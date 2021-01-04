@@ -5,7 +5,7 @@ import ContactDiv from './StyledContact';
 
 export default function Contact(props) {
   const [showContact, setShowContact] = useState(false);
-  const { openBurger, setOpenBurger } = props;
+  const { openBurger, setOpenBurger, showSkills, setShowSkills } = props;
 
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0);
@@ -14,6 +14,8 @@ export default function Contact(props) {
   return (
     <div>
       <Layout
+        showSkills={showSkills}
+        setShowSkills={setShowSkills}
         openBurger={openBurger}
         setOpenBurger={setOpenBurger}>
         <ContactDiv showContact={showContact}>

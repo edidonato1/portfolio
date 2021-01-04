@@ -10,10 +10,14 @@ import git from '../../assets/icons/git.png';
 import mongodb from '../../assets/icons/mongodb.png'
 import express from '../../assets/icons/express.png'
 import node from '../../assets/icons/node.png'
+import pdf from '../../assets/resume/resume.pdf'
 import StyledSkills from './StyledSkills';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faScroll } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Skills(props) {
-  const { showSkills, setShowSkills, home} = props
+  const { showSkills, setShowSkills, home } = props
 
   return (
     <StyledSkills showSkills={showSkills} home={home}>
@@ -21,6 +25,13 @@ export default function Skills(props) {
         <span><h1>skills</h1></span>
         <small onClick={() => setShowSkills(false)}>[ hide ]</small>
       </div>
+      <span
+        id="resume">
+        <a
+          href={pdf}
+          target="_blank"
+          id="resume-text">résumé<FontAwesomeIcon icon={faScroll} /></a>
+      </span>
       <div className="icon-box">
         <div className="skills-box">
           <img className="skill-icon" id="js" alt="javascript" src={js} />
