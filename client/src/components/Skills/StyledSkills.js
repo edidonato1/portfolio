@@ -32,11 +32,33 @@ color: #DB686F;
   display: flex;
   align-items: center;
   width: 80%;
-  padding-left: 40px;
+  padding-left: 0px;
+  font-family: "Nothing You Could Do";
+  font-size: 22px;
+  /* color: #DB686F; */
+  color: #f0ebeb; 
+  --webkit-transition: .2s;
+  --moz-transition: .2s;
+  transition: .2s;
 }
 
 #resume-text {
-  margin-right: 20px;
+  margin: -10px 0 20px 0;
+}
+
+#resume-icon {
+  margin-left: 10px;
+  transition: .2s;
+  color: #35a3a3;
+}
+
+#resume:hover {
+  color: #DB686F;
+
+  #resume-icon {
+    font-size: 25px;
+    margin-left: 7px;
+  }
 }
 
 small {
@@ -115,6 +137,7 @@ h3 {
   top: 80px;
   height: 100%;
   overflow-y: auto;
+  opacity: ${({showSkills}) => (showSkills ? "1" : "0")};
 
   body {
     overflow: hidden;
@@ -127,28 +150,27 @@ h3 {
 
 @media screen and (max-width: 600px) {
   transform: ${({ showSkills }) => (showSkills ? "translateY(0%)" : "translateY(102%)")};
-  /* top: 220px; */
+  
   bottom: 0;
   right: initial;
   width: 100%;
-  /* height: 100%; */
   height: fit-content;
   overflow-y: scroll;
   z-index: 0;
   border-left: initial;
   border-top: 3px solid #43a8a8;
   transition: .7s;
-  /* top: 80px; */
   height: ${({home}) => (home ? "calc(100vh - 200px )" : "calc(100vh - 160px)")};
   top: ${({ home }) => (home ? "200px" : "160px")};
   padding-bottom: 40px;
 
-h1 {
-  color: #f0ebeb;
-  margin-bottom: 10px;
-}
-.icon-box {
 
+  h1 {
+    color: #f0ebeb;
+    margin-bottom: 10px;
+  }
+
+  .icon-box {
     overflow-y: scroll;
     margin-bottom: 20px;
     height: 100%;
@@ -156,17 +178,17 @@ h1 {
   }
 
   .skills-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 155px;
-  height: 37px;
-  margin: 7px 5px;
-  background: #313131;
-  border-radius: 10px;
-  padding: 5px 5px 5px 10px;
-  box-shadow:  1px 2px 2px #DB686F;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    height: 37px;
+    margin: 7px 5px;
+    background: #313131;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    box-shadow:  1px 2px 2px #DB686F;
+  }
 
 
 

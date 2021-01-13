@@ -157,8 +157,7 @@ height: 100vh;
 
   .list {
     margin-left: 41px;
-    transition: 1s;it
-    
+    transition: 1.5s;
   }
   
   .list-span {
@@ -178,17 +177,10 @@ height: 100vh;
     color: #bf6b72;
   }
 
-  #contact {
-    animation-delay: 1.7s;
+  #skills {
+    cursor: pointer;
   }
 
-  #work {
-    animation-delay: 1.9s;
-  }
-
-  #resume {
-    animation-delay: 2.1s;
-  }
 
 
 @media screen and (max-width: 800px) {

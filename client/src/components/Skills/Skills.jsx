@@ -25,13 +25,16 @@ export default function Skills(props) {
         <span><h1>skills</h1></span>
         <small onClick={() => setShowSkills(false)}>[ hide ]</small>
       </div>
-      <span
-        id="resume">
-        <a
-          href={pdf}
-          target="_blank"
-          id="resume-text">résumé<FontAwesomeIcon icon={faScroll} /></a>
-      </span>
+      <a
+        href={pdf}
+        target="_blank"
+        rel="noreferrer" 
+        id="resume-text">
+        <span
+          id="resume">
+          résumé <FontAwesomeIcon id="resume-icon" icon={faScroll} />
+        </span>
+      </a>
       <div className="icon-box">
         <div className="skills-box">
           <img className="skill-icon" id="js" alt="javascript" src={js} />

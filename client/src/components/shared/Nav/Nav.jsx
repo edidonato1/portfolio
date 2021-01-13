@@ -41,13 +41,14 @@ export default function Nav(props) {
 
   const handleClick = () => {
     setTimeout(() => {
-      setOpenBurger(false)
-    }, 800)
+      setOpenBurger(false);
+    }, 800);
   }
 
   const handleHomeClick = () => {
     if (home) {
-      setShowPineapple(!showPineapple)
+      setShowPineapple(!showPineapple);
+      setShowSkills(false);
     }
   }
 

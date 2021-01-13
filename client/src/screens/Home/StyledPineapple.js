@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const StyledPineapple = styled.div`
 
 transform: ${({ showPineapple }) => (showPineapple ? "translateX(0%)" : "translateX(102%)")};
+
 transition:.4s;
 position: fixed;
 right: 0;
@@ -52,7 +53,7 @@ h3 {
 
 
 @media screen and (max-width: 800px) {
-
+opacity: ${({ showPineapple }) => (showPineapple ? "1" : "0)")};
 width: 50vw;
 
   top: 80px;
@@ -69,7 +70,6 @@ width: 50vw;
 }
 
 @media screen and (max-width: 600px) {
-
   transform: ${({ showPineapple }) => (showPineapple ? "translateY(0%)" : "translateY(102%)")};
   bottom: 0;
   right: initial;

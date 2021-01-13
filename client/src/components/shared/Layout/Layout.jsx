@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Nav from '../Nav/Nav';
 import Skills from '../../Skills/Skills';
 import StyledLayout from './StyledLayout';
