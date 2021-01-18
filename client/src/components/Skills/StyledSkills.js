@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../helpers/colorVars';
 
 const StyledSkills = styled.div`
 
@@ -7,7 +8,7 @@ transition:.4s;
 position: fixed;
 right: 0;
 top: 0;
-color: lightgray;
+color: ${colors.lightGray};
 display: flex;
 flex-direction: column;
 height: 100vh;
@@ -15,9 +16,9 @@ width: 35vw;
 z-index: 98;
 border-left: 3px solid #43a8a8;
 align-items: center;
-background: #202020;
+background: ${colors.darkGray};
 overflow-y: scroll;
-color: #DB686F;
+color: ${colors.pink};
 
 
 #title-box {
@@ -35,8 +36,7 @@ color: #DB686F;
   padding-left: 0px;
   font-family: "Nothing You Could Do";
   font-size: 22px;
-  /* color: #DB686F; */
-  color: #f0ebeb; 
+  color: ${colors.lightGray}; 
   --webkit-transition: .2s;
   --moz-transition: .2s;
   transition: .2s;
@@ -49,11 +49,11 @@ color: #DB686F;
 #resume-icon {
   margin-left: 10px;
   transition: .2s;
-  color: #35a3a3;
+  color: ${colors.aqua};
 }
 
 #resume:hover {
-  color: #DB686F;
+  color: ${colors.pink};
 
   #resume-icon {
     font-size: 25px;
@@ -62,7 +62,7 @@ color: #DB686F;
 }
 
 small {
-  color: #35a3a3;
+  color: ${colors.aqua};
   cursor: pointer;
 }
 
@@ -74,7 +74,7 @@ h3 {
   font-weight: 400;
   margin: 10px;
   font-size: 18px;
-  color: #f0ebeb; 
+  color: ${colors.lightGray}; 
 }
 
 .icon-box {
@@ -98,7 +98,7 @@ h3 {
   background: #313131;
   border-radius: 10px;
   padding: 5px 5px 5px 10px;
-  box-shadow:  1px 2px 2px #DB686F;
+  box-shadow:  1px 2px 2px ${colors.pink};
 }
 
 #react {
@@ -166,7 +166,7 @@ h3 {
 
 
   h1 {
-    color: #f0ebeb;
+    color: ${colors.lightGray};
     margin-bottom: 10px;
   }
 
@@ -187,7 +187,7 @@ h3 {
     background: #313131;
     border-radius: 10px;
     padding: 5px 5px 5px 10px;
-    box-shadow:  1px 2px 2px #DB686F;
+    box-shadow:  1px 2px 2px ${colors.pink};
   }
 
 

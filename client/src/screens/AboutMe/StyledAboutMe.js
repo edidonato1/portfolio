@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../helpers/colorVars';
 
 const AboutMeDiv = styled.div`
 
@@ -14,7 +15,7 @@ text-align: justify;
   
 h2 {
   animation: 1s linear 0s 1 appears;
-  color: #bf6b72;
+  color: ${colors.pink};
   font-weight: 600;
   font-size: 35px;
   margin-bottom: 0;
@@ -24,7 +25,7 @@ h3 {
   animation: 1s linear 0s 1 appears;
   margin-top: 0;
   font-weight: 500;
-  color: #35a3a3;
+  color: ${colors.aqua};
 }
 
 #about-me-right {
@@ -32,7 +33,7 @@ h3 {
 }
 
 #get-in-touch {
-  color: #43a8a8;
+  color: ${colors.aqua};
   cursor: pointer;
   text-decoration: none;
 }

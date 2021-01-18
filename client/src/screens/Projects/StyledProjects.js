@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../helpers/colorVars';
 
 const ProjectsDiv = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ h1 {
 
 .projects-title-inline {
   position: relative;
-  background: #202020;
+  background: ${colors.darkGray};
   display: flex;
   align-items: center;
   z-index: 1;
@@ -28,15 +29,15 @@ h1 {
 }
 
 .icon {
-  color: ${({ open }) => (open ? "#35a3a3" : "#bf6b72")};
+  color: ${({ open }) => (open ? colors.aqua : colors.pink)};
   font-size: 22px;
   transition: .1s;
-  background: #202020;
+  background: ${colors.darkGray};
   margin-top: 4px;
 }
 
 .icon:hover {
-  color: #35a3a3;
+  color: ${colors.aqua};
   font-size: 26px;
   margin-left: -1px;
   animation-name: none;
@@ -44,7 +45,7 @@ h1 {
 .icon-container {
   margin-top: -10px;
   z-index: 1;
-  background: #202020;
+  background: ${colors.darkGray};
 }
 
 .drop-down {
@@ -56,7 +57,7 @@ h1 {
 }
 
 .project-li {
-  color: #DB686F;
+  color: ${colors.pink};
   cursor: pointer;
   width: fit-content;
   transition: .2s;
@@ -64,7 +65,7 @@ h1 {
 }
 
 .project-li:hover {
-  color: #35a3a3;
+  color: ${colors.aqua};
   font-size: 18px;
 }
 
@@ -88,13 +89,13 @@ h1 {
   left: 0;
   line-height: 37px;
   font-size: 18px;
-  background: #202020;
+  background: ${colors.darkGray};
   height: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 20px;
-  border-bottom: ${({ open }) => (open ? "3px solid #43a8a8" : "none")};
+  border-bottom: ${({ open }) => (open ? `3px solid ${colors.aqua}` : "none")};
   padding-top: ${({ openBurger }) => (openBurger ? "85px" : "0")};
   border-top: none;
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import colors from '../../../helpers/colorVars';
 
 const Navbar = styled.nav`
 
@@ -9,7 +10,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-background: #DB686F;
+background: ${colors.pink};
 height: 100vh;
 width: 80px;
 z-index: 99;
@@ -41,8 +42,8 @@ h1 {
   align-items: center;
   height: 50px;
   width: 50px;
-  color: #DB686F;
-  background: #202020;
+  color: ${colors.pink};
+  background: ${colors.darkGray};
   margin-top: 20px;
 }
 
@@ -52,7 +53,7 @@ h1 {
 }
 
 .initials:hover {
-  background: #35a3a3;
+  background: ${colors.aqua};
 }
 
 ul {
@@ -78,14 +79,14 @@ ul {
 }
 
 .nav-icon {
-  color: #202020;
+  color: ${colors.darkGray};
   padding: 30px 0;
   font-size: 30px;
   transition: .2s;
 }
 
 .nav-icon:hover {
-  color: #35a3a3;
+  color: ${colors.aqua};
   font-size: 33px;
 }
 
@@ -186,10 +187,10 @@ ul {
     margin-right: initial;
     right: 0;
     top: ${({ home }) => (home ? "200px" : "160px")};
-    background: #202020;
+    background: ${colors.darkGray};
     height: 80px;
     width: 100%;
-    border-top: 3px solid #35a3a3;
+    border-top: 3px solid ${colors.aqua};
     border-bottom: 3px solid #f0ebeb;
     flex-direction: row-reverse;
     padding: 0px 10px;
@@ -205,7 +206,7 @@ ul {
   
   #e-didonato {
     font-family: 'Nothing You Could Do', cursive;
-    color: #202020;
+    color: ${colors.darkGray};
     font-weight: 500;
     font-size: 31px;
     letter-spacing: -1px;
@@ -213,11 +214,11 @@ ul {
   }
 
   .initials:hover {
-  background: #202020;
+  background: ${colors.darkGray};
 }
 
   .nav-icon {
-    color: #35a3a3;
+    color: ${colors.aqua};
   }
 
   .nav-icon:hover {
@@ -230,7 +231,7 @@ ul {
   }
   
   .social {
-    color: #DB686F;
+    color: ${colors.pink};
   }
 
   .icon-container {

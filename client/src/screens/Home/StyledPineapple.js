@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../helpers/colorVars';
 
 const StyledPineapple = styled.div`
 
@@ -15,11 +16,11 @@ justify-content: center;
 height: 100vh;
 width: 40vw;
 z-index: 98;
-border-left: 3px solid #43a8a8;
+border-left: 3px solid ${colors.aqua};
 align-items: center;
-background: #202020;
+background: ${colors.darkGray};
 overflow-y: scroll;
-color: #DB686F;
+color: ${colors.pink};
 
 .main {
   text-align: justify;
@@ -31,24 +32,24 @@ color: #DB686F;
 }
 
 a {
-  color: #35a3a3;
+  color: ${colors.aqua};
 }
 
 p {
-  color: #f0ebeb;
+  color: ${colors.lightGray};
 }
 
 #me {
   font-family: 'Nothing You Could Do', cursive;
   font-size: 25px;
-  color: #bf6b72;
+  color: ${colors.pink};
 }
 
 h3 {
   font-weight: 600;
   margin: 10px;
   font-size: 18px;
-  color: #bf6b72; 
+  color: ${colors.pink}; 
 }
 
 
@@ -78,7 +79,7 @@ width: 50vw;
   overflow-y: scroll;
   z-index: 0;
   border-left: initial;
-  border-top: 3px solid #43a8a8;
+  border-top: 3px solid ${colors.aqua};
   transition: .7s;
   height: calc(100vh - 200px);
   top: 200px;
@@ -93,7 +94,7 @@ width: 50vw;
   }
 
   h1 {
-    color: #f0ebeb;
+    color: ${colors.lightGray};
     margin-bottom: 10px;
   }
 

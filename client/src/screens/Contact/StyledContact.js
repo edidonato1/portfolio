@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../helpers/colorVars';
 
 const ContactDiv = styled.div`
 display: flex;
@@ -6,7 +7,7 @@ display: flex;
 
 .contact-title {
   position: relative;
-  background: #202020;
+  background: ${colors.darkGray};
   display: flex;
   align-items: flex-end;
   z-index: 1;
@@ -38,7 +39,7 @@ display: flex;
 }
 
 .show-contact {
-  color: #43a8a8;
+  color: ${colors.aqua};
   cursor: pointer;
 }
 
@@ -47,7 +48,7 @@ a {
 }
 
 a:hover {
-  color: #35a3a3;
+  color: ${colors.aqua};
   font-size: 18px;
 }
 
@@ -59,8 +60,8 @@ a:hover {
   border-bottom: 1px solid #ecc8cb;
   border-left: 1px solid #ecc8cb;
   transition: .3s;
-  border-bottom-color:  ${({ showContact }) => (showContact ? "#ecc8cb" : "#202020")};
-  border-left-color:  ${({ showContact }) => (showContact ? "#ecc8cb" : "#202020")};
+  border-bottom-color:  ${({ showContact }) => (showContact ? "#ecc8cb" : colors.darkGray)};
+  border-left-color:  ${({ showContact }) => (showContact ? "#ecc8cb" : colors.darkGray)};
 }
 
 .inline-span {
@@ -128,9 +129,9 @@ button {
   height: 40px;
   padding: 10px;
   border-radius: 5px;
-  background:  #296CF2;
+  background:  ${colors.coralBlue};
   font-weight: 500;
-  color: rgb(207, 207, 207);
+  color: ${colors.lightGray};
   transition: .3s;
   font-size: 14px;
 }
@@ -139,7 +140,7 @@ button:hover {
   height: 45px;
   width: 80px;;
   margin-bottom: -2px;
-  color: #202020;
+  color: ${colors.darkGray};
   font-size: 16px;
   font-weight: 500;
 }
@@ -152,7 +153,7 @@ button:hover {
 
   .contact-title {
     position: initial;
-    background: #202020;
+    background: ${colors.darkGray};
     margin: initial;
     height: 100%;
     display: flex;
@@ -200,7 +201,7 @@ button:hover {
   #contact-extra {
     display: flex;
     flex-flow: column-reverse;
-    color: #35a3a3;
+    color: ${colors.aqua};
   }
 
 }
@@ -211,8 +212,6 @@ button:hover {
     width: 90vw;
     padding: 15px;
   }
-
-
 
   #form-right {
     overflow: initial;
@@ -227,18 +226,15 @@ button:hover {
   }
 
   button {
-  width: 28%;
-  height: 50px;
-  font-size: 17px;
-}
+    width: 28%;
+    height: 50px;
+    font-size: 17px;
+  }
 
-textarea {
-  min-height: 170px;
-  max-height: 250px;
-}
-
-
-
+  textarea {
+    min-height: 170px;
+    max-height: 250px;
+  }
 
 
 }

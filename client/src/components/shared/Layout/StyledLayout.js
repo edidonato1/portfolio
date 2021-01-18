@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import colors from '../../../helpers/colorVars';
+
 
 const StyledLayout = styled.div`
 
@@ -8,16 +10,16 @@ const StyledLayout = styled.div`
   width: 30%;
   min-width: 250px;
   display: flex;
-  background: #202020;
+  background: ${colors.darkGray};
   flex-direction: column;
   justify-content: flex-end;
   transition: .3s;
   height: 100vh;
   margin: 0 0 0 80px;
   padding-left: 50px;
-  color: #DB686F;
+  color: ${colors.pink};
   z-index: 98;
-  border-right: 3px solid #43a8a8;
+  border-right: 3px solid ${colors.aqua};
 }
 
 .left-div-child {
@@ -35,14 +37,13 @@ hr {
 
 
 .right-div {
-  /* border-left: 3px solid #43a8a8; */
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #313131;
+  background: ${colors.midGray};
   width: 70%;
-  color: #f0ebeb;
+  color: ${colors.lightGray};
   padding-bottom: 70px;
 }
 
@@ -69,7 +70,7 @@ hr {
     margin-top: 80px;
     margin-left: 0;
     padding-left: 0;
-    border-bottom: 3px solid #43a8a8;
+    border-bottom: 3px solid ${colors.aqua};
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;

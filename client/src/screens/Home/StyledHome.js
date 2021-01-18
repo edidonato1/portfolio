@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../helpers/colorVars';
 
 const HomeDiv = styled.div`
 perspective: 1000px;
@@ -33,8 +34,8 @@ height: 100vh;
     margin-left: 7px;
     display: flex;
     font-size: 40px;
-    -webkit-text-stroke: .8px #f0ebeb;
-    text-shadow: 2px 2px #35a3a3;
+    -webkit-text-stroke: .8px ${colors.lightGray};
+    text-shadow: 2px 2px ${colors.aqua};
   }
 
   #e1 {
@@ -62,7 +63,7 @@ height: 100vh;
   }
 
   #home-right {
-    background: #313131;
+    background: ${colors.midGray};
     position: relative;
     padding-top: 0;
   }
@@ -163,14 +164,14 @@ height: 100vh;
   .list-span {
     margin: 0 10px;
     font-family: inherit;
-    color: #f0ebeb;
-    text-shadow: 4px 4px #202020;
+    color: ${colors.lightGray};
+    text-shadow: 4px 4px ${colors.darkGray};
     animation: 1s ease-out 1.5s 1 flash;
     transition: .5s;
   }
 
   .list-span:hover {
-    color: #35a3a3;
+    color: ${colors.aqua};
   }
 
   .list:hover {
@@ -218,8 +219,8 @@ height: 100vh;
     position: absolute;
     right: 20px;
     bottom: 5px;
-    background: #bf6b72;
-    border: 1px solid #313131;
+    background: ${colors.pink};
+    border: 1px solid ${colors.midGray};
     border-radius: 10px;
     height: 30px;
     padding: 0 5px;
@@ -228,15 +229,15 @@ height: 100vh;
   }
 
   #hide-that:hover {
-    background: #35a3a3;
+    background: ${colors.aqua};
   }
 
   #down-arrow {
-    color: #202020;
+    color: ${colors.darkGray};
   }
 
   h6 {
-    color: #f0ebeb;
+    color: ${colors.lightGray};
     margin-right: 5px;
     font-size: 15px;
   }
@@ -312,7 +313,7 @@ height: 100vh;
   }
 
   .list-span:hover {
-    color: #f0ebeb;
+    color: ${colors.lightGray};
   }
 
   .list:hover {
