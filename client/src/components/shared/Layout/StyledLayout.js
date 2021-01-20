@@ -5,6 +5,7 @@ import colors from '../../../helpers/colorVars';
 const StyledLayout = styled.div`
 position: relative;
 width: 100%;
+
 .left-div {
   position: sticky;
   top: 0;

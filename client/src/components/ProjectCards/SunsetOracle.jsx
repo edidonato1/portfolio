@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import StyledProjectCard from './StyledProjectCard';
 import zip from '../../assets/videos/enter_zip_code.mov';
 import html from '../../assets/icons/html_logo.png';
@@ -87,9 +86,8 @@ export default function SunsetOracle(props) {
       </section>
       <hr />
       <div className="next-last">
-        <Link onClick={() => setCurrentProject('pops')}>last</Link>
+        <p className="next" onClick={() => setCurrentProject('pops')}>last</p>
       </div>
     </StyledProjectCard>
-
   )
 }

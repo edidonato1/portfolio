@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import StyledProjectCard from './StyledProjectCard';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
@@ -129,8 +128,8 @@ export default function Root(props) {
       </section>
       <hr />
       <div className="next-last">
-        <Link onClick={() => setCurrentProject('colab')}>last</Link>
-        <Link onClick={() => setCurrentProject('pops')} >next</Link>
+        <p className="next" onClick={() => setCurrentProject('colab')}>last</p>
+        <p className="next" onClick={() => setCurrentProject('pops')} >next</p>
       </div>
     </StyledProjectCard>
 

@@ -17,14 +17,10 @@ transition: .5s ease-out;
 transform: ${({ load }) => (load ? "translateY(0px)" : "translateY(-100%)")};
 border-bottom: 3px solid ${colors.aqua};
 
-
 h3 {
   font-family: 'Nothing You Could Do', cursive;
   font-size: 31px;
 }
-
-
-
 
 .ticker {
   position: relative;

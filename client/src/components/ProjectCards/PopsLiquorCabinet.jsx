@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react'
 import StyledProjectCard from './StyledProjectCard';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
@@ -111,10 +110,9 @@ export default function PopsLiquorCabinet(props) {
       </section>
       <hr />
       <div className="next-last">
-        <Link onClick={() => setCurrentProject('root')}>last</Link>
-        <Link onClick={() => setCurrentProject('sunset')} >next</Link>
+        <p className="next" onClick={() => setCurrentProject('root')}>last</p>
+        <p className="next" onClick={() => setCurrentProject('sunset')} >next</p>
       </div>
     </StyledProjectCard>
-
   )
 }

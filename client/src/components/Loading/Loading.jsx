@@ -2,7 +2,6 @@ import StyledLoading from './StyledLoading';
 
 export default function Loading({ load }) {
 
-
   return (
     <StyledLoading load={load}>
         <h3>loading...</h3>

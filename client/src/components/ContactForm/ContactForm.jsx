@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Redirect } from 'react-router-dom'
 import emailjs from 'emailjs-com'
 import { init } from 'emailjs-com';
@@ -39,7 +39,6 @@ const ContactForm = () => {
       [name]: value
     });
   };
-
 
   if (sent) {
     return <Redirect to="/" />

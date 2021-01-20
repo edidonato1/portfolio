@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import colors from '../../helpers/colorVars';
 
 const StyledProjectCard = styled.div`
 
@@ -32,15 +33,16 @@ h6 {
   font-weight: 300;
 }
 
-a {
+a, .next {
   color: #DB686F;
   transition: .2s;
+  cursor: pointer;
 }
 
-a:hover {
-  color: #35a3a3;
-  font-size: 105%;
+.next:hover {
+  color: ${colors.aqua};
 }
+
 
 .friends:hover {
   font-size: 100%;

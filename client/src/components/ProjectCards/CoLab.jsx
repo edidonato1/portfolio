@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
 import js from '../../assets/icons/js_logo.png';
@@ -107,8 +106,8 @@ export default function CoLab(props) {
       <hr />
 
       <div className="next-last">
-        <Link> </Link>
-        <Link onClick={() => setCurrentProject('root')} >next</Link>
+        <p> </p>
+        <p className="next" onClick={() => setCurrentProject('root')} >next</p>
       </div>
     </StyledProjectCard>
   )
