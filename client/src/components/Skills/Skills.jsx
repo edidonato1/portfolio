@@ -1,6 +1,6 @@
 import html from '../../assets/icons/html_logo.png';
 import css from '../../assets/icons/css_logo.png';
-import js from '../../assets/icons/js_logo.png';
+import javascript from '../../assets/icons/js_logo.png';
 import react from '../../assets/icons/react.svg';
 import ruby from '../../assets/icons/ruby.png';
 import rails from '../../assets/icons/rails.png';
@@ -12,6 +12,7 @@ import express from '../../assets/icons/express.png'
 import node from '../../assets/icons/node.png'
 import pdf from '../../assets/resume/resume.pdf'
 import StyledSkills from './StyledSkills';
+import SkillBox from './SkillBox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faScroll } from '@fortawesome/free-solid-svg-icons';
 
@@ -36,54 +37,18 @@ export default function Skills(props) {
         </span>
       </a>
       <div className="icon-box">
-        <div className="skills-box">
-          <img className="skill-icon" id="js" alt="javascript" src={js} />
-          <h3>JavaScript</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="react" alt="react" src={react} />
-          <h3>React</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="postgres" alt="postgres" src={postgres} />
-          <h3>PostgreSQL</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="ruby" alt="ruby" src={ruby} />
-          <h3>Ruby</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="rails" alt="rails" src={rails} />
-          <h3>Ruby on Rails</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="axios" alt="axios" src={axios} />
-          <h3>Axios</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="git" alt="git" src={git} />
-          <h3>Git</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="mongodb" alt="mongodb" src={mongodb} />
-          <h3>MongoDB</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="express" alt="express" src={express} />
-          <h3>Express</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="node" alt="node" src={node} />
-          <h3>Node.js</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="html" alt="html" src={html} />
-          <h3>HTML</h3>
-        </div>
-        <div className="skills-box">
-          <img className="skill-icon" id="css" alt="css" src={css} />
-          <h3>CSS</h3>
-        </div>
+        <SkillBox name="javascript" src={javascript}/>
+        <SkillBox name="React" src={react} />
+        <SkillBox name="PostgreSQL" src={postgres}/>
+        <SkillBox name="Ruby" src={ruby} />
+        <SkillBox name="Rails" src={rails} />
+        <SkillBox name="Axios" src={axios} />
+        <SkillBox name="Git" src={git} />
+        <SkillBox name="MongoDB" src={mongodb} />
+        <SkillBox name="Express" src={express} />
+        <SkillBox name="Node.js" src={node} />
+        <SkillBox name="HTML" src={html} />
+        <SkillBox name="CSS" src={css} />
       </div>
     </StyledSkills>
   )

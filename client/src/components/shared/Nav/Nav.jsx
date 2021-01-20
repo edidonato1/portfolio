@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Burger from './Burger';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import NavIcon from './NavIcon';
 import pina from '../../../assets/icons/pineapple.svg';
 import pina2 from '../../../assets/icons/pina2.svg';
@@ -23,12 +23,6 @@ export default function Nav(props) {
       setOpenBurger(false);
     }
     setShowSkills(!showSkills);
-  }
-
-  const handleClick = () => {
-    setTimeout(() => {
-      setOpenBurger(false);
-    }, 800);
   }
 
   const handleHomeClick = () => {
@@ -56,48 +50,30 @@ export default function Nav(props) {
       </div>
       <div className="all-icons">
         <ul id="nav-icon-main">
-          <Link to="/about">
-            <div onClick={handleClick} className="icon-container">
-              <li
-                className="nav-icon"
-                onMouseOver={() => setMeHover(true)}
-                onMouseLeave={() => setMeHover(false)}>
-                <FontAwesomeIcon icon={faUserAstronaut} />
-                {meHover || mobile ? <p className="nav-hidden" >about</p> : <> </>}
-              </li>
-            </div>
-          </Link>
-          {/* <Link to="/contact">
-            <div onClick={handleClick} className="icon-container">
-              <li
-                className="nav-icon"
-                onMouseOver={() => setContactHover(true)}
-                onMouseLeave={() => setContactHover(false)}>
-                <FontAwesomeIcon icon={faPaperPlane} />
-                {contactHover || mobile ? <p className="nav-hidden">contact</p> : <></>}
-              </li>
-            </div>
-          </Link> */}
-
+          <NavIcon 
+            mobile={mobile}
+            setOpenBurger={setOpenBurger}
+            pageTitle="about"
+            icon={faUserAstronaut}
+            setHover={setMeHover}
+            hover={meHover}
+            />
           <NavIcon
             mobile={mobile}
+            setOpenBurger={setOpenBurger}
             pageTitle="contact"
-            handleClick={handleClick}
-            setHover={setContactHover}
             icon={faPaperPlane}
+            setHover={setContactHover}
             hover={contactHover}
           />
-          <Link to="/projects">
-            <div onClick={handleClick} className="icon-container">
-              <li
-                className="nav-icon"
-                onMouseOver={() => setWorkHover(true)}
-                onMouseLeave={() => setWorkHover(false)}>
-                <FontAwesomeIcon icon={faBriefcase} />
-                {workHover || mobile ? <p className="nav-hidden" >projects</p> : <></>}
-              </li>
-            </div>
-          </Link>
+          <NavIcon 
+            mobile={mobile}
+            setOpenBurger={setOpenBurger}
+            pageTitle="projects"
+            icon={faBriefcase}
+            setHover={setWorkHover}
+            hover={workHover}
+          />
           <div id="skills">
             <div className="icon-container">
               <li

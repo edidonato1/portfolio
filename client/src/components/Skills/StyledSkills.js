@@ -110,34 +110,34 @@ h3 {
   box-shadow:  1px 2px 2px ${colors.pink};
 }
 
-#react {
+#React {
   width: 40px;
   margin-right: -7px;
 }
 
-#ruby, #postgres, #axios {
+#Ruby, #PostgreSQL, #Axios {
   width: 23px;
 }
 
-#rails {
+#Rails {
   width: 37px;
   margin-right: -10px;
 }
 
-#express {
+#Express {
   width: 37px;
   margin-right: -7px;
 }
-#mongodb {
+#MongoDB {
   width: 30px;
   margin-right: -5px;
 }
 
-#node, #html {
+#Node.js, #HTML {
   width: 22px;
 }
 
-#css {
+#CSS {
   width: 29px;
   margin-right: -5px;
 }
