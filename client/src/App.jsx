@@ -25,11 +25,6 @@ function App() {
       window.removeEventListener("resize", handler);
   }, []);
 
-  // const loadingBar = () => {
-  //   setLoad(true);
-  //   setTimeout((() => setLoad(false)), 1900)
-  // }
-
   return (
     <Layout
       mobile={mobile}
