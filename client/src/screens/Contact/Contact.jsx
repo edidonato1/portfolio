@@ -1,46 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import ContactForm from '../../components/ContactForm/ContactForm';
-import Layout from '../../components/shared/Layout/Layout';
 import ContactDiv from './StyledContact';
 
-export default function Contact(props) {
+export default function Contact() {
   const [showContact, setShowContact] = useState(false);
-  const { openBurger, setOpenBurger, showSkills, setShowSkills } = props;
 
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0);
   }, []);
 
   return (
-    <div>
-      <Layout
-        showSkills={showSkills}
-        setShowSkills={setShowSkills}
-        openBurger={openBurger}
-        setOpenBurger={setOpenBurger}>
-        <ContactDiv showContact={showContact}>
-          <div className="left-div" >
-            <div className="left-div-child">
-              <h1 className="contact-title left-div-title">contact</h1>
-              <span className="inline-span opened">
-                <div className="pointer"></div>
-                <p id="contact-extra">203 . 430 . 0261<br></br><a id="email" href="mailto: edward.f.didonato@gmail.com">gmail</a></p>
-              </span>
-            </div>
-          </div>
-          <div className="right-div" id="form-right">
-            <section className="contact-blurb">
-              <p>i'm currently available for full time,<br></br> or freelance opportunities.</p><br></br>
-              <p id="contact-blurb-bottom">feel free to fill out the form below, <br></br>or
-                <span
-                  onClick={() => setShowContact(!showContact)}
-                  className="show-contact"> contact me directly </span> for inquiries.
-              </p>
-            </section>
-            <ContactForm />
-          </div>
-        </ContactDiv>
-      </Layout>
-    </div>
+    <ContactDiv showContact={showContact}>
+      <div className="left-div" >
+        <div className="left-div-child">
+          <h1 className="contact-title left-div-title">contact</h1>
+          <span className="inline-span opened">
+            <div className="pointer"></div>
+            <p id="contact-extra">203 . 430 . 0261
+              <br></br>
+              <a id="email" href="mailto: edward.f.didonato@gmail.com">gmail</a>
+            </p>
+          </span>
+        </div>
+      </div>
+      <div className="right-div" id="form-right">
+        <section className="contact-blurb">
+          <p>i'm currently available for full time,
+            <br></br> 
+            or freelance opportunities.
+          </p>
+          <br></br>
+          <p id="contact-blurb-bottom">feel free to fill out the form below,
+            <br></br>
+            or
+            <span
+              onClick={() => setShowContact(!showContact)}
+              className="show-contact"> contact me directly
+            </span> 
+            for inquiries.
+          </p>
+        </section>
+        <ContactForm />
+      </div>
+    </ContactDiv>
   )
 }

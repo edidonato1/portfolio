@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Burger from './Burger';
 import { Link, NavLink } from 'react-router-dom';
 import pina from '../../../assets/icons/pineapple.svg';
@@ -9,28 +9,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAstronaut, faPaperPlane, faBriefcase, faTools } from '@fortawesome/free-solid-svg-icons';
 
 
-
 export default function Nav(props) {
-  const { home, openBurger, setOpenBurger, showSkills, setShowSkills, showPineapple, setShowPineapple } = props;
+  const { home, openBurger, setOpenBurger, showSkills, setShowSkills, showPineapple, setShowPineapple, mobile } = props;
   const [hoverHome, setHoverHome] = useState(false);
-  const [mobile, setMobile] = useState(false);
   const [meHover, setMeHover] = useState(false);
   const [contactHover, setContactHover] = useState(false);
   const [workHover, setWorkHover] = useState(false);
   const [skillsHover, setSkillsHover] = useState(false);
-
-  const handler = () => {
-    window.innerWidth <= 600 ? setMobile(true) : setMobile(false);
-  }
-
-  useEffect(() => {
-    handler();
-    window.addEventListener("resize", handler);
-
-    return () =>
-      window.removeEventListener("resize", handler);
-
-  }, []);
 
   const handleSkills = () => {
     if (mobile) {
