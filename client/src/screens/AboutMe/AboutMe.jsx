@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Layout from '../../components/shared/Layout/Layout';
 import AboutMeDiv from './StyledAboutMe';
 import eddie from '../../assets/images/eddie_rwb.png';
 

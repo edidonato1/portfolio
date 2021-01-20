@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Burger from './Burger';
 import { Link, NavLink } from 'react-router-dom';
+import NavIcon from './NavIcon';
 import pina from '../../../assets/icons/pineapple.svg';
 import pina2 from '../../../assets/icons/pina2.svg';
 import Navbar from './StyledNav';
@@ -66,7 +67,7 @@ export default function Nav(props) {
               </li>
             </div>
           </Link>
-          <Link to="/contact">
+          {/* <Link to="/contact">
             <div onClick={handleClick} className="icon-container">
               <li
                 className="nav-icon"
@@ -76,7 +77,16 @@ export default function Nav(props) {
                 {contactHover || mobile ? <p className="nav-hidden">contact</p> : <></>}
               </li>
             </div>
-          </Link>
+          </Link> */}
+
+          <NavIcon
+            mobile={mobile}
+            pageTitle="contact"
+            handleClick={handleClick}
+            setHover={setContactHover}
+            icon={faPaperPlane}
+            hover={contactHover}
+          />
           <Link to="/projects">
             <div onClick={handleClick} className="icon-container">
               <li

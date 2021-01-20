@@ -32,7 +32,6 @@ color: ${colors.pink};
 #resume {
   display: flex;
   align-items: center;
-  width: 80%;
   padding-left: 0px;
   font-family: "Nothing You Could Do";
   font-size: 22px;
@@ -43,7 +42,11 @@ color: ${colors.pink};
 }
 
 #resume-text {
+  border: 1px solid ${colors.pink};
+  border-radius: 10px;
+  padding: 3px 7px 3px 7px;
   margin: -10px 0 20px 0;
+  transition: 1s;
 }
 
 #resume-icon {
@@ -52,12 +55,18 @@ color: ${colors.pink};
   color: ${colors.aqua};
 }
 
-#resume:hover {
-  color: ${colors.pink};
+#resume-text:hover {
+  border-color: ${colors.lightGray};
+  background: rgb(240, 235, 235, .1);
 
-  #resume-icon {
+  #resume {
+    color: ${colors.pink};
+    text-shadow: 1px 1px black;
+
+    #resume-icon {
     font-size: 25px;
     margin-left: 7px;
+    }
   }
 }
 
@@ -150,7 +159,6 @@ h3 {
 
 @media screen and (max-width: 600px) {
   transform: ${({ showSkills }) => (showSkills ? "translateY(0%)" : "translateY(102%)")};
-  
   bottom: 0;
   right: initial;
   width: 100%;
@@ -170,9 +178,14 @@ h3 {
     margin-bottom: 10px;
   }
 
+  #resume-text {
+    margin-top: 20px;
+  }
+
   .icon-box {
     overflow-y: scroll;
     margin-bottom: 20px;
+
     height: 100%;
     padding-bottom: 100px;
   }
@@ -189,8 +202,6 @@ h3 {
     padding: 5px 5px 5px 10px;
     box-shadow:  1px 2px 2px ${colors.pink};
   }
-
-
 
 }
 

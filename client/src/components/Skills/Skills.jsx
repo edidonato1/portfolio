@@ -32,7 +32,7 @@ export default function Skills(props) {
         id="resume-text">
         <span
           id="resume">
-          résumé <FontAwesomeIcon id="resume-icon" icon={faScroll} />
+          view résumé <FontAwesomeIcon id="resume-icon" icon={faScroll} />
         </span>
       </a>
       <div className="icon-box">

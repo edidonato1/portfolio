@@ -12,9 +12,9 @@ export default function Projects(props) {
   const { openBurger, mobile } = props;
 
   const handleClick = (project) => {
-    setCurrentProject(project);
+    setCurrentProject(project); // toggle project card to be rendered
     if (mobile && open) {
-      setOpen(false);
+      setOpen(false); // close menu when new project is selected on mobile breakpoint
     }
   }
 
