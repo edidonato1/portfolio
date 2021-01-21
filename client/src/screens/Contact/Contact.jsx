@@ -36,8 +36,7 @@ export default function Contact() {
             <span
               onClick={() => setShowContact(!showContact)}
               className="show-contact"> contact me directly
-            </span> 
-            for inquiries.
+            </span> for inquiries.
           </p>
         </section>
         <ContactForm />
