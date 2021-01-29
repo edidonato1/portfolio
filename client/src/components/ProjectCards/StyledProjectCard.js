@@ -72,6 +72,14 @@ section {
 
 #my-work {
   margin-bottom: -10px;
+  cursor: pointer;
+  transition: 1s;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#my-work:hover {
+  color: ${colors.pink};
 }
 
 .project-links {

@@ -43,6 +43,8 @@ export default function Projects(props) {
         </div>
       </div>
       <ProjectCardsContainer
+        open={open}
+        setOpen={setOpen}
         mobile={mobile}
         currentProject={currentProject}
         setCurrentProject={setCurrentProject}

@@ -80,8 +80,8 @@ export default function PopsLiquorCabinet(props) {
       </section>
       <div className="media" id="media-container">
         <img className="media-child" src={add} alt="add bottle" />
-        {mobile ?
-          <video className="media-child" controls muted >
+        {mobile ?  // only autoPlay if in the browser
+          <video className="media-child" controls muted > 
             <source src={grab} type="video/mp4" />
           </video>
           :

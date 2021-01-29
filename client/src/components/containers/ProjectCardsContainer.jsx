@@ -5,12 +5,21 @@ import Root from '../ProjectCards/Root';
 import CoLab from '../ProjectCards/CoLab';
 
 export default function ProjectCardsContainer(props) {
-  const { currentProject, setCurrentProject, mobile } = props;
+  const {
+    currentProject,
+    setCurrentProject,
+    mobile,
+    open,
+    setOpen } = props;
 
   return (
     <div className="right-div" id="projects-right">
       {currentProject === 'home' ?
-        <ProjectsHome mobile={mobile} currentProject={currentProject} /> : <> </>}
+        <ProjectsHome
+          open={open}
+          setOpen={setOpen}
+          mobile={mobile}
+          currentProject={currentProject} /> : <> </>}
       {currentProject === 'sunset' ?
         <SunsetOracle
           mobile={mobile}
