@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import ContactDiv from './StyledContact';
 
@@ -26,16 +27,18 @@ export default function Contact() {
       <div className="right-div" id="form-right">
         <section className="contact-blurb">
           <p>i'm currently available for full time,
-            <br></br> 
+            <br/>
             or freelance opportunities.
+            <br />
+            <Link to="/projects" className="contact-links">case studies for reference</Link>
           </p>
-          <br></br>
+          <br/>
           <p id="contact-blurb-bottom">feel free to fill out the form below,
             <br></br>
             or
             <span
               onClick={() => setShowContact(!showContact)}
-              className="show-contact"> contact me directly
+              className="contact-links"> contact me directly
             </span> for inquiries.
           </p>
         </section>

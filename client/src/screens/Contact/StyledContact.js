@@ -38,9 +38,16 @@ display: flex;
   background: rgba(200, 200, 200, .2);
 }
 
-.show-contact {
+.contact-links {
   color: ${colors.aqua};
   cursor: pointer;
+  transition: 1s;
+}
+
+
+.contact-links:hover {
+  color: ${colors.pink};
+  font-size: initial;
 }
 
 a {
