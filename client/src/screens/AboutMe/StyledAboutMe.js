@@ -36,6 +36,11 @@ h3 {
   color: ${colors.aqua};
   cursor: pointer;
   text-decoration: none;
+  transition: 1s;
+}
+
+#get-in-touch:hover {
+  color: ${colors.pink};
 }
 
 .about-text {
