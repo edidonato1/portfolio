@@ -26,13 +26,13 @@ export default function Contact() {
       </div>
       <div className="right-div" id="form-right">
         <section className="contact-blurb">
-          <p>i'm currently available for full time,
+          {/* <p>i'm currently available for full time,
             <br/>
             or freelance opportunities.
             <br />
             <Link to="/projects" className="contact-links">case studies for reference</Link>
           </p>
-          <br/>
+          <br/> */}
           <p id="contact-blurb-bottom">feel free to fill out the form below,
             <br></br>
             or
