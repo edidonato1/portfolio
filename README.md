@@ -4,8 +4,9 @@
 ##  the application
 I began the construction of this application several weeks before the completion of a software engineering immersive program through General Assembly.  It represents a home for all of my work, as well as a way to showcase my interest in web design, without boundaries.
 
-As are many projects, this application is an ever-evolving passion project as much as it is a professional device.  
-<br>
+As with many projects, this application is an ever-evolving passion project as much as it is a professional device.  
+
+I've built this application to be as responsive as possible
 
 ## 
 ## dependencies/frameworks
@@ -18,3 +19,4 @@ All dependencies installed using node package manager (npm)
 | Styled Components| Allows for more dynamic styling of components in React. | `npm i styled-components`
 |    FontAwesome   | Icon library for attractive and mobile-friendly UI. |`npm i --save @fortawesome/free-solid-svg-icons`
 |      Email-JS       | Client-side JavaScript email service| `npm i emailjs-com`
+
